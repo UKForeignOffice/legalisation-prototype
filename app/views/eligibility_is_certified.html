@@ -1,0 +1,58 @@
+{{<layout}}
+
+{{$pageTitle}}
+Application Type
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+    <p><a href="eligibility_doc_summary_old" class="back-to-previous">Back</a></p>
+
+    <h1 class="heading-xlarge" style="margin-bottom: 10px;">Confirm your document is certified</h1>
+    <div class="column-two-thirds">
+    <h3 class="heading-medium">Degree certificate or transcript (UK)</h3>
+
+        <p>Your degree certificate must be awarded by a <a rel="external" target="_blank" href="https://www.gov.uk/check-a-university-is-officially-recognised">recognised body</a>.</p>
+
+        <p>It must also be certified by either:</p>
+
+        <ul>
+            <li>a solicitor or notary public in the UK</li>
+            <li>an official of the British Council (only original certificates)</li>
+            <li>an official of a UK embassy overseas</li>
+        </ul>
+
+       <!--   <p>You may be able to get your document certified at a British embassy. <a rel="external" target="_blank" href="https://www.gov.uk/government/world/embassies">Check if this service is offered</a> in the country you’re in.</p>
+
+       <div role="note" aria-label="Information" class="panel-indent panel-indent-info">
+            <p>A photocopy of your document can be legalised, but it must be certified.</p>
+        </div> -->
+
+        <p>Has your document been certified in accordance with this guidance?</p>
+        <form>
+            <fieldset class="inline">
+                <div class="form-group form-group-compound">
+                    <label class="block-label"  for="radio-indent-1">
+                        <input id="radio-indent-1" type="radio" name="radio-indent-group" value="yes">
+                        Yes
+                    </label>
+                    <label class="block-label"  for="radio-indent-2">
+                        <input id="radio-indent-2" type="radio" name="radio-indent-group" value="no">
+                        No
+                    </label>
+                </div>
+            </fieldset>
+        </form>
+        <div class="form-group">
+            <p class="validation-message"></p>
+            <a href="javascript:isYourDocumentCertified()" class="button">Continue</a>
+        </div>
+    </div>
+
+  </main>
+
+{{/content}}
+
+{{/layout}}

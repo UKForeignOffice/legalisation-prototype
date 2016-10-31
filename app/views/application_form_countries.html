@@ -1,0 +1,74 @@
+{{<layout}}
+
+{{$pageTitle}}
+Document Details
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+    <p><a href="application_form_address" class="back-to-previous">Back</a></p>
+
+    <h1 class="heading-xlarge">Number of documents</h1>
+  <!--  <p class="text">
+        Please enter the number of documents you want to legalise.
+    </p>
+-->
+    <div class="form-group">
+        <form>
+            <fieldset class="inline">
+               <!-- <legend>Document information:</legend> -->
+            <div>
+                <div id="countries-list">
+                    <div id="row">
+                        <div class="col1">
+                            <label for="otherCountriesNumber">Please enter the total number of documents you want to legalise</label>
+                            <input type="number" id="otherCountriesNumber" name="otherCountriesNumber" value="" class="number"/>
+                            Each document costs £30. 
+                            
+                            <!-- cost calculator -->
+                            <h1 id="total-row" style="font-size: 24px;line-height: 1.25;font-weight: 700;text-transform: none;margin: 1.2em 0 0.4em 0;">Cost to legalise <span id="total"></span> documents: £<span id="cost"></span></h1>
+
+                        </div>
+                       <!--  
+					   <div class="col2">
+                            <label for="otherCountries">Country name (optional)</label>
+                            <div class="typeahead-container">
+                                <div class="typeahead-field">
+                                <span class="typeahead-query">
+                                    <input type="text" id="otherCountries" name="otherCountries" value="" autocomplete="off" class="text country-autocomplete long validate tt-query" style="position: relative; vertical-align: top; background-color: transparent;">
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+						
+                        <div id="remove-control">
+                            &nbsp;
+                        </div>
+						
+						-->
+                    </div>
+                </div>
+            </div>
+        <!--    <a href="#" id="addScnt">Add another country</a> -->
+
+            </fieldset>
+        </form>
+    
+    <!-- This is redundant in simpler form we have now 
+        <h1 id="total-row" style="font-size: 24px;line-height: 1.25;font-weight: 700;text-transform: none;margin: 1.2em 0 0.4em 0;">Total number of documents to be legalised: <span id="total">0</span></h1>
+    -->
+    </div>
+
+    <div class="form-group">
+        <a href="application_form_sending_in" class="button">Continue</a>
+    </div>
+
+  </main>
+
+{{/content}}
+
+{{/layout}}
+
+<script src="/public/javascripts/jquery-ui.js"></script>

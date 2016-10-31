@@ -1,0 +1,171 @@
+{{<layout}}
+
+{{$pageTitle}}
+Application Summary
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+    <p><a href="application_form_special" class="back-to-previous">Back</a></p>
+
+
+    <h1 class="heading-large">Check your answers before paying for your application</h1>
+
+    <h2 class="heading-medium">Personal details</h2>
+    <table id="review-personal-details" class="summary-table">
+        <tbody>
+            <tr>
+                <td class="summary-table-cell-label">Name</td>
+                <td class="summary-table-cell-content">John Smith</td>
+                <td class="summary-table-cell-link"><a href="application_form_personal_details_dummy">Change</a></td>
+            </tr>
+            <tr>
+                <td class="summary-table-cell-label">Email</td>
+                <td class="summary-table-cell-content">email@legalisation.gov.uk</td>
+                <td class="summary-table-cell-link"><a href="application_form_personal_details_dummy">Change</a></td>
+            </tr>
+            <tr>
+                <td class="summary-table-cell-label">Telephone</td>
+                <td class="summary-table-cell-content">03700 00 22 44</td>
+                <td class="summary-table-cell-link"><a href="application_form_personal_details_dummy">Change</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="heading-medium">Return address</h2>
+    <table id="review-address" class="summary-table">
+        <tbody>
+        <tr>
+            <td class="summary-table-cell-label">Return address for successfully legalised documents</td>
+            <td class="summary-table-cell-content">Informed Solutions</br>
+                The Old Bank,</br>
+                Old Market Place,</br>
+                Altrincham,</br>
+                Cheshire,</br>
+                WA14 4PA</td>
+            <td class="summary-table-cell-link"><a href="application_form_address_dummy">Change</a></td>
+        </tr>
+        <tr>
+            <td class="summary-table-cell-label">Return address if we can't legalise your documents</td>
+            <td class="summary-table-cell-content">Informed Solutions</br>
+                The Old Bank,</br>
+                Old Market Place,</br>
+                Altrincham,</br>
+                Cheshire,</br>
+                WA14 4PA</td>
+            <td class="summary-table-cell-link"><a href="application_form_address_dummy">Change</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2 class="heading-medium">Number of documents</h2>
+    <table id="review-document-details" class="summary-table">
+        <tbody>
+        <tr>
+            <td class="summary-table-cell-label">Total number of documents</td>
+            <td class="summary-table-cell-content">3</td>
+            <td class="summary-table-cell-link"><a href="application_form_countries_dummy">Change</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2 class="heading-medium">Postage</h2>
+    <table id="review-postage" class="summary-table">
+        <tbody>
+        <tr>
+            <td class="summary-table-cell-label">Return delivery method</td>
+            <td class="summary-table-cell-content">European courier</td>
+            <td class="summary-table-cell-link"><a href="application_form_postage_dummy">Change</a></td>
+        </tr>
+  <!--      <tr>
+            <td class="summary-table-cell-label">Total Cost of Postage</td>
+            <td class="summary-table-cell-content">&pound;14.50</td>
+            <td class="summary-table-cell-link"></td>
+        </tr> -->
+        </tbody>
+    </table>
+
+    <h2 class="heading-medium">Additional information</h2>
+    <table id="review-special" class="summary-table">
+        <tbody>
+    <!--    <tr>
+            <td class="summary-table-cell-label">Special Instructions</td>
+            <td class="summary-table-cell-content">Please can you write my internal reference number on the return envelope</td>
+            <td class="summary-table-cell-link"><a href="application_form_special_dummy">Change special instructions</a></td>
+        </tr> -->
+        <tr>
+            <td class="summary-table-cell-label">Your reference</td>
+            <td class="summary-table-cell-content">IR-12345</td>
+            <td class="summary-table-cell-link"><a href="application_form_special_dummy">Change</a></td>
+        </tr>
+		        <tr>
+            <td class="summary-table-cell-label">Feedback consent</td>
+            <td class="summary-table-cell-content">Yes</td>
+            <td class="summary-table-cell-link"><a href="application_form_special_dummy">Change</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2 class="heading-medium">Cost</h2>
+    <table id="review-special" class="summary-table">
+        <tbody>
+        <tr>
+            <td class="summary-table-cell-label">Cost of legalisation</td>
+            <td class="summary-table-cell-content">&pound;90.00</td>
+            <td class="summary-table-cell-link"></td>
+        </tr>
+		        <tr>
+            <td class="summary-table-cell-label">Cost of postage</td>
+            <td class="summary-table-cell-content">&pound;5.50</td>
+            <td class="summary-table-cell-link"></td>
+        </tr>
+				        <tr>
+            <td class="summary-table-cell-label">Total cost</td>
+            <td class="summary-table-cell-content"><span style="font-weight: bold;">&pound;95.50</span></td>
+            <td class="summary-table-cell-link"></td>
+        </tr>
+        </tbody>
+    </table>
+	
+
+	<!--
+    <div class="notice" style="max-width: 30em;">
+        <h2 class="heading-medium">Your Privacy</h2>
+
+
+        <p>Please be aware that the Legalisation Office may need to share information, data or facts contained within
+            your documents with the relevant authority/individuals for legal purposes or for the purposes of
+            authentication and verification. For further information please read our
+            <a href="#">terms and conditions and privacy policy</a>.
+        </p>
+
+        <div class="form-group">
+            <label class="block-label" for="checkbox-1">
+                <input id="checkbox-1" type="checkbox" value="accept_terms">
+                I agree to the <a href="#">terms and conditions and privacy policy</a>
+            </label>
+            <label class="block-label" for="checkbox-2">
+                <input id="checkbox-2" type="checkbox" value="accept_feedback">
+                I am happy to be contacted for feedback to help improve this service
+            </label>
+        </div>
+
+        <div class="warning" style="clear:both;">
+            <p class="text">
+                By submitting your application you confirm that the information you have provided is true.
+            </p>
+        </div>
+    </div>
+	-->
+
+    <div class="form-group"><br><br>
+        <a href="declaration" class="button">Continue</a>
+    </div>
+
+  </main>
+
+{{/content}}
+
+{{/layout}}

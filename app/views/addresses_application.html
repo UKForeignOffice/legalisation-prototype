@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Addresses in application
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="" method="get" class="form">
+
+        <h1 class="heading-xlarge">
+          Return address details
+        </h1>
+
+        <p class="heading-medium">
+          Do you want to use one of the addresses saved in your account?
+        </p>
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              What do you want to get in touch about?
+            </legend>
+
+            <label for="radio-part-1" class="block-label">
+              <input type="radio" name="address-choice" value="address1">
+              <span class="heading-small">Yes, use this address</span><br>Mark Barlow,
+              118, Oakfield Road, London, N10 6LL, United Kingdom
+            </label>
+
+            <label for="radio-part-2" class="block-label">
+              <input type="radio" name="address-choice" value="address2">
+              <span class="heading-small">Yes, use this address</span><br>Mark Barlow, 
+              FCO, King Charles Street, London, SW1A 2AH, United Kingdom
+            </label>
+
+            <label for="radio-part-3" class="block-label" style="width:86.5%;">
+              <input type="radio" name="address-choice" value="address-enter">
+              <span class="heading-small">No, I'll enter a new address</span><br>
+              
+            </label>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <a href="addresses_sameordifferent" class="button">Continue</a>
+        </div>
+
+      </form>
+
+
+
+<!-- the current version -->
+
+<Br clear="all"><br><br>
+<hr>
+
+<h2 class="heading-medium">Current version on live</h2>
+
+        <p>
+          Do you want to use one of the addresses saved in your account?
+        </p>
+
+<div class="">
+    <form action="/use-saved-address-details" id="savedAddressDetailsForm" method="post">
+        <table class="summary-table" style="    width: 55%;">
+            
+            <tr><td>
+                    Mark Barlow<br>
+                    78<br>
+                    Oakfield Road<br>
+                    London<br>
+                    
+                    N14 6LS<br>
+                    United Kingdom<br>
+
+                    <label class="block-label " for="savedAddressID-62"> Use this address
+                        <input type="radio" id="savedAddressID-62" name="savedAddressID" value="62"  >
+                    </label>
+                </td>
+            </tr>
+
+            
+            <tr><td>
+                    Mark Barlow<br>
+                    Foreign &amp; Commonwealth Office<br>
+                    King Charles Street<br>
+                    London<br>
+                    
+                    SW1A 2AH<br>
+                    United Kingdom<br>
+
+                    <label class="block-label " for="savedAddressID-75"> Use this address
+                        <input type="radio" id="savedAddressID-75" name="savedAddressID" value="75"  >
+                    </label>
+                </td>
+            </tr>
+
+            
+            <tr><td>
+                    Mark Barlow<br>
+                    99<br>
+                    Calle Plaza<br>
+                    Plazapueblo<br>
+                    
+                    
+                    Belarus<br>
+
+                    <label class="block-label " for="savedAddressID-77"> Use this address
+                        <input type="radio" id="savedAddressID-77" name="savedAddressID" value="77"  >
+                    </label>
+                </td>
+            </tr>
+
+            
+            <tr>
+                <td style="border-bottom: none">
+                    <label class="block-label  " for="savedAddressID"> I'll enter a new address
+                        <input type="radio" id="savedAddressID" name="savedAddressID" value=-1  >
+                    </label>
+            </tr></td>
+        </table>
+
+
+        <input type="hidden" name="address_type" value="main">
+        <div class="form-group">
+            <input type="submit"  style="margin-top: 20px" class="button" value="Continue" />
+        </div>
+    </form>
+
+</div>
+
+
+<!-- end the current version -->
+
+
+
+    </div>
+  </div>
+</main>
+{% endblock %}

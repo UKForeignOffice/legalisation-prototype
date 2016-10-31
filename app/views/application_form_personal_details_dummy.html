@@ -1,0 +1,54 @@
+{{<layout}}
+
+{{$pageTitle}}
+Personal Details
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+    <p><a href="application_form_summary" class="back-to-previous">Back</a></p>
+
+
+    <h1 class="heading-xlarge">Your details</h1>
+
+    <div class="form-group">
+        <label for="first-name" class="form-label-bold">First name</label>
+        <!-- <span class="form-hint">First name of the person completing this application</span> -->
+        <input class="form-control" id="first-name" type="text" value="John">
+    </div>
+
+    <div class="form-group">
+        <label for="last-name"  class="form-label-bold">Last name</label>
+        <!-- <span class="form-hint">Last name of the person completing this application</span> -->
+        <input class="form-control" id="last-name" type="text" value="Smith">
+    </div>
+
+    <div class="form-group">
+        <label for="phone-number" class="form-label-bold">Telephone number</label>
+        <span class="form-hint">Can be landline or mobile</span>
+        <input type="tel" class="form-control phone" id="phone-number" value="03700 00 22 44">
+    </div>
+
+    <div class="form-group">
+        <label for="email" class="form-label-bold">Email address</label>
+        <span class="form-hint">We will send confirmation of your application here</span>
+        <input class="form-control" id="email" name="email" type="text" value="email@legalisation.gov.uk">
+        <div id="email_hint" style="display: none;"></div>
+    </div>
+    <div class="form-group" id="confirm_email_div">
+        <label for="email-confirm" class="form-label-bold">Confirm email address</label>
+        <div class="error_message" id="email_confirm_hint" style="display: none;"></div>
+        <input class="form-control" id="email-confirm" type="text" value="email@legalisation.gov.uk	">
+    </div>
+
+    <div class="form-group">
+        <a href="application_form_summary" class="button">Save and Return to Summary</a>
+    </div>
+
+  </main>
+
+{{/content}}
+
+{{/layout}}

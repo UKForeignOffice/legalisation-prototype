@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Addresses in account
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+        <h1 class="heading-xlarge">
+          Saved addresses
+        </h1>
+
+        <p>
+          Speed up your postal applications by saving return addresses you use regularly.
+        </p>
+
+ <div class="form-group">
+        <table id="review-personal-details" class="summary-table">
+            <tbody>
+            
+            <tr><td>
+                    Mark Barlow<br>
+                    78, Oakfield Road, London, N11 6XX, United Kingdom<br>
+                    <br>
+                    <a class="button-secondary button address-button" href="/api/user/edit-address?id=62">Edit</a> &nbsp;
+                    <a class="delete-address button-delete button address-button" href="/api/user/delete-address?id=62">Delete</a>
+                </td>
+            </tr>
+            
+            <tr><td>
+                    Mark Barlow<br>
+                    Foreign &amp; Commonwealth Office, King Charles Street, London, SW1A 2AH, United Kingdom<br>
+                    <br>
+                    <a class="button-secondary button address-button" href="/api/user/edit-address?id=75">Edit</a> &nbsp;
+                    <a class="delete-address button-delete button address-button" href="/api/user/delete-address?id=75">Delete</a>
+                </td>
+            </tr>
+            
+            <tr><td>
+                    Mark Barlow<br>
+                    99, Calle Plaza, Plazapueblo, Belarus<br>
+                    <br>
+                    <a class="button-secondary button address-button" href="/api/user/edit-address?id=77">Edit</a> &nbsp;
+                    <a class="delete-address button-delete button address-button" href="/api/user/delete-address?id=77">Delete</a>
+                </td>
+            </tr>
+            
+            </tbody></table>
+    </div>
+    <a class="button-secondary button" href="/api/user/add-address">Add an address</a>
+</div>
+
+
+
+
+<!-- the current version -->
+
+<Br clear="all"><br><br>
+<hr>
+
+<h2 class="heading-medium">Current version on live</h2>
+
+<p>Speed up your postal applications by saving return addresses you use regularly.</p>
+    
+    <div class="form-group">
+        <table id="review-personal-details" class="summary-table">
+            <tbody>
+            
+            <tr><td>
+                    Mark Barlow<br>
+                    78<br>
+                    Oakfield Road<br>
+                    London<br>
+                    
+                    N14 6LS<br>
+                    United Kingdom<br>
+
+                    <br>
+                    <a class="button-secondary button address-button" href="/api/user/edit-address?id=62">Edit</a> &nbsp;
+                    <a class="delete-address button-delete button address-button" href="/api/user/delete-address?id=62">Delete</a>
+                </td>
+            </tr>
+            
+            <tr><td>
+                    Mark Barlow<br>
+                    Foreign &amp; Commonwealth Office<br>
+                    King Charles Street<br>
+                    London<br>
+                    
+                    SW1A 2AH<br>
+                    United Kingdom<br>
+
+                    <br>
+                    <a class="button-secondary button address-button" href="/api/user/edit-address?id=75">Edit</a> &nbsp;
+                    <a class="delete-address button-delete button address-button" href="/api/user/delete-address?id=75">Delete</a>
+                </td>
+            </tr>
+            
+            <tr><td>
+                    Mark Barlow<br>
+                    99<br>
+                    Calle Plaza<br>
+                    Plazapueblo<br>
+                    
+                    
+                    Belarus<br>
+
+                    <br>
+                    <a class="button-secondary button address-button" href="/api/user/edit-address?id=77">Edit</a> &nbsp;
+                    <a class="delete-address button-delete button address-button" href="/api/user/delete-address?id=77">Delete</a>
+                </td>
+            </tr>
+            
+            </tbody></table>
+    </div>
+    <a class="button-secondary button" href="/api/user/add-address">Add an address</a>
+</div>
+
+
+<!-- end the current version -->
+
+
+
+    </div>
+  </div>
+</main>
+{% endblock %}
