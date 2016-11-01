@@ -28,3 +28,14 @@ $path: "/public/images/";
 }
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+
+input.number {
+    text-transform: none;
+    border: 1px solid #bbb;
+    margin: 0 0 1em;
+    padding: 0.5em;
+    width: 100px;
+    clear: both;
+    display: block;
+}
