@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Returning us your documents
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+<div class="column-two-thirds">
+<h1 class="heading-xlarge">Returning your documents</h1>
+
+
+<form action="/submit-postage-return-options" id="return_address" method="post">
+
+    <div class="form-group" id="legend_postage_available" >
+
+        
+        <fieldset>
+            <legend class="form-label-bold">
+                Select a delivery method for the return of your documents
+            </legend>
+
+            
+
+            
+            <label class="block-label" for="return_0" data-target="example-sae">
+                <input id="return_0"
+                       type="radio" 
+                       name="return_postage" value="7">
+                I&#39;ll include a pre-paid stamped addressed A4-sized envelope with my documents
+            </label>
+
+
+<!-- start the big reveal -->
+<div class="panel panel-border-narrow js-hidden" id="example-sae">
+
+              <h2 class="heading-medium">
+                Your other address
+              </h2>
+
+              <fieldset>
+
+                <legend class="visuallyhidden">
+                  Your other address
+                </legend>
+
+                <div class="form-group form-group-compound">
+                  <label class="form-label" for="address-line-1">Street</label>
+                  <input class="form-control" type="text" id="address-line-1">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label visuallyhidden" for="address-line-2">Street</label>
+                  <input class="form-control" type="text" id="address-line-2">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="address-town">Town or City</label>
+                  <input class="form-control form-control-1-4" type="text" id="address-town">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="address-postcode">Postcode</label>
+                  <input class="form-control form-control-1-8" type="text" id="address-postcode">
+                </div>
+
+              </fieldset>
+
+            </div>
+<!-- end the big reveal -->
+
+            
+            <label class="block-label" for="return_1">
+                <input id="return_1"
+                       type="radio" 
+                       name="return_postage" value="8">
+                Courier delivery (including to British Forces Post Office) - £5.50
+            </label>
+            
+
+        </fieldset>
+    </div>
+
+    <div class="form-group">
+        <input type="submit"  id='NextBtn' class="button" value="Continue" />
+    </div>
+
+</form>
+
+
+
+
+
+
+
+</div>
+</main>
+
+{% endblock %}
