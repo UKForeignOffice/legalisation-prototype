@@ -48,6 +48,11 @@ input.number {
 
 
 
+a[rel="external"]:after {
+    background-image: url(/public/images/external-link.png);
+    background-repeat: no-repeat;
+}
+
 
 
 
