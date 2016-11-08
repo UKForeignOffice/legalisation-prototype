@@ -68,6 +68,32 @@ input.number {
   box-shadow: 0 2px 0 #b5babe; }
 
 
+#doc_search_button {
+    width: 42px;
+    height: 38px;
+    text-indent: -5000px;
+    cursor: pointer;
+    color: #fff;
+    background: #0b0c0c url(/public/images/search-button.png) no-repeat 3px 50%;
+    margin-left: -10px;
+}
+
+
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 300px;
+  height: 24px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 24px;
+  border: 2px solid #ccc;
+  outline: none;
+  }
+
+.typeahead {
+  background-color: #fff; }
+
 
 // a[rel="external"]:after {
 //    background-image: url(/public/images/external-link.png);
