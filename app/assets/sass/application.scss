@@ -48,6 +48,23 @@ input.number {
 
 
 
+.button-secondary {
+  background-color: #dee0e2;
+  color: #0b0c0c;
+  box-shadow: 0 2px 0 #b5babe; }
+
+.button-secondary:visited {
+  background-color: #dee0e2;
+  color: #0b0c0c;
+  box-shadow: 0 2px 0 #b5babe; }
+
+.button-secondary:hover, .button-secondary:focus {
+  background-color: #d0d3d6;
+  color: #0b0c0c;
+  box-shadow: 0 2px 0 #b5babe; }
+
+
+
 // a[rel="external"]:after {
 //    background-image: url(/public/images/external-link.png);
 //    background-repeat: no-repeat;
