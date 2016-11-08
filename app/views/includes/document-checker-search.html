@@ -1,0 +1,39 @@
+<!-- Search field -->
+<form id="documentFilter" action="/select-documents" method="get">
+    <p>Find <span class="visually-hidden">your documents or click one of the top searches below</span> then select all of the documents you want to legalise</p>
+    
+
+  <div>
+    <div id="doc-seach-typeahead">
+
+        <label class="visually-hidden" for="doc_search_field">Document search</label>
+        <input
+            class="typeahead"
+            type="search"
+            id="doc_search_field"
+            value=""
+            name="searchTerm"
+            placeholder="Search for a document"
+            autocomplete="off"
+            role="combobox"
+            aria-autocomplete="list"
+            >
+        <input type="submit" id="doc_search_button" value="Search" class="button" />
+    </div>
+  </div>
+
+</form>
+
+<form action="/select-documents" method="post" class="document-search-top-searches" id="document-search-top-searches">
+
+    <div class="top-searches"><br>
+        <span>Top searches: </span>
+        <a href="?searchTerm=degree%20certificate"><span class="visually-hidden">search for</span> degree certificate</a>,
+        <a href="?searchTerm=birth%20certificate"><span class="visually-hidden">search for</span>birth certificate</a>,
+        <a href="?searchTerm=divorce%20document"><span class="visually-hidden">search for</span>divorce document</a>,
+        <a href="?searchTerm=court%20document"><span class="visually-hidden">search for</span>court document</a>,
+        <a href="?searchTerm=companies%20house%20document"><span class="visually-hidden">search for</span>Companies House document</a>,
+        <a href="?searchTerm=certificate%20of%20incorporation"><span class="visually-hidden">search for</span>certificate of incorporation</a>
+    </div>
+
+</form>
