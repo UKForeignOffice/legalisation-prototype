@@ -95,6 +95,113 @@ input.number {
   background-color: #fff; }
 
 
+
+a.remove {
+  color: #b10e1e !important; }
+
+.add-doc {
+  text-align: center;
+  font-weight: bold; }
+
+.add-doc a:hover {
+  cursor: pointer; }
+
+.filtering {
+  clear: left;
+  padding: 0; }
+
+span.selected-doc-list-doc-title {
+  float: left;
+  width: 100%;
+  font-weight: bold; }
+
+span.remove-doc-label {
+  float: right;
+  font-size: 17px;
+  bottom: -7px;
+  position: relative;
+  right: -8px; }
+
+label.selectDocNoJs {
+  width: 100%;
+  float: right; }
+
+label.selectDocNoJs input {
+  float: right;
+  width: 15px;
+  height: 15px; }
+
+input.nojs-btn {
+  margin: 13px 0 13px 0;
+  padding: 9px 17px;
+  font-size: 17px;
+  line-height: 22px;
+  vertical-align: middle;
+  background: lightgrey;
+  color: black;
+  float: right;
+  width: 100%; }
+
+label.remove-doc {
+  display: inline-block;
+  width: 100%;
+  line-height: 25px;
+  vertical-align: middle; }
+
+.remove-doc input {
+  position: relative;
+  bottom: -2px;
+  width: 15px;
+  height: 15px; }
+
+#doc-table {
+  table-layout: fixed;
+  margin-bottom: 30px;
+  outline: none; }
+  #doc-table thead th {
+    font-size: 20px; }
+  #doc-table td, #doc-table th {
+    width: 75%; }
+  #doc-table td:last-child, #doc-table th:last-child {
+    width: 25%; }
+  #doc-table td:last-child, #doc-table th:last-child {
+    text-align: left; }
+
+.actions {
+  width: 80px; }
+
+.remove_link {
+  color: #005ea5 !important;
+  text-decoration: underline;
+  background-color: white !important;
+  box-shadow: none;
+  font-size: 16px;
+  margin: 0px !important;
+  padding: 0px !important;
+  display: block; }
+
+.selected_Document {
+  width: 48%;
+  float: left;
+  border: 2px solid #dee0e2;
+  margin-left: -3px;
+  background-color: white;
+  padding: 7px 0 0 10px; }
+
+#selected_document_box2 {
+  width: 65%;
+  float: right;
+  margin-top: 20px;
+  margin-right: 13px;
+  padding: 6px;
+  background-color: #dee0e2; }
+
+#selected_document_box2 .container-head {
+  font-weight: bold;
+  padding: 6px; }
+
+
+
 // a[rel="external"]:after {
 //    background-image: url(/public/images/external-link.png);
 //    background-repeat: no-repeat;
