@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Legalisation prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+<h1 class="heading-xlarge" id="select-your-documents">Select all your documents</h1>
+
+{% include "includes/document-checker-search.html" %}
+
+
+<div class="filtering">
+
+<div class="filter-results main-content">
+
+    <p id="docs_selector" class="visually-hidden ">
+        Select all of the documents below you want legalised
+    </p>
+
+    <form id="documentAdder" action="/manual-add-docs" method="post">
+
+        <table id="doc-table" tabindex="0">
+            <caption hidden="" aria-hidden="false">Document search results</caption>
+            <thead>
+            <tr>
+                <th>Document</th>
+                <th class="add-doc">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+            <tr>
+                <td>
+                    <span class="doc-selector-doc-title">Birth certificate (UK)</span>
+                </td>
+                <td class="add-doc">
+                    
+                    <a id="add_201" onclick="return addLink(
+                            event,
+                            '201',
+                            '',
+                            'birth%20certificate',
+                            'Tue, 08 Nov 2016 17:17:14 GMT',
+                            'Birth certificate (UK)');" href="/add-document/201?searchTerm=birth%20certificate" class="add_text hidden">Select <span class="visually-hidden">Birth certificate (UK)</span></a>
+
+                    <a id="remove_201" onclick="return removeLink(
+                            event,
+                            '201',
+                            '',
+                            'birth%20certificate',
+                            'Tue, 08 Nov 2016 17:17:14 GMT',
+                            'Birth certificate (UK)');" href="/remove-document/201?searchTerm=birth%20certificate" class="remove_text ">Remove <span class="textindent">Birth certificate (UK) from your application</span></a>
+                </td>
+            </tr>
+            
+            </tbody>
+        </table>
+    </form>
+
+</div>
+
+
+
+
+</div>
+
+
+<!-- basket and continue section
+
+<div class="follow-scroll" id="shopping_basket_container">
+    <div id="shopping_basket" class="filter-form document-basket hide">
+ 
+        <table class="no-js-basket" id="basket-table">
+            <caption class="visually-hidden">Your selected documents</caption>
+            <thead>
+            <tr class="container-head">
+                <th>Selected documents</th>
+                <th> <span style="float:left;">Quantity <span id="selected-count-table1" aria-hidden="true">(undefined)</span></span></th>
+            </tr>
+            </thead>
+            <tbody>
+            
+            
+            </tbody>
+        </table>
+
+
+</div>
+
+
+</div>
+
+<form action="/confirm-documents" id="yourDocuments" method="post" class="column-two-thirds">
+    <div class="form-group">
+        <input type="submit"  id='NextBtn' class="button hide" value="Continue"  />
+
+    </div>
+</form>
+
+
+end basket and continue section -->
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
+
+
+
