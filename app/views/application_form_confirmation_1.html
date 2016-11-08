@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Confirmation
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
 
 <h1 class="heading-xlarge">Print your documents</h1>
     <div class="column-two-thirds">
@@ -163,6 +163,6 @@ Confirmation
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

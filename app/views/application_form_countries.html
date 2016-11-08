@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Document Details
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
     <p><a href="application_form_address" class="back-to-previous">Back</a></p>
 
     <h1 class="heading-xlarge">Number of documents</h1>
@@ -25,13 +25,13 @@ Document Details
                         <div class="col1">
                             <label for="otherCountriesNumber">Please enter the total number of documents you want to legalise</label>
                             <input type="number" id="otherCountriesNumber" name="otherCountriesNumber" value="" class="number"/>
-                            Each document costs £30. 
-                            
+                            Each document costs £30.
+
                             <!-- cost calculator -->
                             <h1 id="total-row" style="font-size: 24px;line-height: 1.25;font-weight: 700;text-transform: none;margin: 1.2em 0 0.4em 0;">Cost to legalise <span id="total"></span> documents: £<span id="cost"></span></h1>
 
                         </div>
-                       <!--  
+                       <!--
 					   <div class="col2">
                             <label for="otherCountries">Country name (optional)</label>
                             <div class="typeahead-container">
@@ -42,11 +42,11 @@ Document Details
                                 </div>
                             </div>
                         </div>
-						
+
                         <div id="remove-control">
                             &nbsp;
                         </div>
-						
+
 						-->
                     </div>
                 </div>
@@ -55,8 +55,8 @@ Document Details
 
             </fieldset>
         </form>
-    
-    <!-- This is redundant in simpler form we have now 
+
+    <!-- This is redundant in simpler form we have now
         <h1 id="total-row" style="font-size: 24px;line-height: 1.25;font-weight: 700;text-transform: none;margin: 1.2em 0 0.4em 0;">Total number of documents to be legalised: <span id="total">0</span></h1>
     -->
     </div>
@@ -67,8 +67,8 @@ Document Details
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+
 
 <script src="/public/javascripts/jquery-ui.js"></script>

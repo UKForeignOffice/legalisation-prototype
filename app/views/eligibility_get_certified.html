@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Application Type
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
 <p><a href="eligibility_is_certified" class="back-to-previous">Back</a></p>
 
 
@@ -19,8 +19,8 @@ Application Type
 
         <ul>
             <li>degree certificate or transcript (UK)</li>
-        </ul>	
-	
+        </ul>
+
         <!-- Certifying Documents -->
         <h3 class="heading-medium">Certifying documents</h3>
         <p>Certain documents must be certified in the UK by a solicitor or ‘notary public’ before they can be legalised.</p>
@@ -57,8 +57,8 @@ Application Type
             <input class="form-control" id="email" name="email" type="text">
             <div id="email_hint" style="display: none;"></div><a href="application_form_email_sent" class="button" style="margin-left:10px; margin-top: -4px;">Send</a>
         </div>
-        
-        
+
+
     </div>
 
     <div class="form-group">
@@ -67,6 +67,6 @@ Application Type
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

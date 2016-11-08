@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Personal Details
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
     <p><a href="application_form_summary" class="back-to-previous">Back</a></p>
 
 
@@ -49,6 +49,6 @@ Personal Details
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

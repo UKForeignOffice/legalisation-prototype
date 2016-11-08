@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Return Delivery
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
 
     <h1 class="heading-xlarge">Postage</h1>
     <p class="text">
@@ -68,6 +68,6 @@ Return Delivery
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Additional Information
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
 
     <h1 class="heading-xlarge">Additional information</h1>
 
@@ -29,7 +29,7 @@ Additional Information
         </fieldset>
     </form>
 
-	
+
 	        <div class="form-group">
              <h2 class="heading-small">Feedback</h2>
             <label class="block-label" for="checkbox-2">
@@ -37,7 +37,7 @@ Additional Information
                 I am happy to be contacted for feedback to help improve this service
             </label>
         </div>
-	
+
     <div class="form-group">
         <a href="application_form_summary" class="button">Save and Return to Summary</a>
         <p><a href="application_form_summary" class="example-back-link">Cancel</a></p>
@@ -45,6 +45,6 @@ Additional Information
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

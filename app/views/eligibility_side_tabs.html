@@ -2,16 +2,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Application Type
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
 
 
         <h1 class="heading-large">Check if documents can be legalised</h1>
@@ -421,8 +421,8 @@ Application Type
     </div>
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+
 
 <script src="/public/javascripts/jquery-ui.js"></script>

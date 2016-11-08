@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Address Details
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
     <p><a href="application_form_summary" class="link-back">Back</a></p>
 
     <h1 class="heading-xlarge">Return address details</h1>
@@ -137,7 +137,7 @@ Address Details
             </fieldset>
         </form>
     </div>
-    
+
 
     <div class="form-group">
         <a href="application_form_summary" class="button">Save and Return to Summary</a>
@@ -145,8 +145,8 @@ Address Details
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+
 
 <script src="/public/javascripts/jquery-ui.js"></script>

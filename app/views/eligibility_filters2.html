@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Document Check
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
 
     <h1 class="heading-xlarge">Select your documents</h1>
 
@@ -323,7 +323,7 @@ Document Check
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+
 <script src="/public/javascripts/jquery-ui.js"></script>

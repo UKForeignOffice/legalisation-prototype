@@ -1,20 +1,20 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Return Delivery
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
     <p><a href="application_form_sending_in" class="back-to-previous">Back</a></p>
 
     <h1 class="heading-xlarge">Returning your documents</h1>
     <p class="text">
         We will return your legalised documents and any supporting documentation by European courier. The courier cost is <span style="font-weight:bold;">£14.50</a>
-        
-    
+
+
     </p>
 
     <br/>
@@ -27,6 +27,6 @@ Return Delivery
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

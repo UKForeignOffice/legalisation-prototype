@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Application Type
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
     <p><a href="eligibility_filters3_nocategories" class="back-to-previous">Back</a></p>
 
 
@@ -56,6 +56,6 @@ Application Type
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

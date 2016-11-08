@@ -1,25 +1,25 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Document Check
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
     <p><a href="application_eligibility_skip" class="back-to-previous">Back</a></p>
 
     <h1 class="heading-xlarge">Select your documents</h1>
-   
-   
+
+
         <div class="filter-results column-two-thirds">
             <p>Select all of the documents you want legalised.</p>
-            
-            
-            
+
+
+
             <!-- search -->
-            
+
             <div class="inner-block" >
                 <!-- <div class="container-head">Search <a href="javascript:clearTableSelection()" class="link" style="float: right;font-weight: normal; font-size:16px;">Clear Results</a></div> -->
                 <div class="container">
@@ -30,13 +30,13 @@ Document Check
                                 <input class="submit" type="submit" value="Search">
                     </form>
                 </div>
-                </div>                        
-                                        
-            
+                </div>
+
+
             <!-- end search -->
-            
-            
-            
+
+
+
             <br><p>You have selected <span id="selected-count-table1" style="font-weight: bold">0</span> documents.</p>
 
            <table id="doc-table">
@@ -452,7 +452,7 @@ Document Check
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+
 <script src="/public/javascripts/jquery-ui.js"></script>

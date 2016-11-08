@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Document Details
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
 
     <h1 class="heading-xlarge">Document details</h1>
     <!-- <p class="text">
@@ -79,8 +79,8 @@ Document Details
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+
 
 <script src="/public/javascripts/jquery-ui.js"></script>

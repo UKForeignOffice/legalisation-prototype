@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Confirmation
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
 
     <div class="form-group column-two-thirds">
             <h1 class="heading-medium">We have sent the certification information to your.email@youremail.com </h1>
@@ -19,6 +19,6 @@ Confirmation
     </div>
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

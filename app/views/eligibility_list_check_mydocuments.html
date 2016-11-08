@@ -3,16 +3,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Document Eligibility
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
     <h1 class="heading-xlarge">Check if documents can be legalised</h1>
 
     <div class="article-container group">
@@ -964,6 +964,6 @@ Document Eligibility
     </div>
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

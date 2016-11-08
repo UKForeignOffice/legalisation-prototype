@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Payment
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
     <h1 class="heading-xlarge">Your payment details</h1>
     <!-- feel free to change this page to suit your needs -->
 
@@ -74,6 +74,6 @@ Payment
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

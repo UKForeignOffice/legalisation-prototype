@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Application Summary
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
     <p><a href="application_form_special" class="back-to-previous">Back</a></p>
 
 
@@ -128,7 +128,7 @@ Application Summary
         </tr>
         </tbody>
     </table>
-	
+
 
 	<!--
     <div class="notice" style="max-width: 30em;">
@@ -166,6 +166,6 @@ Application Summary
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

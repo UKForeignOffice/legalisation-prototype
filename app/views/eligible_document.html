@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Get a document legalised
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
     <h1 class="heading-xlarge">Your document is eligible</h1>
 
     <div class="article-container group">
@@ -28,6 +28,6 @@ Get a document legalised
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

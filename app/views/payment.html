@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Payment
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
     <p><a href="declaration" class="back-to-previous">Back</a></p>
 
     <h1 class="heading-xlarge">Payment (placeholder)</h1>
@@ -23,6 +23,6 @@ Payment
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Application Type
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
 
 
     <h1 class="heading-xlarge" style="margin-bottom: 10px;">Check if documents can be legalised</h1>
@@ -309,6 +309,6 @@ Application Type
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

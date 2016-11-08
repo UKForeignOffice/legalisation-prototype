@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 Return Delivery
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
     <p><a href="application_form_sending_in" class="back-to-previous">Back</a></p>
 
 
@@ -30,7 +30,7 @@ Return Delivery
         </label>
 
       <!--
-        
+
         <label class="block-label" for="radio-2">
             <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
             European courier - £14.50
@@ -78,6 +78,6 @@ Return Delivery
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

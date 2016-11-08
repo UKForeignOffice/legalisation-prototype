@@ -1,13 +1,13 @@
- {{<layout}}
+ {% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 How cookies are used on the legalisations service
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
-    {{>pagehead}}
+    {% include "includes/phase_banner_beta.html" %}
 
 
 
@@ -60,8 +60,8 @@ How cookies are used on the legalisations service
 
   </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+
 
 
