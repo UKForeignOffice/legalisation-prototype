@@ -202,6 +202,39 @@ label.remove-doc {
 
 
 
+.document-basket {
+  float: left !important;
+  clear: right;
+  margin: 10px 0 !important;
+  padding: 0 !important; }
+  @media (max-width: 640px) {
+    .document-basket {
+      width: 100%;
+      font-size: 15px; } }
+  @media (min-width: 641px) {
+    .document-basket {
+      padding: 0 15px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      font-size: 16px; } }
+  @media (min-width: 641px) and (min-width: 641px) {
+    .document-basket {
+      float: left;
+      width: 58.3333333333%; } }
+  @media (min-width: 769px) {
+    .document-basket {
+      padding: 0 15px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      font-size: inherit; } }
+  @media (min-width: 769px) and (min-width: 641px) {
+    .document-basket {
+      float: left;
+      width: 58.3333333333%; } }
+
+
 // a[rel="external"]:after {
 //    background-image: url(/public/images/external-link.png);
 //    background-repeat: no-repeat;
