@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Legalisation prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+
+<!-- start paste -->
+
+
+
+<h1 class="heading-xlarge" id="documents-checker-confirm">Confirm your document format</h1>
+
+    
+ <div id="birth-certificate-div" class="form-group nopaddingright ">
+        <fieldset>
+            <h2 class="heading-medium show">Birth certificate (UK)</h2>
+            <fieldset class="inline" role="radiogroup" aria-required="true">
+                <legend class="visuallyhidden">Confirm your birth certificate (UK) format</legend>
+                <div>
+                                     
+                    <p>Your birth certificate (UK) can be legalised.</p>
+                    
+
+                    <p>We can only accept the document in the following format. Please confirm that you will send us:</p>
+
+                              
+                    
+                    <label class="block-label" for="docid_201_c">
+                        <input data-doc-type="original" value="docid_201_0" id="docid_201_c" type="checkbox" name="docid_201_c">
+                        Your original birth certificate (UK)
+                    </label>           
+
+                </div>
+            </fieldset>
+        </fieldset>
+  </div>
+
+    <div id="degree-certificate-uk-div" class="form-group nopaddingright ">
+
+            <h2 class="heading-medium show">Degree certificate or transcript (UK)</h2>
+            <div class="form-group">
+            <fieldset>
+   
+                    <p>Your degree certificate or transcript (UK) can be legalised if it has been awarded by a <a target="_blank" href="https://www.gov.uk/check-a-university-is-officially-recognised">recognised body</a>.</p>
+                    
+
+                    <p>We accept the document in the following formats. Please confirm which one you will send:</p>
+
+                    
+                    <label class="block-label">
+                        <input id="copy" type="radio" name="doc" value="copy">
+                        A photocopy of your degree certificate or transcript (UK)
+                    </label>
+
+                    <label class="block-label">
+                        <input id="original" type="radio" name="doc" value="original">
+                        Your original degree certificate or transcript (UK)
+                    </label>
+                    
+
+
+
+            </fieldset>
+                </div>
+
+    </div>
+    
+
+    <div class="form-group">
+        <a href="check-documents-eligible" class="button">Continue</a>
+    </div>
+
+
+
+<!-- end paste -->
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
