@@ -26,8 +26,8 @@ router.get('/your-basic-details', function (req, res) {
 
   } else {
 
-    // if certified is any other value (or is missing) render the page requested
-    res.render('/your-basic-details');
+    // if certified is any other value (or is missing) render the page requested. No slash beforehand is essential to render
+    res.render('your-basic-details');
 
   }
 
