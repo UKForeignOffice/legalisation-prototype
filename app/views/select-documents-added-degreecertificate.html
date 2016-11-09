@@ -1,0 +1,161 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Legalisation prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+<h1 class="heading-xlarge" id="select-your-documents">Select all your documents</h1>
+
+{% include "includes/document-checker-search.html" %}
+
+
+<div class="filtering">
+
+<div class="filter-results main-content">
+<br>
+    <p id="docs_selector" class="visually-hidden ">
+        Select all of the documents below you want legalised
+    </p>
+
+    <form id="documentAdder" action="/manual-add-docs" method="post">
+
+        <table id="doc-table" tabindex="0">
+            <caption hidden="" aria-hidden="false">Document search results</caption>
+            <thead>
+            <tr>
+                <th>Document</th>
+                <th class="add-doc">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+            <tr>
+                <td>
+                    <span class="doc-selector-doc-title">Degree certificate or transcript (UK)</span>
+                </td>
+                <td class="add-doc">
+                    
+                    <a id="add_201" onclick="return addLink(
+                            event,
+                            '201',
+                            '',
+                            'birth%20certificate',
+                            'Tue, 08 Nov 2016 17:17:14 GMT',
+                            'Birth certificate (UK)');" href="/add-document/201?searchTerm=birth%20certificate" class="add_text hidden">Select</a>
+
+                    <a id="remove_201" onclick="return removeLink(
+                            event,
+                            '201',
+                            '',
+                            'birth%20certificate',
+                            'Tue, 08 Nov 2016 17:17:14 GMT',
+                            'Birth certificate (UK)');" href="select-documents-result-degreecertificate" class="remove_text">Remove</a>
+                </td>
+            </tr>
+            
+            </tbody>
+        </table>
+    </form>
+
+</div>
+
+
+
+
+</div>
+
+
+
+<!-- start basket -->
+
+<div class="follow-scroll" id="shopping_basket_container">
+    <div id="shopping_basket" class="filter-form document-basket hide">
+ 
+
+<table class="no-js-basket" id="basket-table">
+            <caption class="visually-hidden">Your selected documents</caption>
+            <thead>
+            <tr class="container-head">
+                <th>Selected documents</th>
+                <th> <span style="float:left;">Quantity <span id="selected-count-table1" aria-hidden="true">(1)</span></span></th>
+            </tr>
+            </thead>
+            <tbody>
+            
+            
+            <tr class="container" id="basket-container">
+
+                <td class="basket-doc-title">
+                    Birth certificate (UK)
+                    <a class="remove_link" id="remove_link_201" onclick="return removeLink(event,
+                               '201',
+                               '', 'birth certificate',
+                               '',
+                               'Birth certificate (UK)');" href="/select-documents-result-birthcertificate">
+                        Remove<span class="visually-hidden"> Birth certificate (UK)</span> </a>
+                </td>
+                <td class="quantity-col">
+                    <form id="manual-remove-doc" action="/manual-update-doc-count?source=" method="post">
+                        <label for="201" class="visually-hidden">Number of Birth certificate (UK)</label>
+                        <input type="number" min="1" max="999" value="1" name="201" id="201" class="basket_doc_count">
+                        <input type="hidden" value="birth certificate" name="searchTerm">
+                        <button type="submit" class="update-quantity-button js-hidden button-secondary button">Update</button>
+                    </form>
+                </td>
+            </tr>
+
+            <tr class="container" id="basket-container">
+
+                <td class="basket-doc-title">
+                    Degree certificate or transcript (UK)
+                    <a class="remove_link" id="remove_link_201" onclick="return removeLink(event,
+                               '201',
+                               '', 'birth certificate',
+                               '',
+                               'Birth certificate (UK)');" href="/select-documents-result-degreecertificate">
+                        Remove<span class="visually-hidden"> Degree certificate or transcript (UK)</span> </a>
+                </td>
+                <td class="quantity-col">
+                    <form id="manual-remove-doc" action="/manual-update-doc-count?source=" method="post">
+                        <label for="201" class="visually-hidden">Number of Birth certificate (UK)</label>
+                        <input type="number" min="1" max="999" value="1" name="201" id="201" class="basket_doc_count">
+                        <input type="hidden" value="birth certificate" name="searchTerm">
+                        <button type="submit" class="update-quantity-button js-hidden button-secondary button">Update</button>
+                    </form>
+                </td>
+            </tr>
+            
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
+
+<!-- and continue... -->
+
+    <p>
+      <a href="confirm-documents" rel="external" class="button" role="button">Continue</a>
+    </p>
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
+
+
+
