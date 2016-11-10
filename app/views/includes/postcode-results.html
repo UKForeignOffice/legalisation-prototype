@@ -1,0 +1,25 @@
+
+<script language="JavaScript">
+<!-- Script courtesy of http://www.web-source.net - Your Guide to Professional Web Site Design and Development
+
+function goto(form) { var index=form.address.selectedIndex
+if (form.address.options[index].value != "0") {
+location=form.address.options[index].value;}}
+
+//-->
+</script>
+
+<form id="select-address-form" method="post" action="/select-your-main-address">
+        <input type="hidden" name="full_name" value="m m">
+        <div class="" id="address-list-group">
+            <label class="form-label visuallyhidden" for="address-list-box">Pick an address</label>
+            <select class="form-control" aria-required="true" id="address-list-box" name="address" form="select-address-form" onchange="goto(this.form)"><option disabled="disabled" selected="selected">Pick an address</option><option value="your-main-address-uk-selected?number=1">1, Fletton Road, London</option><option value="your-main-address-uk-selected?number=2">2, Fletton Road, London</option><option value="your-main-address-uk-selected?number=3">3, Fletton Road, London</option><option value="your-main-address-uk-selected?number=4">4, Fletton Road, London</option><option value="your-main-address-uk-selected?number=5">5, Fletton Road, London</option><option value="your-main-address-uk-selected?number=6">6, Fletton Road, London</option><option value="your-main-address-uk-selected?number=7">7, Fletton Road, London</option><option value="your-main-address-uk-selected?number=8">8, Fletton Road, London</option><option value="your-main-address-uk-selected?number=9">9, Fletton Road, London</option><option value="your-main-address-uk-selected?number=10">10, Fletton Road, London</option><option value="your-main-address-uk-selected?number=11">11, Fletton Road, London</option><option value="your-main-address-uk-selected?number=12">12, Fletton Road, London</option><option value="your-main-address-uk-selected?number=13">13, Fletton Road, London</option><option value="your-main-address-uk-selected?number=14">14, Fletton Road, London</option><option value="your-main-address-uk-selected?number=15">15, Fletton Road, London</option><option value="your-main-address-uk-selected?number=16">16, Fletton Road, London</option><option value="your-main-address-uk-selected?number=17">17, Fletton Road, London</option><option value="your-main-address-uk-selected?number=18">18, Fletton Road, London</option><option value="your-main-address-uk-selected?number=19">19, Fletton Road, London</option><option value="your-main-address-uk-selected?number=20">20, Fletton Road, London</option><option value="your-main-address-uk-selected?number=22">22, Fletton Road, London</option><option value="your-main-address-uk-selected?number=24">24, Fletton Road, London</option><option value="your-main-address-uk-selected?number=26">26, Fletton Road, London</option></select>
+        </div>
+        <div id="select-address-button-div" class="js-hidden hide">
+            <button class="button find-address button-secondary" type="submit" id="select-address-button">Select Address</button>
+        </div>
+
+    </form>
+
+
+

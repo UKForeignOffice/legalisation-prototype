@@ -13,7 +13,89 @@
     <div class="column-two-thirds">
 
 
-to come...
+
+
+<h1 class="heading-xlarge">Your details</h1>
+
+
+<form action="/your-basic-details/confirm"
+      id="yourDetailsForm"
+      method="post">
+    <div class="form-group" id="legend_first_name">
+        <label for="first-name" class="form-label-bold">First name</label>
+        <fieldset>
+            <input class="form-control" id="first-name" type="text"  autocomplete="off" name="first_name" aria-required="true"  value="">
+        </fieldset>
+    </div>
+
+
+    <div class="form-group " id="legend_last_name">
+        <label for="last-name"  class="form-label-bold">Last name</label>
+        <fieldset>
+            <input class="form-control" id="last-name" autocomplete="off" type="text"  name="last_name" aria-required="true"  value="">
+        </fieldset>
+    </div>
+
+
+    <div class="form-group " id="legend_telephone" >
+        <label for="phone" class="form-label-bold">Telephone number</label>
+        <span class="form-hint">Landline or mobile number</span>
+        <fieldset>
+            <input type="tel" id="phone" class="form-control phone"  autocomplete="off" name="telephone" aria-required="true"  value="">
+        </fieldset>
+    </div>
+    <fieldset class="inline" style="margin-bottom: 20px">
+
+        <div  id="email-question">
+            <h2 class="form-label-bold">Do you have an email address?</h2>
+            <span class="error-message">
+                
+            </span>
+            <fieldset role="radiogroup" aria-required="true"  >
+
+                <label class="block-label " data-target="emails" for="radio-indent-1">
+                    <input id="radio-indent-1" type="radio" name="has_email" value="yes"   >
+                    Yes
+                </label>
+
+                <label class="block-label " for="radio-indent-2">
+                    <input id="radio-indent-2" type="radio" name="has_email" value="no"   >
+                    No
+                </label>
+            </fieldset>
+        </div>
+
+        <div class="panel panel-border-narrow js-hidden"   id="emails">
+            <div class="form-group ">
+                <label for="email" class="form-label-bold">Email address</label>
+                <span class="form-hint">We'll send confirmation of your application here</span>
+                <fieldset>
+                    <input class="form-control" id="email" autocomplete="off" type="text"   name="email" value="">
+                </fieldset>
+            </div>
+
+            <div class="form-group " id="legend_confirm_email">
+                <label for="email-confirm" class="form-label-bold">Confirm email address</label>
+                <fieldset>
+
+                    <input class="form-control" id="email-confirm" autocomplete="off" type="text" 
+                           name="confirm_email" value="">
+                </fieldset>
+            </div>
+
+
+        </div>
+    </fieldset>
+
+
+
+    <div class="form-group">
+        <a href="your-main-address-details" class="button">Continue</a>
+    </div>
+</form>
+
+
+
 
     </div>
   </div>

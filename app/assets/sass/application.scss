@@ -285,6 +285,144 @@ label.remove-doc {
     } }
 
 
+#find-postcode {
+  padding: 4px;
+  float: left; }
+
+  @media (max-width: 640px) {
+    #find-postcode {
+      width: 97%;
+      padding: 1%; } }
+
+  @media (min-width: 641px) {
+    #find-postcode {
+      padding: 0 15px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 4px; } }
+
+  @media (min-width: 641px) and (min-width: 641px) {
+    #find-postcode {
+      float: left;
+      width: 33.3333333333%; } }
+
+  @media (min-width: 769px) {
+    #find-postcode {
+      padding: 0 15px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 4px; } }
+
+  @media (min-width: 769px) and (min-width: 641px) {
+    #find-postcode {
+      float: left;
+    //  width: 25%; 
+    } }
+
+
+
+.find-address {
+  float: left; }
+
+  @media (max-width: 640px) {
+    .find-address {
+      margin: 10px 0 0 0;
+      width: 100%; } }
+
+  @media (min-width: 641px) {
+    .find-address {
+      margin: 0 0 0 10px; } }
+
+  @media (min-width: 769px) {
+    .find-address {
+      margin: 0 0 0 10px; } }
+
+
+a#address-manual {
+  float: left;
+  clear: left;
+  margin-top: 7px; }
+
+
+#address-list-box {
+  float: left; }
+
+#address-list-group,
+#address-list-group-alt {
+  height: 33px;
+  margin-bottom: 15px;
+  padding: 5px 0;
+  clear: both; }
+  @media (max-width: 640px) {
+    #address-list-group,
+    #address-list-group-alt {
+      width: 100%; } }
+  @media (min-width: 641px) {
+    #address-list-group,
+    #address-list-group-alt {
+      padding: 0 15px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 5px 0; } }
+  @media (min-width: 641px) and (min-width: 641px) {
+    #address-list-group,
+    #address-list-group-alt {
+      float: left;
+      width: 66.6666666667%; } }
+  @media (min-width: 769px) {
+    #address-list-group,
+    #address-list-group-alt {
+      padding: 0 15px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 5px 0; } }
+  @media (min-width: 769px) and (min-width: 641px) {
+    #address-list-group,
+    #address-list-group-alt {
+      float: left;
+      width: 66.6666666667%; } }
+
+  
+
+// This generic form-control might mess stuff up....
+
+
+.form-control {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 4px;
+  background-color: #fff;
+  border: 2px solid #6f777b;
+}
+
+@media (min-width: 641px) {
+  .form-control {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+@media (min-width: 641px) {
+  .form-control {
+    width: 50%;
+  }
+}
+
+
+
+
+
 // a[rel="external"]:after {
 //    background-image: url(/public/images/external-link.png);
 //    background-repeat: no-repeat;

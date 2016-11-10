@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Legalisation prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+
+<h1 class="heading-xlarge">Return address details</h1>
+
+
+<div class="form-group">
+   
+{% include "includes/postcode-lookup.html" %}
+
+{% include "includes/postcode-results.html" %}
+
+
+
+
+<div id="uk-address-form" class="">
+<br clear="all"><br>
+    <form id="address_form" method="post" action="">
+        <div class="form-group" id="address-details-group">
+
+            <div class="form-group " id="legend_full_name">
+                <label class="form-label-bold" for="full-name">Full name</label>
+                <span class="form-hint">Name of the person you would like the documents returned to</span>
+                <legend></legend>
+                <input class="form-control" id="full-name" type="text" name="full_name" aria-required="true" value="">
+
+            </div>
+            <div class="form-group" id="legend_organisation">
+                <label class="form-label-bold" for="organisation">Company or organisation (optional)</label>
+                <legend></legend>
+
+                <input class="form-control" id="organisation" type="text" name="organisation" aria-required="false" value="">
+            </div>
+
+            <div class="form-group" id="legend_house_name">
+                <label class="form-label-bold" for="house_name">House name or number</label>
+                <legend></legend>
+
+                <input class="form-control" id="house_name" type="text" name="house_name" aria-required="true" value="{{ number_display }}">
+            </div>
+
+            <div class="form-group" id="legend_street">
+                <label class="form-label-bold" for="street">Street</label>
+                <legend></legend>
+
+                <input class="form-control" type="text" id="street" name="street" aria-required="true" value="Fletton Road">
+            </div>
+
+            <div class="form-group" id="legend_town">
+                <label class="form-label-bold" for="town">Town</label>
+                <legend></legend>
+                <input class="form-control" type="text" id="town" name="town" aria-required="true" value="London">
+            </div>
+
+            <div class="form-group" id="legend_county">
+                <label class="form-label-bold" for="county">County <span>(optional)</span></label>
+                <legend> </legend>
+
+                <input class="form-control" type="text" id="county" name="county" value="">
+            </div>
+
+            <div class="form-group" id="legend_postcode">
+                <label class="form-label-bold" for="postcode">Postcode</label>
+                <legend></legend>
+
+                <input class="form-control form-control-1-4 postcode" id="postcode" name="postcode" type="text" aria-required="true" value="N11 2QL">
+            </div>
+
+            <input type="hidden" name="country" value="United Kingdom">
+            <input type="hidden" name="manual" value="false">
+            <input type="hidden" name="address_type" value="main">
+
+            <a href="alternative-address" class="button">Continue</a>
+
+        </div>
+
+
+    </form>
+</div>
+
+
+</div>
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
