@@ -48,37 +48,33 @@
     <div id="degree-certificate-uk-div" class="form-group nopaddingright ">
 
             <h2 class="heading-medium show">Degree certificate or transcript (UK)</h2>
+        <form action="check-documents-eligible" method="get" class="form">
             <div class="form-group">
             <fieldset>
    
                     <p>Your degree certificate or transcript (UK) can be legalised if it has been awarded by a <a target="_blank" href="https://www.gov.uk/check-a-university-is-officially-recognised">recognised body</a>.</p>
                     
-
                     <p>We accept the document in the following formats. Please confirm which one you will send:</p>
-
                     
                     <label class="block-label">
-                        <input id="copy" type="radio" name="doc" value="copy">
+                        <input id="copy" type="radio" name="docformat" value="copy">
                         A photocopy of your degree certificate or transcript (UK)
                     </label>
 
                     <label class="block-label">
-                        <input id="original" type="radio" name="doc" value="original">
+                        <input id="original" type="radio" name="docformat" value="original">
                         Your original degree certificate or transcript (UK)
                     </label>
-                    
-
-
-
+          
             </fieldset>
                 </div>
 
     </div>
     
 
-    <div class="form-group">
-        <a href="check-documents-eligible" class="button">Continue</a>
-    </div>
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
 
 
 
