@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Legalisation prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+
+<h1 class="heading-xlarge">Session test - data to post to next pages via session, includes several hidden inputs</h1>
+
+
+<div class="form-group">
+    <form id="is-uk" method="get" action="/session-test">
+
+            <div class="form-group ">
+                <fieldset class="inline" aria-required="true" role="radiogroup">
+                    <legend class="form-label-bold">Is the return address in the UK?</legend>
+                    
+                    <label class="block-label " for="radio-yes">
+                        <input id="radio-yes"  type="radio" name="is_uk" value="true" >
+                        Yes
+                    </label>
+                    <label class="block-label " for="radio-no">
+                        <input id="radio-no" type="radio" name="is_uk" value="false" >
+                        No
+                    </label>
+                </fieldset>
+            </div>
+
+    <div class="form-group" id="legend_first_name">
+        <label for="first-name" class="form-label-bold">First name</label>
+        <fieldset>
+            <input class="form-control" id="first-name" type="text"  autocomplete="off" name="first_name" aria-required="true"  value="">
+        </fieldset>
+    </div>
+
+
+    <div class="form-group " id="legend_last_name">
+        <label for="last-name"  class="form-label-bold">Last name</label>
+        <fieldset>
+            <input class="form-control" id="last-name" autocomplete="off" type="text"  name="last_name" aria-required="true"  value="">
+        </fieldset>
+    </div>
+
+
+            <div class="form-group">
+                <button class="button" type="submit">Continue</button>
+            </div>
+
+
+<input type="hidden" name="telephone" value ="909090">
+<input type="hidden" name="email" value ="session@session.com">
+
+
+
+
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
