@@ -101,6 +101,30 @@ router.get('/your-main-address-uk-selected', function (req, res) {
 });
 
 
+
+// Get your basic details
+
+
+
+router.get('/your-main-address-details', function (req, res) {
+
+// get the answer from the query string (?number=1) and set it as a variable so you can use it
+
+var first_name = req.query.first_name;
+var last_name = req.query.last_name;
+var telephone = req.query.telephone;
+var email = req.query.email;
+
+
+
+// now send that variable to the page which has variable tags xx_display
+   res.render('your-main-address-details', { 'first_name_display' : first_name, 'last_name_display' : last_name, 'telephone_display' : telephone, 'email_display' : email });
+
+});
+
+
+
+
 // Get the full address for alternative choice page
 
 router.get('/alternative-address', function (req, res) {
@@ -118,7 +142,7 @@ var country = req.query.country;
 
 
 // now send that variable to the page which has variable tags xx_display
-   res.render('alternative-address', { 'full_name_display' : full_name, 'organisation_display' : organisation, 'house_name_display' : house_name, 'street_display' : street, 'town_display' : town, 'county_display' : county, 'postcode_display' : postcode, 'country_display' : country,  });
+   res.render('alternative-address', { 'full_name_display' : full_name, 'organisation_display' : organisation, 'house_name_display' : house_name, 'street_display' : street, 'town_display' : town, 'county_display' : county, 'postcode_display' : postcode, 'country_display' : country });
 
 });
 
