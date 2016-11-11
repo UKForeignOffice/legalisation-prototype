@@ -84,7 +84,9 @@ router.get('/your-main-address-uk', function (req, res) {
 
 
 
-// Populate the number in the selected address, UK
+// DATA Capturing
+
+// Populate the number in the selected address, UK, to mimic selection from postcode lookup
 // Passing data into a page, dynamic version
 
 router.get('/your-main-address-uk-selected', function (req, res) {
@@ -97,6 +99,33 @@ router.get('/your-main-address-uk-selected', function (req, res) {
 
 
 });
+
+
+// Get the full address for alternative choice page
+
+router.get('/alternative-address', function (req, res) {
+
+// get the answer from the query string (?number=1) and set it as a variable so you can use it
+
+var full_name = req.query.full_name;
+var organisation = req.query.organisation;
+var house_name = req.query.house_name;
+var street = req.query.street;
+var town = req.query.town;
+var county = req.query.county;
+var postcode = req.query.postcode;
+var country = req.query.country;
+
+
+// now send that variable to the page which has variable tags xx_display
+   res.render('alternative-address', { 'full_name_display' : full_name, 'organisation_display' : organisation, 'house_name_display' : house_name, 'street_display' : street, 'town_display' : town, 'county_display' : county, 'postcode_display' : postcode, 'country_display' : country,  });
+
+});
+
+
+
+
+
 
 
 

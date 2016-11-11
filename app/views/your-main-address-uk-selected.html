@@ -28,7 +28,7 @@
 
 <div id="uk-address-form" class="">
 <br clear="all"><br>
-    <form id="address_form" method="post" action="">
+    <form id="address_form" method="get" action="alternative-address">
         <div class="form-group" id="address-details-group">
 
             <div class="form-group " id="legend_full_name">
@@ -79,11 +79,16 @@
                 <input class="form-control form-control-1-4 postcode" id="postcode" name="postcode" type="text" aria-required="true" value="N11 2QL">
             </div>
 
+ 
             <input type="hidden" name="country" value="United Kingdom">
             <input type="hidden" name="manual" value="false">
             <input type="hidden" name="address_type" value="main">
 
-            <a href="alternative-address" class="button">Continue</a>
+           
+            <div class="form-group">
+                <button class="button" type="submit">Continue</button>
+            </div>
+
 
         </div>
 

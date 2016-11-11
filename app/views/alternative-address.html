@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Legalisation prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+
+
+
+
+<h1 class="heading-xlarge">Return address if we can’t legalise your documents</h1>
+
+    <form method="get" action="" class="form">
+        <div class="form-group">
+
+            <fieldset	>
+                <legend class="form-label-bold">Where would you like us to post your documents if we’re unable to legalise them?</legend>
+
+                <label class="block-label "  for="radio-yes">
+                    <input id="radio-yes" type="radio" name="is_same" value="true"  >
+                    <strong>Same address as before</strong><br/>
+                    {{ full_name_display }}, 
+					{{ organisation_display }} 
+					{{ house_name_display }},
+					{{ street_display }}, 
+					{{ town_display }}, 
+					{{ county_display }} 
+					{{ postcode_display }}, 
+					{{ country_display }}
+                   
+                </label>
+                <label class="block-label " for="radio-no">
+                    <input id="radio-no" type="radio" name="is_same"  value="false" >
+                    <strong>Different address</strong>
+                </label>
+            </fieldset>
+        </div>
+
+
+        <div class="form-group">
+            <button class="button" type="submit">Continue</button>
+        </div>
+
+
+    </form>
+</div>
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
