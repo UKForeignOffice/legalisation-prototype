@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Legalisation prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+<h1 class="heading-xlarge">Number of documents</h1>
+
+<div class="form-group">
+
+    <form id="document-count-form" action="postage-send-options" method="get" >
+        <div class="form-group">
+            <div class="" id="legend_document_count">
+                <label class="form-label-bold" for="documentCount"> How many documents do you want to legalise?</label>
+               
+                <fieldset>
+                    <input type="number" aria-required="true" step="any"
+                           
+                           id="documentCount" name="documentCount"
+                           value=""
+                           class="number"/>
+                </fieldset>
+            </div>
+            <script language="Javascript">
+
+var documentCost=30;
+
+$('#total-row').removeClass('hide');
+$(document).ready(function(){
+    var sum = 0;
+    var totalCost = 0;
+    $('body').find('.number').each(function () {
+        sum += Number($(this).val());
+        totalCost = sum * documentCost;
+    });
+    $('#total').text(sum);
+    $('#cost').text('Â£'+totalCost);
+});
+$(document).on('change blur keydown paste input', '.number', function () {
+    var sum = 0;
+    var totalCost = 0;
+    $('body').find('.number').each(function () {
+        sum += Number($(this).val());
+        totalCost = sum * documentCost;
+    });
+    $('#total').text(sum);
+    var cost = totalCost <0 || sum % 1 !== 0|| sum >999 ? 'Invalid number of documents': 'Â£'+totalCost.toString();
+    $('#cost').text(cost);
+    $("#sr-notification-container").empty().text("Cost total updated, new total is "+cost);
+
+});
+
+
+            </script>
+
+            <p>Each document costs £30</p>
+            <p id="total-row" class="hide heading-small" >
+                Cost to legalise documents: <span id="cost">0</span></p>
+        </div>
+        <input type="submit"  id='NextBtn' class="button" value="Continue" />
+
+    </form>
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

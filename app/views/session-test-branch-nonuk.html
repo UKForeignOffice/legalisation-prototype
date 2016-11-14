@@ -12,23 +12,19 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-<h1 class="heading-xlarge">UK branch</h1>
+<h1 class="heading-xlarge">Non-UK branch</h1>
 
-Pulled from query string, stored in session, retrieved from session: <Br><br>
+From the session after a branch redirect, no query string present: <Br><br>
 
 
 First name? {{ first_name }} <br>
 Last name? {{ last_name }} <br>
-Tel? (hidden input) {{ telephone }} <br>
+Tel (hidden input)? {{ telephone }} <br>
 Email (hidden input)? {{ email }} <br>
 
-<br>
-<A href="session-test-next" class="Button">Next page</A>
 
     </div>
   </div>
 </main>
 
 {% endblock %}
-
-

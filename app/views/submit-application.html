@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Legalisation prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+
+
+<div style="margin-bottom: 30px;">
+    <div class="container-confirmed container govuk-box-highlight">
+        <h1 class="heading-large confirmed">
+            <i class="flaticon-checked21"></i>Total amount: £30.00 for 1 document
+            and return by pre-paid envelope
+        </h1>
+        <h2 class="heading-secondary confirmed">Application reference: <span style="font-weight: bold;">A-C-11-2222-3333-0102</span></h2>
+        <h2 class="heading-secondary confirmed">Email confirmation sent to <span>{{ email }}</span> </h2>
+    </div>
+</div>
+
+<div class="form-group">
+    <h2 class="heading-large nomargintop">What to do next</h2>
+</div>
+
+
+    <h2 class="heading-medium nomargintop">1. Print your cover sheet</h2>
+
+    <div class="form-group">
+        <a class="print link" href="/print-cover-sheet" target="_blank" id="print-button">Print cover sheet <span class="visually-hidden"> opens in new window</span></a>
+    </div>
+
+
+
+    <div class="form-group">
+      <details>
+        <summary><span class="summary">What to do if you don't have a printer</span></summary>
+        <div class="panel panel-border-narrow">
+            If you don't have a printer, write down the application reference number, your name and address and send this to us with your documents.
+             We've also sent you an email with the application reference and office address details, so you have the option to print that at another computer later. 
+        </div>
+      </details>
+    </div>
+
+
+    <div class="form-group">
+        <div class="heading-medium">2. Send your documents</div>
+
+        
+        <p>Please send your documents and cover sheet via <span class="bold-text">Royal Mail recorded delivery</span> to:</p>
+
+        <p><span>Legalisation Office<br/>
+            Foreign and Commonwealth Office<br/>
+            PO Box 6255<br/>
+            Milton Keynes<br/>
+            MK10 1XX
+        </span></p>
+        
+    </div>
+
+    <h2 class="heading-medium">How long it takes and when you'll be charged</h2>
+
+
+    <p>It normally takes 2 working days to process your documents, plus courier or postage time. It might take longer during Easter and summer.</p>
+
+    <p>We manage payment as follows:</p>
+    <ul class="list list-bullet">
+        <li>your payment card will be charged when we receive your documents </li>
+        <li>if we haven’t received your documents within 28 days, your payment will be  cancelled and the money returned to your account - you  will need to make another application </li>
+        <li>if we can’t legalise your documents, we’ll refund your payment, but will charge the courier fee to return your documents to you </li>
+    </ul>
+
+
+
+    <div class="form-group"><p class=""></br>
+            <a id="submit-application-feedback" href="http://www.smartsurvey.co.uk/s/2264M/" target="_blank">What did you think of this service? <span class="visually-hidden"> opens in new window</span></a> (takes 30 seconds)</p>
+        <p class=""></br><a href="/start">Start a new application</a></p>
+
+        
+    </div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

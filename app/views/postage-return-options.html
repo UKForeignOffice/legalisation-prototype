@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Returning us your documents
+  Legalisation prototype
 {% endblock %}
 
 {% block content %}
@@ -9,13 +9,20 @@
 <main id="content" role="main">
 {% include "includes/phase_banner_beta.html" %}
 
-<div class="column-two-thirds">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
 <h1 class="heading-xlarge">Returning your documents</h1>
 
 
-<form action="/submit-postage-return-options" id="return_address" method="post">
 
-    <div class="form-group" id="legend_postage_available" >
+
+
+
+<form action="/additional-information" id="return_address" method="get">
+
+    <div class="form-group " id="legend_postage_available" >
 
         
         <fieldset>
@@ -23,41 +30,23 @@
                 Select a delivery method for the return of your documents
             </legend>
 
-           
+            
+
+            
+            <label class="block-label" for="return_0">
+                <input id="return_0"
+                       type="radio" 
+                       name="return_postage" value="I will include a pre-paid stamped addressed A4-sized envelope with my documents">
+                I&#39;ll include a stamped addressed A4-sized envelope with my documents
+            </label>
+            
             <label class="block-label" for="return_1">
                 <input id="return_1"
                        type="radio" 
-                       name="return_postage" value="8">
+                       name="return_postage" value="Courier delivery (including to British Forces Post Office)">
                 Courier delivery (including to British Forces Post Office) - £5.50
             </label>
-             
-
             
-            <label class="block-label" for="return_0" data-target="example-sae">
-                <input id="return_0"
-                       type="radio" 
-                       name="return_postage" value="7">
-                I&#39;ll include a pre-paid stamped addressed A4-sized envelope with my documents
-            </label>
-
-
-<!-- start the big reveal  -->
-<div class="panel panel-border-narrow js-hidden" id="example-sae">
-
-              <h2 class="heading-medium">
-                Stamped addressed envelope instructions
-              </h2>
-              <ol class ="list list-number">
-              <li>Add stamps to an A4-sized envelope - enough to cover posting your documents back (<a href="https://business.help.royalmail.com/app/answers/detail/a_id/89/~/size-and-weight-formats-for-uk-mail" rel="external" target="_blank">the amount depends on the size and weight</a>) 
-              <li>Write your return address on the envelope
-              <li>When you post your documents to us, include this envelope with them - it's OK to fold it
-              </ol>
-
-            </div>
-<!-- end the big reveal -->
-
-            
-
 
         </fieldset>
     </div>
@@ -71,10 +60,10 @@
 
 
 
-
-
-
-</div>
+    </div>
+  </div>
 </main>
 
 {% endblock %}
+
+

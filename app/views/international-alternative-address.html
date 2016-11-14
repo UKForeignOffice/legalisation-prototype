@@ -16,10 +16,10 @@
 
 
 
-<h1 class="heading-xlarge">Return address details</h1>
+<h1 class="heading-xlarge">Return address if we can't legalise your documents</h1>
 
 
-<form id="address_form" method="get" action="alternative-address">
+<form id="address_form" method="get" action="how-many-documents">
     <div class="form-group" id="address-details-group">
 
         <div class="form-group  " id="legend_full_name">
@@ -34,7 +34,7 @@
         <div class="form-group  " id="legend_organisation">
             <label class="form-label-bold" for="organisation">Company or organisation (optional)</label>
 
-            <input class="form-control" id="organisation" type="text" name="organisation" aria-required="true" value="" >
+            <input class="form-control" id="organisation" type="text" name="organisation_alt" aria-required="true" value="" >
         </div>
 
         <div class="form-group  " id="legend_house_name">
@@ -42,7 +42,7 @@
             <fieldset>
 
             </fieldset>
-            <input class="form-control" id="house_name" type="text" name="house_name"  aria-required="true" value="" >
+            <input class="form-control" id="house_name" type="text" name="house_name_alt"  aria-required="true" value="" >
         </div>
 
         <div class="form-group  " id="legend_street">
@@ -50,14 +50,14 @@
             <fieldset>
 
             </fieldset>
-            <input class="form-control" type="text" id="street" name="street"  aria-required="true" value="" >
+            <input class="form-control" type="text" id="street" name="street_alt"  aria-required="true" value="" >
         </div>
 
         <div class="form-group  " id="legend_town">
             <label class="form-label-bold" for="town">Town</label>
             <fieldset>
 
-                <input class="form-control" type="text" id="town" name="town"  aria-required="true" value="" >
+                <input class="form-control" type="text" id="town" name="town_alt"  aria-required="true" value="" >
             </fieldset>
         </div>
 
@@ -66,14 +66,14 @@
             <fieldset>
 
             </fieldset>
-            <input class="form-control" type="text" id="county" name="county" value="">
+            <input class="form-control" type="text" id="county" name="county_alt" value="">
 
         </div>
         <div class="form-group  " id="legend_postcode">
             <label class="form-label-bold" for="postcode">Zip Code (optional)</label>
             <fieldset>
 
-                <input class="form-control form-control-1-4 postcode" id="postcode" name="postcode" type="text"  value="" >
+                <input class="form-control form-control-1-4 postcode" id="postcode" name="postcode_alt" type="text"  value="" >
             </fieldset>
         </div>
         <div class="form-group  " id="legend_country">
@@ -81,7 +81,7 @@
             <fieldset>
 
 
-                <select class="form-control" aria-required="true" id="country" form="address_form" name="country">
+                <select class="form-control" aria-required="true" id="country" form="address_form" name="country_alt">
                     <option selected disabled value="">Select country...</option>
                     
                     

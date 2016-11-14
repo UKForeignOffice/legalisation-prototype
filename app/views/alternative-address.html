@@ -13,13 +13,9 @@
     <div class="column-two-thirds">
 
 
-
-
-
-
 <h1 class="heading-xlarge">Return address if we can’t legalise your documents</h1>
 
-    <form method="get" action="" class="form">
+    <form method="get" action="same-or-different-router" class="form">
         <div class="form-group">
 
             <fieldset	>
@@ -28,14 +24,14 @@
                 <label class="block-label "  for="radio-yes">
                     <input id="radio-yes" type="radio" name="is_same" value="true"  >
                     <strong>Same address as before</strong><br/>
-                    {{ full_name_display }}, 
-					{{ organisation_display }} 
-					{{ house_name_display }},
-					{{ street_display }}, 
-					{{ town_display }}, 
-					{{ county_display }} 
-					{{ postcode_display }}, 
-					{{ country_display }}
+                    {{ full_name }}, 
+					{{ organisation }} 
+					{{ house_name }},
+					{{ street }}, 
+					{{ town }}, 
+					{{ county }} 
+					{{ postcode }}, 
+					{{ country }}
                    
                 </label>
                 <label class="block-label " for="radio-no">

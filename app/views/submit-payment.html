@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Legalisation prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+  <h1 class="heading-xlarge">Pay for your application</h1>
+
+    <div class="intro">
+
+        <p>You'll now be taken to Barclaycard SmartPay, where you can pay with Maestro, MasterCard or Visa.</p>
+
+        
+
+        <!-- PAYMENT FORM -->
+        <form action="submit-application" method="get">
+
+            <div class="form-group">
+                
+
+                <button type="submit" class="button">Pay on Barclaycard SmartPay</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

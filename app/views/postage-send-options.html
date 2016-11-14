@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Legalisation prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+<h1 class="heading-xlarge">Sending us your documents</h1>
+
+    
+
+<form id="send-options-form" action="postage-return-options" method="get">
+
+    <div class="form-group " id="legend_postage_available" >
+
+        <fieldset>
+            <legend class="form-label-bold">
+                Select how you’ll send your documents
+            </legend>
+            
+
+            <label class="block-label" for="send_0">
+                <input id="send_0" 
+                       aria-required="true"
+                       type="radio" 
+                       name="send_postage" value="I will post my documents from the UK">
+                I will post my documents from the UK
+            </label>
+
+            
+
+            <label class="block-label" for="send_1">
+                <input id="send_1" 
+                       aria-required="true"
+                       type="radio" 
+                       name="send_postage" value="I will use a courier to send my documents from the UK">
+                I will use a courier to send my documents from the UK
+            </label>
+
+            
+
+            <label class="block-label" for="send_2">
+                <input id="send_2" 
+                       aria-required="true"
+                       type="radio" 
+                       name="send_postage" value="I am overseas and will post or courier my documents to the UK">
+                I am overseas and will post or courier my documents to the UK
+            </label>
+
+            
+        </fieldset>
+    </div>
+
+
+    <div class="form-group">
+        <input type="submit"  id='NextBtn' class="button" value="Continue" />
+    </div>
+
+</form>
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

@@ -9,12 +9,12 @@ var session = require('express-session');
 // Initialising router - put at start
 router.use('*',  function(req, res, next) {
 
-  if (req.session.EXAMPLE){
-    console.log("There is session data" +  req.session.EXAMPLE );
+  if (req.session.first_name){
+    console.log("There is session data, e.g. first_name: " +  req.session.first_name );
     next();
   } else {
-    console.log("no vars");
-  req.session.EXAMPLE = "";
+    console.log("no vars in session");
+  req.session.first_name = "";
 
 
 // initialise other vars 
@@ -32,7 +32,7 @@ router.get('/index', function (req, res) {
 
 });
 
-// I link to this to wipe the prototype from any page and return back
+// Link to this to wipe the prototype from any page and return back
 // Quick reset to clear variables and remove any query string
 router.get('/reset', function(req, res){
 req.session.destroy();
@@ -44,15 +44,10 @@ req.session.destroy();
 
 
 
-
-
-
 // Route index page
 router.get('/', function (req, res) {
   res.render('index')
 })
-
-
 
 
 
@@ -62,7 +57,7 @@ module.exports = router
 
 
 
-// Branching
+// BASIC BRANCHING
 
 
 // Need or No Need to Certify branch
@@ -110,49 +105,19 @@ router.get('/your-basic-details', function (req, res) {
 });
 
 
-// Get your basic details data
 
-
-router.get('/your-main-address-details', function (req, res) {
-
-// get the answer from the query string (?number=1) and set it as a variable so you can use it
-
-var first_name = req.query.first_name;
-var last_name = req.query.last_name;
-var telephone = req.query.telephone;
-var email = req.query.email;
-
-
-
-// now send that variable to the page which has variable tags xx_display - in this case set as hidden inputs so I can reuse and pass it down to next page
-   res.render('your-main-address-details', { 'first_name_display' : first_name, 'last_name_display' : last_name, 'telephone_display' : telephone, 'email_display' : email });
-
-});
-
-
-
-
-
-// UK address or not branch
+// UK address or not branch, successful address
 
 router.get('/your-main-address-uk', function (req, res) {
 
   // get the answer from the query string (eg. ?certified=no)
   
-
-// need to repeat this lot here as using the variables in the redirect query string; normally would not need to repeat it all
-var first_name = req.query.first_name;
-var last_name = req.query.last_name;
-var telephone = req.query.telephone;
-var email = req.query.email;
-
-
   var is_uk = req.query.is_uk;
 
   if (is_uk == "false"){
 
     // redirect to the relevant page; you have to rebuild all the query string for redirects otherwise it gets lost
-    res.redirect("/international-main-address?first_name=" + first_name + "&last_name="  + last_name + "&telephone="  + telephone + "&email="  + email );
+    res.redirect("/international-main-address");
 
   } else {
 
@@ -165,51 +130,36 @@ var email = req.query.email;
 
 
 
-// DATA Capturing
-
-// Populate the number in the selected address, UK, to mimic selection from postcode lookup
-// Passing data into a page, dynamic version
-
-router.get('/your-main-address-uk-selected', function (req, res) {
-
-// get the answer from the query string (?number=1) and set it as a variable so you can use it
-  var number = req.query.number;
-
-// now send that variable to the page which has variable tags for number_display
-  res.render('your-main-address-uk-selected', { 'number_display' : number });
 
 
-});
+// UK address or not branch, unsuccessful return address
 
+router.get('/your-alternative-address-uk', function (req, res) {
 
+  // get the answer from the query string (eg. ?certified=no)
+  
+  var is_uk = req.query.is_uk;
 
+  if (is_uk == "false"){
 
-// Get the full address for alternative choice page
+    // redirect to the relevant page; you have to rebuild all the query string for redirects otherwise it gets lost
+    res.redirect("/international-alternative-address");
 
-router.get('/alternative-address', function (req, res) {
+  } else {
 
-// get the answer from the query string (?number=1) and set it as a variable so you can use it
+    // if any other value (or is missing) render the page requested. No slash beforehand is essential to render
+    res.render('your-alternative-address-uk');
 
-var full_name = req.query.full_name;
-var organisation = req.query.organisation;
-var house_name = req.query.house_name;
-var street = req.query.street;
-var town = req.query.town;
-var county = req.query.county;
-var postcode = req.query.postcode;
-var country = req.query.country;
-
-
-// now send that variable to the page which has variable tags xx_display
-   res.render('alternative-address', { 'full_name_display' : full_name, 'organisation_display' : organisation, 'house_name_display' : house_name, 'street_display' : street, 'town_display' : town, 'county_display' : county, 'postcode_display' : postcode, 'country_display' : country });
+  }
 
 });
 
 
+// END BASIC BRANCHING
 
 
 
-// Try this session version instead - for session test files
+// START SESSION TEST FILES
 
 router.get('/session-test', function(req, res, next){
   for (var propName in req.query) {
@@ -234,7 +184,19 @@ router.get('/session-test', function(req, res, next){
 
   if (is_uk == "false"){
 
-    res.redirect("/international-main-address");
+    res.redirect("/session-test-branch-nonuk");
+
+    router.get('/session-test-branch-nonuk', function(req, res, next){
+
+  res.render('session-test-branch-nonuk', {
+    'first_name'  : req.session.first_name,
+    'last_name'   : req.session.last_name,
+    'telephone'   : req.session.telephone,
+    'email'       : req.session.email,
+
+  });
+});
+
 
   } else {
 
@@ -267,15 +229,315 @@ router.get('/session-test', function(req, res, next){
 router.get('/session-test-next', function(req, res, next){
 
   res.render('session-test-next', {
-    'first_name'     : req.session.first_name,
+    'first_name'  : req.session.first_name,
     'last_name'   : req.session.last_name,
     'telephone'   : req.session.telephone,
-    'email'   : req.session.email,
+    'email'       : req.session.email,
 
   });
 });
 
 
+// END SESSION TEST FILES
 
+
+
+
+// START SESSION VERSION OF STANDARD APPLICATION
+
+
+// Capture user details
+// 1. Store the data in session
+router.get('/your-main-address-details', function(req, res, next){
+  for (var propName in req.query) {
+    if (req.query.hasOwnProperty(propName)) {
+      req.session[propName] = req.query[propName];
+    }
+  }
+
+
+// 2. Render the page, with data variables if needed
+ res.render('your-main-address-details');
+
+});
+
+
+
+// Capture house number selected in dropdown
+// 1. Store the data in session
+router.get('/your-main-address-uk-selected', function(req, res, next){
+  for (var propName in req.query) {
+    if (req.query.hasOwnProperty(propName)) {
+      req.session[propName] = req.query[propName];
+    }
+  }
+
+
+// 2. Render the page, with any data variables if needed
+ res.render('your-main-address-uk-selected', {
+    'number'     : req.session.number,
+    'first_name' : req.session.first_name,
+    'last_name'  : req.session.last_name
+  });
+
+});
+
+
+// Get name into the manual address entry option too
+router.get('/your-main-address-manual', function(req, res, next){
+
+  res.render('your-main-address-manual', {
+    'first_name'  : req.session.first_name,
+    'last_name'   : req.session.last_name
+  });
+});
+
+
+
+// Get name into the international address entry option too
+router.get('/international-main-address', function(req, res, next){
+
+  res.render('international-main-address', {
+    'first_name'  : req.session.first_name,
+    'last_name'   : req.session.last_name
+  });
+});
+
+
+
+// Capture full address submitted,  the standard successful address
+// 1. Store the data in session
+router.get('/alternative-address', function(req, res, next){
+  for (var propName in req.query) {
+    if (req.query.hasOwnProperty(propName)) {
+      req.session[propName] = req.query[propName];
+    }
+  }
+
+
+// 2. Render the page, with data variables if needed
+ res.render('alternative-address', {
+    'full_name'     : req.session.full_name,
+    'organisation'  : req.session.organisation,
+    'house_name'    : req.session.house_name,
+    'street'        : req.session.street,
+    'town'          : req.session.town,
+    'county'        : req.session.county,
+    'postcode'      : req.session.postcode,
+    'country'       : req.session.country
+  });
+
+});
+
+
+// ALTERNATE, UNSUCCESSFUL RETURN ADDRESS
+// Capture house number selected in dropdown, unsuccessful return address
+// 1. Store the data in session
+router.get('/your-alternative-address-uk-selected', function(req, res, next){
+  for (var propName in req.query) {
+    if (req.query.hasOwnProperty(propName)) {
+      req.session[propName] = req.query[propName];
+    }
+  }
+
+
+// 2. Render the page, with any data variables if needed
+ res.render('your-alternative-address-uk-selected', {
+    'number'     : req.session.number,
+    'first_name' : req.session.first_name,
+    'last_name'  : req.session.last_name
+  });
+
+});
+
+
+// Get name into the manual address entry option too
+router.get('/your-alternative-address-manual', function(req, res, next){
+
+  res.render('your-alternative-address-manual', {
+    'first_name'  : req.session.first_name,
+    'last_name'   : req.session.last_name
+  });
+});
+
+
+
+// Get name into the international address entry option too
+router.get('/international-alternative-address', function(req, res, next){
+
+  res.render('international-alternative-address', {
+    'first_name'  : req.session.first_name,
+    'last_name'   : req.session.last_name
+  });
+});
+
+
+
+// Combo of data capture and branching, at point of same or different address question
+// 1. Store the data in session - this one is just getting the is_same value to use as redirector and for summary page later
+router.get('/same-or-different-router', function(req, res, next){
+  for (var propName in req.query) {
+    if (req.query.hasOwnProperty(propName)) {
+      req.session[propName] = req.query[propName];
+
+    }
+  }
+
+// 2. Do branching
+
+  var is_same = req.session.is_same;
+
+  if (is_same == "false"){
+
+    res.redirect("/your-alternative-address-details");
+
+
+  } else {
+
+    // if any other value (or is missing) render the page requested. No slash beforehand is essential to render
+    res.render('how-many-documents');
+
+  }
+
+
+});
+
+
+
+// Need to also grab the alternate address details which are posted to this page via alternative address route
+router.get('/how-many-documents', function(req, res, next){
+  for (var propName in req.query) {
+    if (req.query.hasOwnProperty(propName)) {
+      req.session[propName] = req.query[propName];
+    }
+  }
+
+    res.render('how-many-documents');
+
+});
+
+// Capture document number for later, documentCount, posted to this page
+router.get('/postage-send-options', function(req, res, next){
+  for (var propName in req.query) {
+    if (req.query.hasOwnProperty(propName)) {
+      req.session[propName] = req.query[propName];
+    }
+  }
+
+    res.render('postage-send-options');
+
+});
+
+
+
+// Capture send options for later, send_postage, posted to this page
+router.get('/postage-return-options', function(req, res, next){
+  for (var propName in req.query) {
+    if (req.query.hasOwnProperty(propName)) {
+      req.session[propName] = req.query[propName];
+    }
+  }
+
+    res.render('postage-return-options');
+
+});
+
+
+// Capture return options for later, return_postage, posted to this page
+router.get('/additional-information', function(req, res, next){
+  for (var propName in req.query) {
+    if (req.query.hasOwnProperty(propName)) {
+      req.session[propName] = req.query[propName];
+    }
+  }
+
+    res.render('additional-information');
+
+});
+
+
+
+
+// The Big Daddy - review page
+// 1. Store the data in session - a couple of fields from additional info to capture
+router.get('/review-summary', function(req, res, next){
+  for (var propName in req.query) {
+    if (req.query.hasOwnProperty(propName)) {
+      req.session[propName] = req.query[propName];
+    }
+  }
+
+
+// this deals with whether alt address is same or not, and replaces accordingly
+  if (req.session.is_same == "true"){
+
+    var same_address = "Same as above";
+
+  }   else {
+
+    // var same_address = req.session.full_name_alt + ", <br>" + req.session.organisation_alt + req.session.house_name_alt + ", <br>" + req.session.street_alt + ", <br>" + req.session.town_alt + ", <br>" + req.session.county_alt + req.session.postcode_alt + ", <br>" + req.session.country_alt;
+
+  var same_address = "{% include \"includes/phase_banner_beta.html\" %}";
+
+
+  }
+
+
+
+
+
+// 2. Render the page, with any data variables if needed
+ res.render('review-summary', {
+    'first_name'  : req.session.first_name,
+    'last_name'   : req.session.last_name,
+    'telephone'   : req.session.telephone,
+    'email'       : req.session.email,
+    'full_name'     : req.session.full_name,
+    'organisation'  : req.session.organisation,
+    'house_name'    : req.session.house_name,
+    'street'        : req.session.street,
+    'town'          : req.session.town,
+    'county'        : req.session.county,
+    'postcode'      : req.session.postcode,
+    'country'       : req.session.country,
+    'documentCount'     : req.session.documentCount,
+    'send_postage'      : req.session.send_postage,
+    'return_postage'    : req.session.return_postage,
+    'customer_ref'      : req.session.customer_ref,
+    'feedback_consent'  : req.session.feedback_consent,
+    'same_address'      : same_address,
+    // the following may become redundant now given above if/else for same address, but for completions sake to have one list with all:
+    'full_name_alt'     : req.session.full_name_alt,
+    'organisation_alt'  : req.session.organisation_alt,
+    'house_name_alt'    : req.session.house_name_alt,
+    'street_alt'        : req.session.street_alt,
+    'town_alt'          : req.session.town_alt,
+    'county_alt'        : req.session.county_alt,
+    'postcode_alt'      : req.session.postcode_alt,
+    'country_alt'       : req.session.country_alt,
+
+  });
+
+});
+
+
+
+
+// Get email into the confirmation page 
+router.get('/submit-application', function(req, res, next){
+
+  res.render('submit-application', {
+    'email'  : req.session.email
+  });
+});
+
+
+
+
+// TODO
+// Review summary - alt address logic, get that include working
+// Postage address at end driven by send choice
+// Postage options driven by country
+// calculation for review summary page using number example in sessions test
 
 

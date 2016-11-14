@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Legalisation prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+<h1 class="heading-xlarge" id="additional-information">Additional information</h1>
+
+
+
+<form action="/review-summary" id="additional_info" method="get">
+    <div class="form-group ">
+        <label class="form-label-bold" for="customer_ref">Your reference (optional)</label>
+        <span class="form-hint">If you have your own internal reference number you can enter it here</span>
+        <fieldset class="inline" id="legend_customer_ref">
+            <input class="form-control" id="customer_ref" value="" name="customer_ref" type="text" autocomplete="off" >
+        </fieldset>
+    </div>
+    
+    <div class="form-group  ">
+        <h2 class="form-label-bold">Feedback</h2>
+        <p class="text">Can we contact you for feedback to help improve this service? For more information see the <a href="/terms-and-conditions" target="_blank">privacy policy<span class="visually-hidden"> opens in new window</span></a>.</p>
+        <fieldset class="inline" aria-required="true" role="radiogroup">
+
+            <label class="block-label " for="radio-feedback-yes" >
+                <input id="radio-feedback-yes"  type="radio"  name="feedback_consent" value=true
+                       aria-required="true"
+                       >
+                Yes
+            </label>
+            <label class="block-label " for="radio-feedback-no">
+                <input id="radio-feedback-no"  type="radio" name="feedback_consent" value=false
+                       aria-required="true"
+                       >
+                No
+            </label>
+        </fieldset>
+    </div>
+   
+    
+    <div class="form-group">
+        <input type="submit"  id='NextBtn' class="button" value="Continue" />
+    </div>
+</form>
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
+

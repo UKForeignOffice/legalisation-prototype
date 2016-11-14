@@ -12,15 +12,21 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-<h1 class="heading-xlarge">UK branch</h1>
-
-From the session, no query string present: <Br><br>
 
 
-First name? {{ first_name }} <br>
-Last name? {{ last_name }} <br>
-Tel (hidden input)? {{ telephone }} <br>
-Email (hidden input)? {{ email }} <br>
+<h1 class="heading-xlarge">Return address if we can't legalise your documents</h1>
+
+
+<div class="form-group">
+   
+{% include "includes/postcode-alternate-lookup.html" %}
+
+
+
+</div>
+
+
+
 
 
     </div>
