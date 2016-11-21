@@ -59,8 +59,15 @@
             <td id="summary-address1" class="summary-table-cell-content">
                 <span class="mobile-format">
                     {{ full_name }}, <br>
-                    {{ organisation }} {{ house_name }}, <br>
-					{{ street }}, <br>
+                    
+                    {%  if organisation == ""  %} 
+ 
+                    {% else %}
+
+                    {{ organisation }}, <br>
+
+                    {% endif %}
+                    {{ house_name }} {{ street }}, <br>
 					{{ town }}, <br>
 					{{ county }} {{ postcode }}, <br>
 					{{ country }}

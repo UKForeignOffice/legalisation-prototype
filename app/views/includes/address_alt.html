@@ -1,6 +1,12 @@
 {{ full_name_alt }}, <br>
-{{ organisation_alt }} {{ house_name_alt }}, <br>
-{{ street_alt }}, <br>
+    {%  if organisation_alt == ""  %} 
+ 
+    {% else %}
+
+    {{ organisation_alt }}, <br>
+
+    {% endif %}
+{{ house_name_alt }} {{ street_alt }}, <br>
 {{ town_alt }}, <br>
 {{ county_alt }} {{ postcode_alt }}, <br>
 {{ country_alt }}
