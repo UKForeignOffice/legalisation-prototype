@@ -468,6 +468,11 @@ router.get('/review-summary', function(req, res, next){
   }
 
 
+// Try this way of setting address_same to be used in in-page logic
+// if (req.session.is_same == "true"){
+//  req.session.address_same = "Set";
+//  } 
+
 
 
 
@@ -491,7 +496,7 @@ router.get('/review-summary', function(req, res, next){
     'customer_ref'      : req.session.customer_ref,
     'feedback_consent'  : req.session.feedback_consent,
     'is_same'      : req.session.is_same,
-    // the following may become redundant now given in-page if/else for same address, but for completions sake to have one list with all:
+   // 'address_same' : req.session.address_same,
     'full_name_alt'     : req.session.full_name_alt,
     'organisation_alt'  : req.session.organisation_alt,
     'house_name_alt'    : req.session.house_name_alt,
