@@ -134,7 +134,20 @@
         
         <tr>
             <td class="summary-table-cell-label summary-label">Your reference</td>
-            <td id="summary-ref" class="summary-table-cell-content"><span class="mobile-format">{{ customer_ref }}</span></td>
+            <td id="summary-ref" class="summary-table-cell-content"><span class="mobile-format">
+
+            {%  if customer_ref == ""  %} None provided
+ 
+            {% else %}
+
+            {{ customer_ref }}
+
+            {% endif %}
+
+
+
+
+            </span></td>
             <td class="summary-table-cell-link">
                 <a class="summary_change_links" href="/update-additional-information">Change<span class="visually-hidden"> your application reference number</span></a>
             </td>
