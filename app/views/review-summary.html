@@ -28,7 +28,17 @@
         </tr>
         <tr>
             <td class="summary-table-cell-label summary-label">Email</td>
-            <td id="summary-email" class="summary-table-cell-content"><span class="mobile-format">{{ email }}</span></td>
+            <td id="summary-email" class="summary-table-cell-content"><span class="mobile-format">
+
+            {%  if email == ""  %} None provided
+ 
+            {% else %}
+
+            {{ email }}
+
+            {% endif %}
+
+            </span></td>
             <td class="summary-table-cell-link"><a class="summary_change_links" href="/update-your-basic-details">Change<span class="visually-hidden"> your email</span></a></td>
         </tr>
         <tr>

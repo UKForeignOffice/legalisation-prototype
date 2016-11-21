@@ -458,21 +458,32 @@ router.get('/additional-information', function(req, res, next){
 
 
 
+// Build the alt address include for review summary page, if needed
+router.get('/includes/address_alt', function(req, res, next){
+
+  res.render('includes/address_alt', {
+    'full_name_alt'     : req.session.full_name_alt,
+    'organisation_alt'  : req.session.organisation_alt,
+    'house_name_alt'    : req.session.house_name_alt,
+    'street_alt'        : req.session.street_alt,
+    'town_alt'          : req.session.town_alt,
+    'county_alt'        : req.session.county_alt,
+    'postcode_alt'      : req.session.postcode_alt,
+    'country_alt'       : req.session.country_alt
+  });
+});
+
+
+
+
 // The Big Daddy - review page
-// 1. Store the data in session - a couple of fields from additional info to capture
+// 1. Store the data in session - a couple of extra fields from additional info to capture
 router.get('/review-summary', function(req, res, next){
   for (var propName in req.query) {
     if (req.query.hasOwnProperty(propName)) {
       req.session[propName] = req.query[propName];
     }
   }
-
-
-// Try this way of setting address_same to be used in in-page logic
-// if (req.session.is_same == "true"){
-//  req.session.address_same = "Set";
-//  } 
-
 
 
 
@@ -496,7 +507,6 @@ router.get('/review-summary', function(req, res, next){
     'customer_ref'      : req.session.customer_ref,
     'feedback_consent'  : req.session.feedback_consent,
     'is_same'      : req.session.is_same,
-   // 'address_same' : req.session.address_same,
     'full_name_alt'     : req.session.full_name_alt,
     'organisation_alt'  : req.session.organisation_alt,
     'house_name_alt'    : req.session.house_name_alt,
