@@ -468,21 +468,6 @@ router.get('/review-summary', function(req, res, next){
   }
 
 
-// this deals with whether alt address is same or not, and replaces accordingly
-  if (req.session.is_same == "true"){
-
-    var same_address = "Same as above";
-
-  }   else {
-
-    // var same_address = req.session.full_name_alt + ", <br>" + req.session.organisation_alt + req.session.house_name_alt + ", <br>" + req.session.street_alt + ", <br>" + req.session.town_alt + ", <br>" + req.session.county_alt + req.session.postcode_alt + ", <br>" + req.session.country_alt;
-
-  var same_address = "{% include \"includes/phase_banner_beta.html\" %}";
-
-
-  }
-
-
 
 
 
@@ -505,8 +490,8 @@ router.get('/review-summary', function(req, res, next){
     'return_postage'    : req.session.return_postage,
     'customer_ref'      : req.session.customer_ref,
     'feedback_consent'  : req.session.feedback_consent,
-    'same_address'      : same_address,
-    // the following may become redundant now given above if/else for same address, but for completions sake to have one list with all:
+    'is_same'      : req.session.is_same,
+    // the following may become redundant now given in-page if/else for same address, but for completions sake to have one list with all:
     'full_name_alt'     : req.session.full_name_alt,
     'organisation_alt'  : req.session.organisation_alt,
     'house_name_alt'    : req.session.house_name_alt,

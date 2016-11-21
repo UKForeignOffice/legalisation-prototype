@@ -62,7 +62,18 @@
             <td class="summary-table-cell-label summary-label" >Return address if we can't legalise your documents
 
                 
-            <td id="summary-address2" class="summary-table-cell-content" ><span class="mobile-format">{{ same_address }}</span></td>
+            <td id="summary-address2" class="summary-table-cell-content" ><span class="mobile-format">
+                
+            {%  if is_same  %} "same as above"
+ 
+            {% else %}
+
+            {% include "includes/address_alt.html" %}
+
+            {% endif %}
+
+
+            </span></td>
             
             <td class="summary-table-cell-link" ><a class="summary_change_links" href="/change-your-address-details?address_type=alternative">Change<span class="visually-hidden"> your unsuccessful legalisation return address</span></a></td>
         </tr>
