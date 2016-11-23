@@ -424,7 +424,10 @@ router.get('/postage-send-options', function(req, res, next){
     }
   }
 
-    res.render('postage-send-options');
+// Need this for in-page logic about send options and pricing
+    res.render('postage-send-options', {
+      'country'        : req.session.country,
+        });
 
 });
 
