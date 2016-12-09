@@ -489,6 +489,9 @@ router.get('/review-summary', function(req, res, next){
   }
 
 
+var documentscost = req.session.documentCount * 30;
+req.session.documentscost = documentscost;
+
 
 // 2. Render the page, with any data variables if needed
  res.render('review-summary', {
@@ -505,6 +508,7 @@ router.get('/review-summary', function(req, res, next){
     'postcode'      : req.session.postcode,
     'country'       : req.session.country,
     'documentCount'     : req.session.documentCount,
+    'documentscost'     : req.session.documentscost,
     'send_postage'      : req.session.send_postage,
     'return_postage'    : req.session.return_postage,
     'customer_ref'      : req.session.customer_ref,
