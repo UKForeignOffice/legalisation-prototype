@@ -586,6 +586,8 @@ var totalcost = documentscost + postagecost;
 // sort the decimals out so you get e.g 35.50 instead of 35.5
 var totalcost2decimals = totalcost.toFixed(2);
 
+// save this to the session so I can use it wherever needed beyond this particular page
+req.session.totalcost2decimals = totalcost2decimals;
 
 // 3. Render the page, with any data variables if needed
  res.render('additional-payments-confirm', {
@@ -598,14 +600,16 @@ var totalcost2decimals = totalcost.toFixed(2);
 
 
 
-// 4. Get email into the additional payment confirmation page 
+// 4. Get email and other variabels into the additional payment confirmation page 
 router.get('/additional-payments-done', function(req, res, next){
 
   res.render('additional-payments-done', {
-    'additionalpaymentsemail'  : req.session.additionalpaymentsemail
+    'additionalpaymentsemail'  : req.session.additionalpaymentsemail,
+    'totalcost2decimals'   : req.session.totalcost2decimals,
+    'numberofdocuments'  : req.session.numberofdocuments,
+    'postagechoice'  : req.session.postagechoice
   });
 });
-
 
 
 // END additional payments stuff
