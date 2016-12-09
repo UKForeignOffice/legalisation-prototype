@@ -537,6 +537,82 @@ router.get('/submit-application', function(req, res, next){
 
 
 
+// START additional payments stuff
+
+//THE BIG RESET FUNCTION!
+router.get('/additional-payments', function (req, res) {
+  //resetAll();
+  req.session.destroy();
+  console.log("reset");
+  res.render('additional-payments');
+
+});
+
+
+// 1. Store the data in session - a couple of extra fields from additional info to capture
+router.get('/additional-payments-confirm', function(req, res, next){
+  for (var propName in req.query) {
+    if (req.query.hasOwnProperty(propName)) {
+      req.session[propName] = req.query[propName];
+    }
+  }
+
+
+// 2. Calculate the cost and then store that in session
+// For this we need the number of documents, and the postage choice, then add them together
+
+var documentscost = req.session.numberofdocuments * 30;
+
+ if (req.session.postagechoice == "uk"){
+
+ var postagecost = 5.50;
+
+  } else if (req.session.postagechoice == "europe") {
+
+ var postagecost = 14.50;
+
+  }  else if (req.session.postagechoice == "rest-of-world") {
+
+ var postagecost = 25;
+
+  }   else {
+
+ var postagecost = 0;
+
+  }
+
+var totalcost = documentscost + postagecost;
+
+// sort the decimals out so you get e.g 35.50 instead of 35.5
+var totalcost2decimals = totalcost.toFixed(2);
+
+
+// 3. Render the page, with any data variables if needed
+ res.render('additional-payments-confirm', {
+    'totalcost2decimals'   : totalcost2decimals,
+    'numberofdocuments'  : req.session.numberofdocuments,
+    'postagechoice'  : req.session.postagechoice
+  });
+
+});
+
+
+
+// 4. Get email into the additional payment confirmation page 
+router.get('/additional-payments-done', function(req, res, next){
+
+  res.render('additional-payments-done', {
+    'additionalpaymentsemail'  : req.session.additionalpaymentsemail
+  });
+});
+
+
+
+// END additional payments stuff
+
+
+
+
 // TODO
 // Review summary - alt address logic, get that include working
 // Postage address at end driven by send choice
