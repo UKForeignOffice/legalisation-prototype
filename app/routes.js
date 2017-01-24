@@ -541,7 +541,7 @@ router.get('/submit-application', function(req, res, next){
 
 
 
-// START additional payments stuff
+// START additional payments stuff v1
 
 //THE BIG RESET FUNCTION!
 router.get('/additional-payments', function (req, res) {
@@ -616,8 +616,53 @@ router.get('/additional-payments-done', function(req, res, next){
 });
 
 
-// END additional payments stuff
+// END additional payments v1 stuff
 
+
+
+
+// START additional payments stuff v2
+
+//THE BIG RESET FUNCTION!
+router.get('/additional-payments2', function (req, res) {
+  //resetAll();
+  req.session.destroy();
+  console.log("reset");
+  res.render('additional-payments2');
+
+});
+
+
+// 1. Store the data in session - a couple of extra fields from additional info to capture
+router.get('/additional-payments2-confirm', function(req, res, next){
+  for (var propName in req.query) {
+    if (req.query.hasOwnProperty(propName)) {
+      req.session[propName] = req.query[propName];
+    }
+  }
+
+
+var paymenttotal = req.session.paymenttotal;
+
+// 3. Render the page, with any data variables if needed
+ res.render('additional-payments2-confirm', {
+    'paymenttotal'   : paymenttotal,
+  });
+
+});
+
+
+// 4. Get email and other variables into the additional payment confirmation page 
+router.get('/additional-payments2-done', function(req, res, next){
+
+  res.render('additional-payments2-done', {
+    'additionalpaymentsemail'  : req.session.additionalpaymentsemail,
+    'paymenttotal'   : paymenttotal,
+  });
+});
+
+
+// END additional payments v2 stuff
 
 
 

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Legalisation prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+    <h1 class="heading-xlarge">Check the payment amount</h1>
+       <form action="/additional-payments-done" method="get" id="letsBegin" novalidate>
+        <p>You will be charged &pound;{{ paymenttotal }} as an additional payment for your legalisation application.</p>
+
+<p>If not used within 28 days your online payment will expire and no funds will be debited from your card or account</p>
+
+
+
+            <button class="button" type="submit" >Pay</button>
+            <span style="
+            display: block; 
+            margin-top: 0.5em; 
+            font-size: 14px; 
+            line-height: 1.42857;
+            font-weight: 400; 
+            text-transform: none; 
+            color: #6f777b;
+            "> on Barclaycard</span>
+        </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
