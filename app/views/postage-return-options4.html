@@ -1,0 +1,214 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Returning us your documents
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+<div class="column-two-thirds">
+<h1 class="heading-xlarge">Returning your documents</h1>
+
+
+<form action="/submit-postage-return-options" id="return_address" method="post">
+
+    <div class="form-group" id="legend_postage_available" >
+
+        
+        <fieldset>
+            <legend class="form-label-bold">
+                Select a delivery method for the return of your documents
+            </legend>
+
+            <label class="block-label" for="return_1">
+                <input id="return_1"
+                       type="radio" 
+                       name="return_postage" value="8">
+                The Legalisation Office will arrange for the return of your documents by courier (including to British Forces Post Office) - £5.50
+            </label>            
+
+            
+            <label class="block-label" for="return_0" data-target="example-sae">
+                <input id="return_0"
+                       type="radio" 
+                       name="return_postage" value="7">
+                You&#39;ll arrange for the return of your documents by adding stamps on to a self-addressed envelope which you'll include with your documents - around £1 to £2, the cost varies
+            </label>
+
+
+
+<!-- key feedback to address
+
+
+NB for Kainos:
+2. repeat on confirmation screen if this option chosen?
+3. Final image to be provided
+4. Break out of the two third width for text
+
+
+
+https://www.get-document-legalised.service.gov.uk/postage-send-options
+Change text on radio options from I to You as follows:
+I will post my documents from the UK -> You'll post your documents from the UK
+I will use a courier to send my documents from the UK -> You'll use a courier to send your documents from the UK
+I am overseas and will post or courier my documents to the UK -> You're overseas and will post or courier your documents to the UK
+
+https://www.get-document-legalised.service.gov.uk/postage-return-options
+UK postage return options page
+
+See new version here with changed copy and expandable help section:
+
+Note:
+- Not the final image
+- You'll see that the expandable help goes 100% width when opened, rather then two-thirds, to allow for the image to sit to the right of the text
+- On mobile/narrower screens I would like the image to appear beneath the text
+
+
+Summary page
+https://www.get-document-legalised.service.gov.uk/postage-return-options
+Use the new 'you' formats for these postage options. Note that these are slightly shorter for return options, without the dash and cost information
+
+Final confirmation page
+IF the user has selected the SAE option, include an additional line of text and the same expandable help in the section "2. Send your documents", per the prototype link:
+
+
+
+Final confirmation - printable cover sheet
+https://www.get-document-legalised.service.gov.uk/submit-application
+Use the new 'you' formats for these postage options. As above, use the initial text up to the dash
+
+
+
+
+
+
+HIGH - DONE
+Change the phrasing to help distinguish between the two
+options users are presented with. Consider leading with
+the ‘effort’ and accompany it with the action and costs.
+Even if specific costs can’t be listed for SAE it is
+important to indicate it will also cost something e.g “We’ll
+arrange the return of your documents using a courier
+£5.50 / You arrange the return of your documents by
+purchasing postage separately and affixing it to an
+envelope which you enclose with your documents
+£variable”
+
+MEDIUM
+Before linking to the Royal Mail website provide users
+with more information. Separate out the options they
+have when taking the SAE route. Giving them information
+about what they need to do when visiting a branch of the
+Royal Mail and giving them an indicative price range,
+whilst also showcasing the simplicity of buying postage
+through the Royal Mail website and printing off.
+Addressing this will counter the confusion, especially
+with users who have less Royal Mail domain knowledge
+
+LOW - NO CAN DO
+Combine the illustration and copy description together to
+reduce unnecessary scrolling. 
+
+LOW - DONE
+Provide slightly more comprehensive content for the
+three steps as some users found it confusing when
+considering sending an envelope within an envelope.
+“Once you have the documents within an envelope
+addressed to us, take an additional envelope which we
+will use to return your documents and…”
+
+
+Put this stamped self-addressed envelope together with your documents in a separate envelope addressed to the legalisation office. It's ok to fold it if it doesnt fit.
+
+
+When you have your documents ready in an envelope addressed to us, include this additional stamped self-addressed envelope with your documents.  It's OK to fold it.
+
+.column-two-thirds {
+    width: 66.66667%;
+    float: left;
+}
+
+
+
+
+-->
+
+        </fieldset>
+    </div>
+
+</div>
+
+
+<!-- help style version -->
+
+    <div class="form-group">
+      <details>
+        <summary><span class="summary">Help with self-addressed envelopes</span></summary>
+        <div class="panel panel-border-narrow">
+
+              <img src="/public/images/SAE-7.png" style="float: right; margin-left: 25px;">
+              <ol class ="list list-number">
+              <li>Add stamps on to an A4-sized envelope - enough to cover posting your documents back:
+                  <ul class="list list-bullet">
+                      <li>we recommend you go to your local post office who will help you buy the right postage</li>
+                      <li>an A4-sized envelope is classified as a 'Large Letter' by Royal Mail</li>
+                      <li>the correct amount depends on <a href="http://www.royalmail.com/price-finder" rel="external" target="_blank">the size, weight and delivery preferences</a> - returning 1 document will cost approximately £1 to £2</li>
+                   </ul>
+              </li>
+              <li>Write your return address on the envelope - we'll use this envelope to send your documents back to you when they've been legalised.</li>
+              <li>Put this stamped self-addressed envelope together with your documents in a separate envelope addressed to the Legalisation Office. It's ok to fold it if it doesnt fit.</li>
+              </ol>
+
+        </div>
+      </details>
+    </div>
+            
+<!-- end help style version -->
+            
+
+
+
+    <div class="form-group">
+ <a class="button" href="postage-return-options-application-confirmation">Continue</a><br><br>
+  (for illustration only, this Continue button goes directly to an example confirmation page showing placement of similar help)
+    </div>
+
+
+
+</form>
+
+
+
+
+
+
+<!--
+
+<div class="panel panel-border-narrow" id="example-sae-MOVED">
+
+              <h2 class="heading-medium">
+                Stamped self-addressed envelope instructions
+              </h2>
+              <img src="/public/images/SAE-6.png" style="float: right; margin-left: 25px;">
+              <ol class ="list list-number">
+              <li>Add stamps on to an A4-sized envelope - enough to cover posting your documents back:
+                  <ul class="list list-bullet">
+                      <li>the correct amount depends on <a href="http://www.royalmail.com/price-finder" rel="external" target="_blank">the size, weight and delivery preferences</a> - returning 1 document will cost approximately £1 to £2</li>
+                      <li>we recommend you go to your local post office who will help you buy the right postage</li>
+                   </ul>
+              </li>
+              <li>Write your return address on the envelope - we'll use this envelope to send your documents back to you when they've been legalised.</li>
+              <li>Put this stamped self-addressed envelope together with your documents in a separate envelope addressed to the Legalisation Office. It's ok to fold it if it doesnt fit.</li>
+              </ol>
+              
+
+            </div>
+
+-->
+
+</main>
+
+{% endblock %}
