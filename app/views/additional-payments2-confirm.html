@@ -13,15 +13,15 @@
     <div class="column-two-thirds">
 
 
-    <h1 class="heading-xlarge">Check the payment amount</h1>
-       <form action="/additional-payments-done" method="get" id="letsBegin" novalidate>
-        <p>You will be charged &pound;{{ paymenttotal }} as an additional payment for your legalisation application.</p>
+    <h1 class="heading-xlarge">Check your payment amount</h1>
+       <form action="/additional-payments2-done" method="get" id="letsBegin" novalidate>
+        <p>You will be charged <strong>&pound;{{ paymenttotal }}</strong> as an additional payment for your legalisation application.</p>
 
 <p>If not used within 28 days your online payment will expire and no funds will be debited from your card or account</p>
 
 
 
-            <button class="button" type="submit" >Pay</button>
+            <button class="button" type="submit" >Pay now</button>
             <span style="
             display: block; 
             margin-top: 0.5em; 
@@ -32,7 +32,7 @@
             color: #6f777b;
             "> on Barclaycard</span>
         </form>
-
+<br><a href="additional-payments2">Cancel</a>
     </div>
   </div>
 </main>

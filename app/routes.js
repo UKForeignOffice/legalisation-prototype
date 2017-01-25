@@ -642,22 +642,20 @@ router.get('/additional-payments2-confirm', function(req, res, next){
   }
 
 
-var paymenttotal = req.session.paymenttotal;
-
-// 3. Render the page, with any data variables if needed
+// 2. Render the page, with any data variables if needed
  res.render('additional-payments2-confirm', {
-    'paymenttotal'   : paymenttotal,
+    'paymenttotal'   : req.session.paymenttotal
   });
 
 });
 
 
-// 4. Get email and other variables into the additional payment confirmation page 
+// 3. Get email and other variables into the additional payment confirmation page 
 router.get('/additional-payments2-done', function(req, res, next){
 
   res.render('additional-payments2-done', {
     'additionalpaymentsemail'  : req.session.additionalpaymentsemail,
-    'paymenttotal'   : paymenttotal,
+    'paymenttotal'   : req.session.paymenttotal
   });
 });
 

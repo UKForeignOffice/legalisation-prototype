@@ -17,15 +17,16 @@
 
        <form action="/additional-payments2-confirm" method="get" id="letsBegin" novalidate>
     
-<div class="panel panel-border-wide">
-      This page is for additional payments only, for existing applications. To make a new application you need to use the <a href="https://www.gov.uk/get-document-legalised">legalisation online application service</a>. </div>
+<p>
+      This page is for making additional payments for existing applications. For example, to pay for an extra document or to pay the correct amount of postage. To submit a new application use the <a href="https://www.gov.uk/get-document-legalised">legalisation online application service</a> instead. </p>
 
   <p>
   <h2 class="form-label-bold">How much extra do you need to pay?</h2>
   <label for="transaction_dc">
-    <span class="form-hint">The Legalisation Office will have contacted you about your application and told you the amount you need to pay</span>
-    &pound; <input type="text" name="paymenttotal" id="transaction_dc" size="10" required/>
+    <span class="form-hint">Enter the amount which you've been told to pay by the Legalisation Office</span>
+    &pound; <input class="form-control" type="text" name="paymenttotal" id="transaction_dc" style="width: 100px;" required/>
   </label>
+
 </p>
 
 
@@ -35,14 +36,11 @@
 
  <label for="transaction_email_address">
     <span class="form-hint">Enter your email so we can send you a payment confirmation</span>
-    <input type="email" name="additionalpaymentsemail" id="transaction_email_address" size="25" required />
+    <input class="form-control" type="email" name="additionalpaymentsemail" id="transaction_email_address" size="25" required />
   </label>
   
 </p>
 
-
-
-<p>If not used within 28 days your online payment will expire and no funds will be debited from your card or account</p>
 
 
 
