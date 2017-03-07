@@ -1,0 +1,291 @@
+Received: from HE1PR04MB3018.eurprd04.prod.outlook.com (10.170.255.152) by
+ HE1PR04MB3017.eurprd04.prod.outlook.com (10.170.255.151) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.919.13 via Mailbox Transport; Wed, 22 Feb 2017 10:54:20 +0000
+Received: from DB5PR04CA0039.eurprd04.prod.outlook.com (10.164.34.177) by
+ HE1PR04MB3018.eurprd04.prod.outlook.com (10.170.255.152) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.919.13; Wed, 22 Feb 2017 10:54:19 +0000
+Received: from AM1FFO11FD046.protection.gbl (2a01:111:f400:7e00::133) by
+ DB5PR04CA0039.outlook.office365.com (2a01:111:e400:598c::49) with Microsoft
+ SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.919.13 via
+ Frontend Transport; Wed, 22 Feb 2017 10:54:18 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.128.194)
+ smtp.mailfrom=gmail.com; kainos.com; dkim=pass (signature was verified)
+ header.d=gmail.com;kainos.com; dmarc=pass action=none
+ header.from=gmail.com;kainos.com; dkim=pass (signature was verified)
+ header.d=gmail.com;
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.128.194 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.128.194; helo=mail-wr0-f194.google.com;
+Received: from mail-wr0-f194.google.com (209.85.128.194) by
+ AM1FFO11FD046.mail.protection.outlook.com (10.174.65.209) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA_P384) id
+ 15.1.919.10 via Frontend Transport; Wed, 22 Feb 2017 10:54:18 +0000
+Received: by mail-wr0-f194.google.com with SMTP id s27so997339wrb.0
+        for <s.moore@kainos.com>; Wed, 22 Feb 2017 02:54:18 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=from:to:subject:date:message-id:mime-version;
+        bh=zbMdgW5TVdu3EPYj0uavpSiwx1ORDX5O5cOVd7yLRPk=;
+        b=cfjwi320hCc1Qtr2dmXRMUnkB8uxjrb/7ONuqbr8k7mkvgc5b1WfzXn1DdfjHDOvOX
+         zy6/4Z0uAZFlwpHoUuztcIYi8weMT17ouezRZ5FTfZyDiH67n5jfAyYc/cx/DPscBfFR
+         N+EIehNnWcChTDWVH8j7HZQJ5xpA+dw0lJJH8bd1YK3CKZCCZdEcUN+q2iALT6ck2YkI
+         +EnoOIjcIx3OTzP3w5y04J7e6TYjxaqvEAV0i7qVjotu5lfX/IcVGmwKHCgUZwd/uMQk
+         wBx3uB2mmSoksNcCS1g6YMDZWgqdDOP/o37mr797NE1atPfD8UL9MSW4KJHMgtRGUA+k
+         FnZw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:to:subject:date:message-id:mime-version;
+        bh=zbMdgW5TVdu3EPYj0uavpSiwx1ORDX5O5cOVd7yLRPk=;
+        b=gELPCoxrlw6s8PRdNyPjoWj/s74GAJVy0XPsrKaZxMjyEIh/o/Y9JN3QdAWD2Qeyr6
+         mfiAg8wdzkIlwrSsLjUQvLDwPLYrIeWDIr5t5I49miP3FvdjNpYesgUiNy+fiwBCnN7W
+         FHk7geB8CyCoi1Gb/mlzfRQsek3mVIOOk0wkL9rqfFGKYScv/MgoueUeHgG4fBncy+ac
+         VRqZ1np4sCEAxk4ji9T3YX+emU7XrDC+84guqWPL9zOTwqMnY2ZERqWmRz2295vA+sdw
+         AWyRUg3Gjq5zMjY4onuyL8ztdM2i6PhncK2IrjdOIHRx0kgsiNHbsLRUTSIBuJ0FSeEw
+         Motg==
+X-Gm-Message-State: AMke39nU3FpE/r//f4NfK+3UlIfpKcv8HlzWNFHZZZdnw2lQGe9HiQbRkFeh+Ou8LNHZ1w==
+X-Received: by 10.223.131.193 with SMTP id 59mr22701036wre.186.1487760858128;
+        Wed, 22 Feb 2017 02:54:18 -0800 (PST)
+Return-Path: simonmoore100@gmail.com
+Received: from fernandoalonso.local ([195.89.171.5])
+        by smtp.gmail.com with ESMTPSA id d29sm1584670wmi.19.2017.02.22.02.54.17
+        for <s.moore@kainos.com>
+        (version=TLS1 cipher=AES128-SHA bits=128/128);
+        Wed, 22 Feb 2017 02:54:17 -0800 (PST)
+From: simonmoore100@gmail.com
+X-Google-Original-From: no-reply@fco.gov.uk
+Received: from fernandoalonso.local (localhost [127.0.0.1])
+	by fernandoalonso.local (Postfix) with ESMTP id A7AAD1A33E49
+	for <s.moore@kainos.com>; Wed, 22 Feb 2017 10:54:16 +0000 (GMT)
+	boundary="----sinikael-?=_1-14877608566320.5081590169575065"
+To: s.moore@kainos.com
+Subject: Receipt for pay-legalisation-post from the Foreign Office
+X-Mailer: nodemailer (1.3.1; +http://www.nodemailer.com;
+ SMTP/1.0.2[client:1.3.8])
+Date: Wed, 22 Feb 2017 10:54:16 +0000
+Message-ID: <1487760856665-58d0ad1d-e670db26-83ad4023@fco.gov.uk>
+MIME-Version: 1.0
+X-MS-Exchange-Organization-Network-Message-Id: 2e7a4fe0-4cd0-4492-c164-08d45b1126a4
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 7ed9bdc7-964d-4dc0-9084-812b90e05c6d:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Office365-Filtering-HT: Tenant
+X-Forefront-Antispam-Report: CIP:209.85.128.194;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(6009001)(8196002)(2980300002)(438002)(199003)(12063002)(189002)(8896002)(1096003)(73972006)(87572001)(60616004)(33646002)(7596002)(356003)(100306002)(8676002)(246002)(50226002)(50986999)(84326002)(6916009)(626004)(106466001)(93516999)(2361001)(59536001)(733005)(36756003)(230783001)(6306002)(345774005)(2351001)(54556002)(66926002)(7636002)(9686003)(77096006)(63696999)(6266002)(110136004)(956001)(92566002)(8666007)(5000100001)(5890100001)(76506005)(86362001)(16003)(568964002)(189998001)(82202002)(76482005)(2810700001)(5660300001)(450100001)(74826001)(85782001)(83322999)(7126002)(85772001);DIR:INB;SFP:;SCL:1;SRVR:HE1PR04MB3018;H:mail-wr0-f194.google.com;FPR:;SPF:Pass;PTR:mail-wr0-f194.google.com;A:1;MX:1;LANG:en;
+X-Microsoft-Exchange-Diagnostics: 1;AM1FFO11FD046;1:FnFgYMD1g8EZPaAv7JEDM+G9JDkWfAqszZgLN0bvDNvTUFDySZohaf5FTacqWewULcURnhTQCaTNXy0s3p3qHp+otq0hOnzJzt2hAfwv0/PFgWEDwBw3ibKoP8b+MFtQdsE6MIupA5fNlgPphCV7IkjNet0qlvaBwyGUboV3q3B1KR1s49gfZ8QV/se9jwrMvR9tqb+7QlMGBR2Q+OZU/Cx/hLSsL9L6g33B5ZgztJw0X5DYW/GWOb7GGMX/UEGdqHdUWOiPfcdo5PDeA7+Mknv/jFMTSO2s69B1MzC5jj2XqW+3oDTb7GCdV1ioGXmyxE7Vt6SI7Mgz2BzmbecwfklHoSNXm1cXzCrNl5FjclcNDvhTreg4Ibca1g3d2OdxGHWHpRLOMJ/Q/7N6hO84GCLZmEVSM6UiHQrhahdNMUTg/cCbOQ43YYCUwGrp+5xuuruKT5OhQz8SB6HRG9N4DPwNKYpBhGXsms5SPrxU30iP1naB7x6ykbxtFgooiWFPf8gGETuLmXId2BWWf3MW11goALlESSk+UcoIhp9uqVZCjHY99b3opIh6wX/9hWheW97wb4kvHDLIT7SLR25rXw==
+X-MS-Office365-Filtering-Correlation-Id: 2e7a4fe0-4cd0-4492-c164-08d45b1126a4
+X-DkimResult-Test: Passed
+X-Microsoft-Antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(81800161)(8251501002)(3001016)(3010002)(71702078);SRVR:HE1PR04MB3018;
+X-Microsoft-Exchange-Diagnostics: 1;HE1PR04MB3018;3:X129J93QF9MwiDU4mLzGzsjn2rPlANnBmxm4ISFFAZW3xWP+IZMjUuXIX+v8w+heKJNB3/ZTVrCVbMCgUJEwsgLT4BBknifdDsiEVQFLGRuTfL/jwxtce/INS2jn74f4iL7hNs9ddblTKXnTeeCBxB1gOqpWwUZ7GMhZ+UXcbYFynVu3fwbi+tewnh6qplVBAucgYh7lB2xKCoNMmBwT5tvTiG8jFkNg883z3GFLS2WKJx1v8gATz5tqN0hc+E4ZDoX+jrstyLHJc7U1axAesdcLnHwKJp2QNTV3FIi9Z+ijx7HPBCreQPM6HsTUx3Wm8fgyMhkKxI3uJqSd2QxBC7KOUkldYKuJe7dObskI5+12jlBww6B+SJ7sr+0zkC4Zn0gXGfHIZJNhL5ZLu5QPKxOM6+TFIxtIpi8GvLf8NGLPWNqBR2d4QICoTnEIB2afgM4nSKUjA05fDb79/DFeLfAl/LBtu4KoK0A+jBLR6Os=
+X-Microsoft-Exchange-Diagnostics: 1;HE1PR04MB3018;25:Dq1MJc+JoPhtvp/VvhsYMNw1mLqqbCGFefSwc7Ew93tizUHk3iNYCDFTuwqGTtgH/88a3m5yORPg985RaodontEuj7/Uh9DFXoKbt7FqeBDJa871UhRwpOZLAE94DckhulAWDjUB89+icC3N0LZtJfAf0JGC4LzzwEbcej/ek9/TOuYvEdfts/s7aCaU6ldbjyhV924tG+tupVmlYPWsA3kRDng4GGdqhM6EZigbEjYHpVg/bNjV3OKzG1KJecwLopGwdLX93ZZBKdPCFOHg3DQtRvESmncl1ly0UjK7jI+e4lnaFXeYd57J11Kabk4mqEmDGSLhMA/MfAQ6NaXdh+xq2t9ILdtaXKiMWxPf7TEzBt4kQwsNPl+6+owJnlVVC3x+XOZ0smCezbf2OfnPiRDHnviZIdpanhtdc9ZQgjSE9+BPW5ZRaq7XD2gkwS2TLfIaXGjx88Zb2aEpKdrc0c9n/Z3RR8UgJ/hm0Wi0SwKwS0/caNZAWQ4nLuD0b6tp;31:Yvn31iRYCoujwtiaFA/MK3LjLrfiyv83F3+dwmFEBenl9XEIRIt3T3smc3MCyNOuk+e00c288rspR+EIt23rbYFFn6NDSn4y9YJT1OrWK+4rmxrBoqJnf4lb5W5a5Tw+0mmNx3fKXwGSJY6a0NKtV27rHIhEGGu87DRDvhwnZvKjEEvt8qmC6nxehIZidDnroib9o0CnCsKfhZK1nFGrAL6HIYV4f5AM9fMJhX9ftyP1qIPSPosi52zUuV4jWWmDawbh1cIVbehX4Lbju64zI5PAFkzyGk3PcEvFtmH6AEdO/nFAy3B1hReMfoCn+nvA
+X-MS-Exchange-Organization-AVStamp-Service: 1.0
+X-Microsoft-Exchange-Diagnostics: 1;HE1PR04MB3018;20:rLqubL/8b2YLUkWQSJWACqcbT6F+PntTvnhFUe2SqQ2kO6NZPEutQ6/W9jW2FNDP/9ZF2VeGI44QXLCpFnpK8Nsux0RQU69+W3Ie50OAl2QR0nT0MApUacCbsj9F7TBbP30ujP4Kl/pVMbmpMNf3Q29CuDrJqc+yBn3TwcfqlBDwB8FDIiUwqfZ1OjwzbmflSwUtGZi9yD8mYRWoKSoeJZYxmZsLHa3nKZ2E6I16PRlqnpxo/+z7nq6OgUjdX2u+OkB/jKcqvKN5aCOwr2SS/fIEv9smzfbn88PZOWSWVTCezAEUg6RiZgtHXSIpHCcywddr6kCLfK2Py+ROoAQZB+/6ILC0mxPGN9u+sHT1YdbIStaufJRsK+0S4QIbANCp7XGdc4O8ELTFZd5uPpAokwfU4Zkke4PqN6m/EtsGmJmHrcLIwarx/UejLPdhFo74yFFu2BnNShABbl54JEwiAUrMEYmpdSKkaQdP1d0glb4a4yqf1VIAJAdRmGKg6MFI
+X-Exchange-Antispam-Report-Test: UriScan:;
+X-Exchange-Antispam-Report-CFA-Test: BCL:0;PCL:0;RULEID:(102415395)(9101531078)(601004)(2401047)(8121501046)(13023025)(13016025)(13024025)(13018025)(9101536074)(3002001)(10201501046);SRVR:HE1PR04MB3018;BCL:0;PCL:0;RULEID:;SRVR:HE1PR04MB3018;
+X-Microsoft-Exchange-Diagnostics: 1;HE1PR04MB3018;4:6OAV4yOeMiMymY7dFBMdWIngLrqugdkdq1bbDBGocUCw0BS5pzwAtAV8v4zRu1bTQp3XIfqg6vTqftcYFkv2+7TlEND6ynuXIwb8Sd0LcPhCnyLvM30B8ONJL5X4APmkULkvZXYMeb5JqV8Q0DSAbHZOxm9q2M4oXsH+FRjDzA3R2hiUDw/HBn1VUVqyxj6gOgvGsRXRL2kjXVTXhZFIJD37U+5QkyeA3YbXrekZj2nDOqRppSdsQot5Cfpi+K5QFVeu3YfedvfkY9h+R7uxf5Sp/hi26YQTNS5/GzSONOZS1jYi7PEaUsyua6l1U/sV65mXUFs+9DMmGCer/WtJrh+nbasnvaQ74/STYZvr46ULwpXM/BAucWS97npHkynuY3TUaBNhRNlIr5VaL+HqppXj4Cjq8Mbf5vRgRftjxb/v+TJvfppJTzxqtlxz3xKmdG6/L+AI5/nHcsq75JgLETTAUHCFqw7/vF+2y/8LeM8p/liFyDX7i+xr7z3OHrfE0dDG4G64TznBymfFjPwtDw==
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Exchange-Diagnostics: =?us-ascii?Q?1;HE1PR04MB3018;23:HKstMYmbp5BP5ZH1IaU0PXkS8Vcptn3WvpZK5d2Iw?=
+ =?us-ascii?Q?x4SROF/VZOLFU2dCPRI8XHCTpYq3g6OIPyjLp1UL+kGKkFmKXot6SqHHxt8A?=
+ =?us-ascii?Q?8IkO3DJm25vGWQqAdXqxARQTOtBh03RBNkJdiBoEksRR2H80jbjOH60lYq+U?=
+ =?us-ascii?Q?2ZMs5GkmbZEzjzt+zMHDn5bCoiQnghftpqgfKDCjlAkNAiB7QVjHZove+pwN?=
+ =?us-ascii?Q?zUX6DKnjm5UWLHj6O9Jz8V64Gnaa1HQz/hiYuu/V++rjplUJjEfmSDTaqm5o?=
+ =?us-ascii?Q?vRcTf5DGb8aaVLUQ4SMwyq9mJMEnPdEJMnMhm6RsKPh0xIK9w6jmGuksATnj?=
+ =?us-ascii?Q?kfGCIMLfzsB7LgwpTr1V2HLWkqcISUhfDnlgQRMvUKkzVxO7VxbgTpdieKUM?=
+ =?us-ascii?Q?bO7uTeo2gAEvXx/7ofRRwW4xKrTCAKPxi511Z+lLLN7yCYTc9ATmSiQfrG/4?=
+ =?us-ascii?Q?zrKaJC2xFjZeA4ryaOKt5PQV7RsWWObArHl4U5hxGjlXfAXuWCK8IdtHXRv5?=
+ =?us-ascii?Q?xzi+QUpvEvKXGGlfqT9pvAzRZyAW225JEC8Akkga6v+eGx4iCD76v+Pqxquu?=
+ =?us-ascii?Q?FpaMekkfLol3Ukfc7DIFyaFKpcGD9H/mlO67QGSb6u3rfNJ3B0OKsg38/epQ?=
+ =?us-ascii?Q?wBNG7mmE1VVvn7YSvjylyO6WlaNOu6BWS4KaHPAUc54tcRIqjfWdaVYHGuyA?=
+ =?us-ascii?Q?VnS8I3HdeybP9+X65RrTRlK8kVaWnol5RdoNTLi5f+5Xyqhivex1vLTNK/oF?=
+ =?us-ascii?Q?MsKPoChZgzR5F+0k2PzqFu3eryjEQjacExrp8K8KSKRr89qLhcMuFYjHSRAs?=
+ =?us-ascii?Q?lPuLMJfuaRK6zKg+kWx7Y3h82qW6Ow/hAuLFeCvc6UhALLRFXqgqDJMYsiHg?=
+ =?us-ascii?Q?NubYSjTvNiuLoFW/amitu5+09X9wRsoAzjEtBxEo2nlsHCZZ+zmPT5yntKCr?=
+ =?us-ascii?Q?F02cAWeQ+n8WLaRRGbbvra52ZCHiIqpeohEd9pVxQ76KCoLENX2D2tzxDu9M?=
+ =?us-ascii?Q?ssMqDw79LXVYJvhQ9QETmlfEFdmuUMix+Qpk1eGKsQAonZnvt27LIAmTKxHT?=
+ =?us-ascii?Q?TXRt3glaQk+IwBaA53x9oR1TPPPp0Q6Sf/Q6uZ39vGQOjExrY/VNpI+a/ytr?=
+ =?us-ascii?Q?b2uij5V8pvGrW7p0E/dZDYS8pBolarMb8bKNIkGvCdihUaDmC8+aPvmh0kNh?=
+ =?us-ascii?Q?6KS2Vuvaz3vHHvlg40zB18hcj6FNVtW14l//9RNpBMn4rE1m+WACW7glW1vx?=
+ =?us-ascii?Q?sXdW39pIZEaLJhHlcF6oOGKrWm+j54ZEIcnk6KMesU/fSp94jJRcWnywcQc4?=
+ =?us-ascii?Q?XX+XJM/T/SnxUxMSMbgzasEdZThBnrC7lY6ZQ9b3HTqCLHMe7GZ4HPbWd2nn?=
+ =?us-ascii?Q?ex2y2wXCy5Usdx3QUhNxBMHPC8=3D?=
+X-Microsoft-Exchange-Diagnostics: 1;HE1PR04MB3018;6:UqA3xkBhZbDxW/4X8NM4tBpYhJAUb+GtNOobr9hhLV/PP6zcC2fdtSZAeS0IoowKQHL5VXyqxl4rsk41EMtvd8URtaO/0bq6D1Y96DY+WY7lJLDAMzZWl7n+MIRg72txU0bHd8lfJGY4R8GZ7DH+u9rJq/9Us9UaA0rh9P9qQ80uKxALMraKzPzCGFzm2blOmHBj8GggJljhVsMC84xhpGIdX/pnAA/LXOK5iT2hN2FsGSr8IHIW9KWW2I5x1Q9YxBLEPAj6zn08o32U6CYv6DOUnMpt0LmI7JHPpPCthpJrfgArsWN2oYOhADa2g+Qh1A4/oCFCgT5swJS8vSKoasdEy9oFc70izEHMuatH1GXt+HWQmIdsr2HAl91NfuwX6RAxYittPt9uuNIymo1ADzZK9W7zw7AF1wv7sH99/d1G9MncuN6VhJE4jN/LvPtU;5:738lcJAPxfpYDPOvwqCcDGkeqrJB6ACvNgGefRR8hgX7zteMNOnMU6aFKjbm/6qThZYYiRiorZ7/VdqlErbe1H3yW0/f5N6uKntvQAQV1V50Ad/cs7SOq6itRqTd4vHOpJyk5hqRKbBaJ9tELGQ25g==;24:8r/ioKrDYBLcWklEv5oh49yB1P5OrTEGoJs+kI6o7b4LsGOv/MS3qbeZPjdIZEIyhjsYQ9w1RTmmPYyEAsq2ejs8leGDHvzr2La+iNV/vZw=
+SpamDiagnosticOutput: 1:99
+SpamDiagnosticMetadata: NSPM
+X-Microsoft-Exchange-Diagnostics: 1;HE1PR04MB3018;7:G5sh7p9rjGUhpf85B2a6xNsHsaOPL61EPxVlkPxvpZ0iBt9judYRqg/Z1119xLpatHsaAmxSl1MlN6tpLLwdr5hTyxrAlLPj4oa747t9YPUv7XR2pesFpmoLMgzN0hcJKIZibBm9J2/vU3GHo3556a3nT8Zj+fiX4UGaFMLOFDWZV6+hFu+REMBz4d4IgikuZTJ/X6eTzpAesLhtQRd37Fw/c0WnFyiQJJvnbkl+rJxXFrFgchPeq5khCQbi/MahD0W60AQ+CGazPV2sIYlIfwbVSqpMdkPA8Bczo7uwGGA0g5XHprIb9ra4Z6nQ4IDYl/st3/h50Q55LwS20GPOervN01T8gzwY1h5955vQHZU=
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 22 Feb 2017 10:54:18.6829
+ (UTC)
+X-MS-Exchange-CrossTenant-Id: 7ed9bdc7-964d-4dc0-9084-812b90e05c6d
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: HE1PR04MB3018
+X-MS-Exchange-Organization-AuthSource: AM1FFO11FD046.protection.gbl
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.5203248
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ex:0;auth:0;dest:I;ENG:(20160514016)(520000050)(520011016)(750028);
+X-Microsoft-Exchange-Diagnostics:
+	1;HE1PR04MB3017;9:OickqvIYnwvRJscve6CQN9Qp6QxYUhq6ICVIkUxeK6MezZuDKYMz8oIwQIIWjizPpOiZOeM/iP+MwP7kmfeQrl35Sb2lNkTmmSfrVavS0uNQZtiDn75tj622/Kz6hAaVbnKdNSECMwPSFoeHyImtqfKUmSFiKJIEKaaXBCrkZlvMBN5AttmdLa5z61N8yeDqEZS+K1Deon3l1D/Ru14oILXqGEFBy4Mh91rhCvmh0ivUjtAq8Os+QvSX29z0OC3HaOr6CMUPYKq5JVfjQeuJ/ZbmE7MaeLkM6CsHQqOA/bfSrCKd4cPULZVO8yHlRZP5WBKP7/rzn/z+ANFQu2axiBAc45mSaPvmFOTIK8oEloVWPemvQEUr8PO7fUi+9Amfgu9+z5qEzobwMkkXrYeKc/WtS9CLxAs+A5PRfJ3g41MmspK8lxBxXi0VeIycjXBG
+Content-type: multipart/mixed;
+	boundary="B_3570686674_1909390952"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3570686674_1909390952
+Content-type: multipart/alternative;
+	boundary="B_3570686674_165732866"
+
+
+--B_3570686674_165732866
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+=20
+Pay to legalise documents by post
+Receipt
+Thank you for your order from the Foreign & Commonwealth Office. We have no=
+w taken payment for the following: Date: 22 February 2017 Payment Reference:=
+ PAYLEGALISATIONPOST-UK-ECOMM-20170222-15 FCO Reference: 8814877603458516 Se=
+rvice: pay-legalisation-post Amount: =C2=A3101.50 Card type: visa Card number: X=
+XXX XXXX XXXX 7777 
+
+--B_3570686674_165732866
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body style=3D"margin: 0; padding: 0;">
+<table style=3D"width:800px;border-collapse:collapse;">
+<tbody>
+<tr>
+<td style=3D"background-color:#0b0c0c;"><img src=3D"cid:govuk" alt=3D""> </td>
+</tr>
+<tr>
+<td>
+<h1 style=3D"font-family:nta, Arial, sans-serif;font-size: 3.2em;line-height:=
+ 1.04167;font-weight: 700;text-transform: none;">
+Pay to legalise documents by post</h1>
+<h2 style=3D"font-family:nta, Arial, sans-serif;font-size: 1.5em;line-height:=
+ 1.04167;font-weight: bold;text-transform: none;">
+Receipt</h2>
+<p style=3D"font-family:nta, Arial, sans-serif; font-size:1em; line-height:1.=
+31579; font-weight:50 text-transform:none;">
+Thank you for your order from the Foreign &amp; Commonwealth Office. We hav=
+e now taken payment for the following:</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Date: 22 February 2017</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Payment Reference: PAYLEGALISATIONPOST-UK-ECOMM-20170222-15</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+FCO Reference: 8814877603458516</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Service: pay-legalisation-post</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Amount: =C2=A3101.50</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Card type: visa</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Card number: XXXX XXXX XXXX 7777</p>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
+
+
+--B_3570686674_165732866--
+
+
+--B_3570686674_1909390952
+Content-type: image/png; name="govuk.PNG";
+ x-mac-type="504E4766"
+Content-ID: <govuk>
+Content-disposition: attachment;
+	filename="govuk.PNG"
+Content-transfer-encoding: base64
+
+
+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
+--B_3570686674_1909390952--
+

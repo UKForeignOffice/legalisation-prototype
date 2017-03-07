@@ -1,0 +1,370 @@
+Received: from AM3PR04MB1236.eurprd04.prod.outlook.com (10.163.6.157) by
+ HE1PR04MB1241.eurprd04.prod.outlook.com (10.162.249.154) with Microsoft SMTP
+ Server (TLS) id 15.1.453.26 via Mailbox Transport; Sat, 16 Apr 2016 20:01:57
+ +0000
+Received: from DB5PR0401CA0030.eurprd04.prod.outlook.com
+ (2a01:111:e400:5a81::40) by AM3PR04MB1236.eurprd04.prod.outlook.com
+ (2a01:111:e400:586d::29) with Microsoft SMTP Server (TLS) id 15.1.453.26;
+ Sat, 16 Apr 2016 20:01:56 +0000
+Received: from AM1FFO11FD013.protection.gbl (2a01:111:f400:7e00::108) by
+ DB5PR0401CA0030.outlook.office365.com (2a01:111:e400:5a81::40) with Microsoft
+ SMTP Server (TLS) id 15.1.466.19 via Frontend Transport; Sat, 16 Apr 2016
+ 20:01:56 +0000
+Authentication-Results: spf=pass (sender IP is 74.125.82.51)
+ smtp.mailfrom=gmail.com; kainos.com; dkim=pass (signature was verified)
+ header.d=gmail.com;kainos.com; dmarc=pass action=none header.from=gmail.com;
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 74.125.82.51 as permitted sender) receiver=protection.outlook.com;
+ client-ip=74.125.82.51; helo=mail-wm0-f51.google.com;
+Received: from mail-wm0-f51.google.com (74.125.82.51) by
+ AM1FFO11FD013.mail.protection.outlook.com (10.174.64.91) with Microsoft SMTP
+ Server (TLS) id 15.1.472.8 via Frontend Transport; Sat, 16 Apr 2016 20:01:56
+ +0000
+Received: by mail-wm0-f51.google.com with SMTP id u206so73899282wme.1
+        for <s.moore@kainos.com>; Sat, 16 Apr 2016 13:01:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=from:to:subject:date:message-id:mime-version;
+        bh=zFFjeySrhxNINp8UvocsfBq3usYD3uOPGNKBnJaCPrQ=;
+        b=N1tR4+i8NP5SW8EJhLx9f0+JNczpl+87V5onRpa9Odd9VELkNl0p4Yb9b0Ulc7PVfr
+         n0/PzlYZduDgmEyx+RG3RYgmZ/TsPmlhz/Ncfh5nP14/w1fwNJxnFnDu2gQ+2THg1utE
+         kdhmcoiMPcAfPr1eermgTjaxqy6kE6glBO94wicSlGyACaMDy73yrY3mqMASeMNI4bMC
+         QcKKe86pMRoh4czqc3w3W+ZeatnLYEjHpAmAGgQ17PZm71fLKwXUpvGTE4Ulj3dqBcad
+         ljsOsq56HqT/8FX2e2W0RDgVcxxreCIeutgSX0EMargusQ0noWt+MRNQJCCNdNGX44WC
+         yWhQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:to:subject:date:message-id:mime-version;
+        bh=zFFjeySrhxNINp8UvocsfBq3usYD3uOPGNKBnJaCPrQ=;
+        b=lwTgdRI3VD+qrg9lwdmjnar3aANbbo+ATEIb3dYs9+4XRTT3vZQxb6fykOSHD53swg
+         c/Yx+XmNSX4WLbZfr53LrsvA7XDnNC+W1mC2lI71Hi0YXRUyLxMF/FzJzvbWL2o2bxj8
+         57cBorrzyHWI2p2GzD8Q89P5wH5lmKq4hFL8+YJOUvPXSdMBu1iu4peHEMSZ9eFr48wZ
+         x8gcjZfUfEK/J5whmuIDkx5n0UIylVfRucj4Y1DN4+FVpE6sVqAFRfMCxUI2T5fildyr
+         OUJXCKketqwXR2ckno/Jx7oOC721uslqPPrBq6RwdkffIW64bxYBKqasXvkoAZ1tvCob
+         E3Fw==
+X-Gm-Message-State: AOPr4FUDRsYugIP2cjyu8xnawSxX1OneJQTnG0HJ9wJpCNw9hm1XAD1VSXBgYF+l/Q8qbg==
+X-Received: by 10.28.23.10 with SMTP id 10mr10777986wmx.6.1460836915430;
+        Sat, 16 Apr 2016 13:01:55 -0700 (PDT)
+Return-Path: simonmoore100@gmail.com
+Received: from fernandoalonso.local ([193.195.13.5])
+        by smtp.gmail.com with ESMTPSA id gr4sm19969986wjd.23.2016.04.16.13.01.54
+        for <s.moore@kainos.com>
+        (version=TLS1 cipher=AES128-SHA bits=128/128);
+        Sat, 16 Apr 2016 13:01:54 -0700 (PDT)
+From: simonmoore100@gmail.com
+X-Google-Original-From: no-reply@fco.gov.uk
+Received: from fernandoalonso.local (localhost [127.0.0.1])
+	by fernandoalonso.local (Postfix) with ESMTP id DF3A7437C9E
+	for <s.moore@kainos.com>; Sat, 16 Apr 2016 21:01:53 +0100 (BST)
+	boundary="----sinikael-?=_1-14608369138600.8227199609391391"
+To: s.moore@kainos.com
+Subject: Order for pay-register-birth-abroad from the Foreign Office
+X-Mailer: nodemailer (1.3.1; +http://www.nodemailer.com;
+ SMTP/1.0.2[client:1.3.8])
+Date: Sat, 16 Apr 2016 20:01:53 +0000
+Message-ID: <1460836913910-b503aea7-b7781368-73453413@fco.gov.uk>
+MIME-Version: 1.0
+X-MS-Exchange-Organization-Network-Message-Id: 63f68d05-3c36-47d1-3f5f-08d36631f685
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 7ed9bdc7-964d-4dc0-9084-812b90e05c6d:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report: CIP:74.125.82.51;IPV:NLI;CTRY:US;EFV:NLI;SFV:NSPM;SFS:(6009001)(2980300002)(438002)(199003)(189002)(76506005)(85782001)(84326002)(74826001)(66926002)(83322999)(5008740100001)(586003)(15975445007)(6806005)(568964002)(77096005)(50226001)(86362001)(82202001)(956001)(19580395003)(189998001)(5001970100001)(229853001)(100306002)(19627595001)(107886002)(11100500001)(18206015028)(76482005)(106466001)(5890100001)(73972006)(2361001)(2351001)(2810700001)(36756003)(110136002)(450100001)(92566002)(230783001)(63696999)(50986999)(60616004)(87572001)(345774005)(33646002)(17760045003)(93516999)(7059030)(516124003)(85772001);DIR:INB;SFP:;SCL:1;SRVR:AM3PR04MB1236;H:mail-wm0-f51.google.com;FPR:;SPF:Pass;MLV:sfv;A:1;MX:1;LANG:en;
+X-MS-Office365-Filtering-Correlation-Id: 63f68d05-3c36-47d1-3f5f-08d36631f685
+X-DkimResult-Test: Passed
+X-Microsoft-Antispam: UriScan:;BCL:0;PCL:0;RULEID:(8251501002)(3001016)(3010002)(71701004)(71702002);SRVR:AM3PR04MB1236;
+X-MS-Exchange-Organization-AVStamp-Service: 1.0
+X-Exchange-Antispam-Report-Test: UriScan:;
+X-Exchange-Antispam-Report-CFA-Test: BCL:0;PCL:0;RULEID:(102415293)(102615271)(601004)(2401047)(8121501046)(13023025)(13018025)(13016025)(13024025)(3002001)(10201501046);SRVR:AM3PR04MB1236;BCL:0;PCL:0;RULEID:;SRVR:AM3PR04MB1236;
+X-MS-Exchange-Organization-SCL: 1
+SpamDiagnosticOutput: 1:23
+SpamDiagnosticMetadata: NSPM
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 16 Apr 2016 20:01:56.0674
+ (UTC)
+X-MS-Exchange-CrossTenant-Id: 7ed9bdc7-964d-4dc0-9084-812b90e05c6d
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: AM3PR04MB1236
+X-MS-Exchange-Organization-AuthSource: AM1FFO11FD013.protection.gbl
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.6001380
+X-Microsoft-Exchange-Diagnostics:
+	1;AM1FFO11FD013;1:T/rAMNkwQ9Kak92pk8vHaQrs1KxN17Jk5c9oFBTArzuN1LaA4eKUGp5hBxQMvTJDkUG7hCbHyvq/eVXLGae5sczenUvFM3KHtNok7JDmKGoeB/DxjNlcBoFuEBksBEeebiCbj5aIU85iLIzBkqiOlvuTWnyX0FYnO/n6+CXuNaDojnrZ0j9yW5GbASbCr8Bdk4vcZ4PAf0bYhvF8+wkvR50gacfT8Jiuzo0yncC6itVX48SC/0/LpyU4nPvejP6i6jQdTG4AsxezXqAPkUMnCk5ezAl/q8VnJxNbsE8ECqVod1mTnsb5yjn19UzZKD8Vp7nh/NEshN5oUcYdRUyx/TyBzOAICHHjX0UXJpFMJgu7nqni8VptMUgnHoaMertQuhwfOZTUL09I4D0AH3HwV3lbOZ9D0xBQLhiFLtX9AZ9TAlQ/NERwVLjvwg14O1S+RD4KAv5NHs0Ji+vCvCUGBf1qAENrz5Szr0xc1HuaGEaoYvtu4EG56RYhvUNezTfZAVandk/dIlFGkMmVZjj1Qw==
+X-Microsoft-Exchange-Diagnostics:
+	1;AM3PR04MB1236;2:N19HXRmdKJC8xUCxtJ2Dk2nGGk416sh/Hc0UTZ+iU50imGj3pCPG2Dq0nN1acobaHSTwqsE6/rp5ePcb4zJjGha8+DbEKquuhb8oC7oPQcNNPqSCPZSSWvYhA+DJw8lJdaKLvbR7woOQgzQlPcimjVZ0Lr8rUZQzZk1Kcg+jkeWV6JGkCZUc6CWWedKzJeis;3:01avLgipqKNXS9ANLPjlGfo1Vv/1N0b9dABzS3ru+lzm4WHt0DVPJrS8G3qcF6ZBUQ9O7Vv3L6vsgNoX75ZdFiOQ8sfuZZT2oagk23k4i1sMCSXGeg7DxsHbei/ckW6DvpSTyen1QWZezyimd62izy5MGMKyDfklxgDd6bpkbSnXtGQEQq88dsyYDwlJ+ygL8elIKi8sESLjDpxyj3PLYjbv8xlLFa2pGKsLIoC5gdnobR+Eeft8pVEUTvcvsoHMguCpD1fGilxdmjGyawG9s4ey1/8RDfBTT87c7+lPBr8I7mLkcAimFgQKnp010wD0Dxs6GslgStFhqnnbdDGe/A==;25:lGShHaBI8V9RlLZWQn3TIV0QGzhu/jOjuopyMl59YuRt/aVhYxg3G5nSWlxj0eyA0hNlc0Qys75XbJ52quZmMmRHsdFvNXiuJ1tRUZFXt/b4HkMHx5DjCPx6d1iS9xTWBTmPR1I3vjjL65cUi3wcKmeXAFZ3YTuHN3f+0V2HMcW7lHjazaUWMimnDvCO2JS6Yn3Zw/mLZYMEi93B8g9qmZUSPRMG4QcJ5bUxXl/k2KDeTcIeHOZg+zxPL4Wm0nnI1OlfLA6jBMgYji7mxp+O120w4daI65IVsOKojr4fMhl93HajllivR8hl5KtrS23OfDk6tx8D8lFw1UAo+ZWUNyc/nuba4xkJsrcUS9+LoRexUM75M0r7pqINWLkupbmg
+X-Microsoft-Exchange-Diagnostics:
+	1;AM3PR04MB1236;20:cO01RQFVTmgbC6HYvJrgqtxMS+TP86HYo9EcG5dHzEmP9cvyr2hiQdJFO9IsZMGFX99FlFImBwx33Jj3ht3kC+1mnZthtsAdqaB991j+k3hRyNxWh971v3z+4929awWWU1DbU2zN1hlR+oIdFNWxl2C5IIf+rR/9tz6blvqHiZW2bNSecBN4mK2jYMM+svth8YUiqE5tQXAHIGaaESIlXo6kPaKuPwlFsLAdV8LZi6tX39QTkPnqyS+oFVFdx4WXb6YL6YyEk2uO2qTQbo1GYwSrhVH+5HHlqItoreZW2zkAuIX8V6+4OBsq7rO3iSLmhmW6oVaVHN0z+ITus34OFeKq0vnWo/4ina6LACSZcnFmbpiJhI5oGETLImVRg1ri7TQ3sfZT71TmMsrFpE/05KBBa/L6NjFN0RdWDmBToHQIcbEYl6AptWA4YvhM5OTD2Zgm0a68agjsUNkPydUW7VxXIsSliF3o0yggn+uxI9ar5/hBq8zAN6vgEJ/Su3/8
+X-Microsoft-Exchange-Diagnostics:
+	1;AM3PR04MB1236;4:8Cgg9zejrwT580AM2vLkU2RvdJsN9Vefp9earIFIO9iTBF8qyOddMYMry3fkIj6sPrfaiCUqWvxVjL59+2FS4cBW08p1t2YZTk355rdTmrL8zGISUP8DJmLFPrYoAGrm9U2h/wjdoM2tLpAQGW3O3YwJCq54YsZupOcFH3mw2HQdxcXdP/i8O726KExlTYwOGTqGPPRzsNzM2gxcT+aVDKI/cML6XYZtNJTW3XuW6aDcTr8EnfRfCxh8uln/PCUNq3+sgMLycSgACD51hL8kjYKBs86RtPA+0KSJd3ElOXP8kspfqPLaTO7BT9T7nseeAvGRveUtbLAmUlRjaCqFM8ftEkdzR8KULWF2y+3F/USqNzMDroKXoVJ0JQw4/iW/hfXmghKoQ2eIHGX+Qtxdyb1DruzeN45tnrNat7WwKoyJ66X21SHtvfha5nxwhWX0fLtixDqPKt6JfjHIHtPmgw==
+X-Microsoft-Exchange-Diagnostics:
+	=?us-ascii?Q?1;AM3PR04MB1236;23:9SFJBUGLLIjHNw0kalYjpSIZstsNJvBzJK/dZD0ZJ?=
+ =?us-ascii?Q?nbie/6xRNBSuQi+4g3kMZRcWMi4cOfw5+Bexg2qiz3JpCWzjYi12ITjuPAaR?=
+ =?us-ascii?Q?r7E1v/M9rWwxgGAamnlLL9Dn8A3tX5RKSdev+h3XzU9SsrwWyy65ExfoV82s?=
+ =?us-ascii?Q?xnDKPcI/2esbEAl9Wh2XOOauVym6VT8wOWplZw9ypJN7svA+1LVQRO/EXFjO?=
+ =?us-ascii?Q?8EUGRHgZH9/afuI+z+6s93i4GsDg1mfWP0l02qlYL4oFGxvrOzfkYWdDfIZn?=
+ =?us-ascii?Q?oLVF1on9lyN8m7CiZG4IqhgWRgBRL7ViD4Zy2OtqxwDsqRaGwpuEAwQr9VWr?=
+ =?us-ascii?Q?px59JpAOOSHJP4Q8cRaJBQvXqU0dYpvxj0nh1XrBXFd16C7wlgzKs/S4/IWw?=
+ =?us-ascii?Q?j33uNoTAhZnf0QBDG8Md0Ydjc60KMbCLYuxa/ob5Xy+RiOjrlE8CGE0FaIox?=
+ =?us-ascii?Q?4ZSNUYGr4UTtKiOYcb0l9bNep2qGtzi6cLPN4NouzfAU7AxZTTehb+WweAS5?=
+ =?us-ascii?Q?mGkHcU8YnwCEkqDl/Jov11pm0TgluOLZg0mvrkwFPL3zpH6bcSzWmmkqr3AC?=
+ =?us-ascii?Q?4no5yRZMMvqxCuG3qvh64he9HAS7xzr/EbZZMli3byjW22ZGSbgmLULUz+9/?=
+ =?us-ascii?Q?yxTwCPRcxbp+oyOyJfD2e2GxnFNtju8DkDNEfjDP0Zw3igAz84Lst53TQWzp?=
+ =?us-ascii?Q?ycYCJTMnKsKkK9eObYjXk5ComuNoQTt0wMNCClmx56Y6GHzMFCe70fdF91tS?=
+ =?us-ascii?Q?ea4u5OBgFg5rGpTyoWqhOq2NGBCtcgNx0pWK2Mz3LxQtSmW5qNZUHVDVeluI?=
+ =?us-ascii?Q?mQa2wOEKomcXgAW1baiyrSYDxhxFrWsT5onyHzBeKlbtuNYds1VS9kK805qP?=
+ =?us-ascii?Q?vveOOjfGDdjBME3b9sKKyFNYBD+pXFflcHR+AbLICV/NJvIwiitsqJNk+BNS?=
+ =?us-ascii?Q?lXQPCkCE2QwxFW1qMXkePNl1wgABOH0ZlJ14F008BUjoWmesQQnDz5ENzaFa?=
+ =?us-ascii?Q?vsAWXW2jfihZwc3bZkHdvlGxxBCEIBvqc/kgJlr+18dLBlrw6lIHmOF7/4yu?=
+ =?us-ascii?Q?J8jRlXv36Ep5jXIJelfbUSFSknpImCtBCNciHeCV5rigmO80kkmvmv784go/?=
+ =?us-ascii?Q?FW25T7pZV5ZFASFOW1Jw3XfRdTrgISgXnDUO2aAMacul9k0JI0DBxZ9od/R2?=
+ =?us-ascii?Q?T7SMWf8X5TaL4ZxCDna5Sbfwe3/B9u0Xe9r+BZx8WkNbBf0oeTo7ROhlhWGm?=
+ =?us-ascii?Q?URuwnOCxDbw4zypqk+dCCopwOI/xZQ4bNnVlsfIbUPnodE1XpBGaMLwg/g2h?=
+ =?us-ascii?Q?8fDx+XevgfB2fCq2dncXAUmlmXQdsppwgvJsZJ9PbNObQ3Axr+VCl7+XvrW9?=
+ =?us-ascii?Q?IooWQ=3D=3D?=
+X-Microsoft-Exchange-Diagnostics:
+	1;AM3PR04MB1236;5:ImPeazuYpXNwN7D6+IjC3nsWQEq5dIDyomU50hW/ePJDTCXh4PSDMc72KIFcnPYUV2UCuZ0mphW3aa/5E743fgXyxtdw5ZRjLldB0Xzxyje+SPDG48bBhADTEv9nd2tWNLNQslXlQ8Z7jiSyvl3cBA==;24:ApLpfrzaiYCmQl5Xg1CnUjTbwEEenbee716nAKcvnA626nBdHteOwVck/C9raFchrUQupr9pYiGo9LyGCWP0UEPugTvbaJLHdTskC8gGqN8=
+X-Microsoft-Exchange-Diagnostics:
+	1;HE1PR04MB1241;9:pXef/YzMHlJK9jBHYhOdCXkWppZr/fdQCTc1flixW/y+lykIbQv4WuNjinnNoyUkuiN2zxBO/QhWZACoq+gQBkV4yb/x+hENtpW67hdxtTdZdGHui1OD/tJmItI2ciWXfvaFQN11Jyz390eGtZTOFg==
+Content-type: multipart/mixed;
+	boundary="B_3570686658_1068241615"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3570686658_1068241615
+Content-type: multipart/alternative;
+	boundary="B_3570686658_352505683"
+
+
+--B_3570686658_352505683
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+=20
+Payment to register a birth abroad
+Authorisation for payment taken
+Thank you for your order from the Foreign & Commonwealth Office. We have ta=
+ken pre-authorisation for the following: Date: 16/04/2016 Payment Reference:=
+ PAYREGISTERBIRTHABROAD-UK-ECOMM-20160416-1 FCO Reference: N/A Service: pay-=
+register-birth-abroad Amount: =C2=A3101.50 Card type: visa Card number: XXXX XXX=
+X XXXX 7777 You have paid for 1 birth registration and 1 certificate includi=
+ng postage coverage to UK. When we have confirmed we can provide the service=
+ we will take the payment and you will receive a receipt via email.=20
+What to do next
+write the payment reference on your application form=20
+print out this email or the payment confirmation page and include it with y=
+our application=20
+If you're in the UK then send your application form and documents to: Overs=
+eas Registration Unit Foreign & Commonwealth Office PO Box 6255 Milton Keyne=
+s MK10 1XX If you're abroad then send your application form and documents to=
+: Overseas Registration Unit Foreign & Commonwealth Office Hanslope Park Han=
+slope Milton Keynes MK19 7BH United Kingdom The Overseas Registration Unit m=
+ust receive your application within 4 weeks of the date of your payment. Aft=
+er 4 weeks the payment authorisation will expire, and the payment will be re=
+funded to your payment card. 
+
+--B_3570686658_352505683
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body style=3D"margin: 0; padding: 0;">
+<table style=3D"width:800px;border-collapse:collapse;">
+<tbody>
+<tr>
+<td style=3D"background-color:#0b0c0c;"><img src=3D"cid:govuk" alt=3D""> </td>
+</tr>
+<tr>
+<td>
+<h1 style=3D"font-family:nta, Arial, sans-serif;font-size: 3.2em;line-height:=
+ 1.04167;font-weight: 700;text-transform: none;">
+Payment to register a birth abroad</h1>
+<h2 style=3D"font-family:nta, Arial, sans-serif;font-size: 1.5em;line-height:=
+ 1.04167;font-weight: bold;text-transform: none;">
+Authorisation for payment taken</h2>
+<p style=3D"font-family:nta, Arial, sans-serif; font-size:1em; line-height:1.=
+31579; font-weight:50 text-transform:none;">
+Thank you for your order from the Foreign &amp; Commonwealth Office. We hav=
+e taken pre-authorisation for the following:</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Date: 16/04/2016</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Payment Reference: PAYREGISTERBIRTHABROAD-UK-ECOMM-20160416-1</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+FCO Reference: N/A</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Service: pay-register-birth-abroad</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Amount: =C2=A3101.50</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Card type: visa</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Card number: XXXX XXXX XXXX 7777</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+You have paid for 1 birth registration and 1 certificate including postage =
+coverage to UK.</p>
+<p style=3D"font-family:nta, Arial, sans-serif; font-size:1em; line-height:1.=
+31579; font-weight:50 text-transform:none;">
+When we have confirmed we can provide the service we will take the payment =
+and you will receive a receipt via email.</p>
+<h2 style=3D"font-family:nta, Arial, sans-serif;font-size: 1.5em;line-height:=
+ 1.04167;font-weight: bold;text-transform: none;">
+What to do next</h2>
+<ul>
+<li style=3D"font-family:nta, Arial, sans-serif; font-size:1em; line-height:1=
+.31579; font-weight:50 text-transform:none;">
+write the payment reference on your application form </li><li style=3D"font-f=
+amily:nta, Arial, sans-serif; font-size:1em; line-height:1.31579; font-weigh=
+t:50 text-transform:none;">
+print out this email or the payment confirmation page and include it with y=
+our application
+</li></ul>
+<p style=3D"font-family:nta, Arial, sans-serif; font-size:1em; line-height:1.=
+31579; font-weight:50 text-transform:none;">
+If you're in the UK then send your application form and documents to:</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Overseas Registration Unit</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Foreign &amp; Commonwealth Office</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+PO Box 6255</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Milton Keynes</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+MK10 1XX</p>
+<p style=3D"font-family:nta, Arial, sans-serif; font-size:1em; line-height:1.=
+31579; font-weight:50 text-transform:none;">
+If you're abroad then send your application form and documents to:</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Overseas Registration Unit</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Foreign &amp; Commonwealth Office</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Hanslope Park</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Hanslope</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Milton Keynes</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+MK19 7BH</p>
+<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+United Kingdom</p>
+<p style=3D"font-family:nta, Arial, sans-serif; font-size:1em; line-height:1.=
+31579; font-weight:50 text-transform:none;">
+The Overseas Registration Unit must receive your application within 4 weeks=
+ of the date of your payment. After 4 weeks the payment authorisation will e=
+xpire, and the payment will be refunded to your payment card.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
+
+
+--B_3570686658_352505683--
+
+
+--B_3570686658_1068241615
+Content-type: image/png; name="govuk.PNG";
+ x-mac-type="504E4766"
+Content-ID: <govuk>
+Content-disposition: attachment;
+	filename="govuk.PNG"
+Content-transfer-encoding: base64
+
+
+iVBORw0KGgoAAAANSUhEUgAAAJ0AAAA0CAYAAACQNTrwAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA2iSURBVHhe7VtrjBRVFmYYhufwEl+w
+oiKKTgOKijojwiaia+smMuIqriCzP2BGQFpcYYAfE4gsIkgnAq0ijAtJ64rbmxgGAzpCIq2J
+tjHGhv0x7UboGB+jsDT4oHmoZ+93um9NVd1bPd2oRXZyT/Klpm6de+t21Vfnde9061dZSQYG
+fsKQzsB3GNIZ+A5DOgPfYUhn4DsM6Qx8hyGdge8wpDPwHYZ0Br7DkM7AdxjSGfgOQzoD32GR
+rm/ffiWhT5++1nHgwEE0dOgwuuCCCxn9+w+wrp8J7BM06Ho4Y9IB/fpVUo8eFTR+/A305Zdf
+0pEjR6itrY0uvXQE9erVW9unGNgnaND1UJB0bmtlP8ffIF23bt0E8XrQvn37CPL6669zG6Dr
+o/vbDfsEDboeOrF0famysj8DLhNtkiy9e/fh9vr6Brr66msoHA7TTz/9RLNmzabJkydzO6wg
+iGnvJ8cDvIhnn6BB14Mn6SQhunUrsyyXbLMTaf/+f9OPP/5I3377Lf3888+UyWTY4sXjce4z
+YMBAa0y4XDkWxpVjyOsS9gkWg+qGMLUkUtSeyfK9LclmKZNOUjzaSMGAvq83AjQzHKN4qp3U
+YTPUnopTLFxHVdq+QCPFc4+iQ7IJWqvVzaMxTu4umXijXteBKLXl9XOSoXijTs8G5V4pijp0
+1PkXmsuUaIpcjwkdqKlG1XWQThIAVijnOsvo7run0Isv/l1YsFlWnAYLVlZWztZu3779PP4X
+X3zBx3Q6zcc9e/YwuSoqelLPnr1YFwRcsmQJbdq0iSZNmsTjSKtnv799ggVRE6JYyv2avCRD
+bbFQAZJ0oDoUo7aih01RLBTQjrM24X4N7dRap+pJzGxtz+tJyVIirNd14uySrkrzsVBWjFer
+6gIW6fDCQbScNYJ1K6Nx48bR999/nx+FaOrUqUyk0aPH0JgxY5kgzc3NdPvtf6BVq55iS7do
+0SJ6+OE5FIlEqHv37nTdddfTxRdfwv3mzw/lRyL66quvaNiwYYK83RmScDwP2wS9UBXaQWnl
+0+pcMslmmqIZT0L7xXYqGUo216rjRZL56x2S3hFU9RgBiuW+V5skKaLVdeMskq5W3Nv9wAoQ
+DnBYuvLyHnT++RfQHXcEmXx33nlXbgzhpiBz5sylW2+dTMeOHaMTJ07Q+vUbmEzo9/HHH7PO
+22+/zW0Y79VX/0knT56kzz77jC6//HJ6+um1rHPq1Ck+goy436RJv2d9WEQc7RPUQvdDSxA8
+PJ3FC54R4aRkKRlxWbyAmwxCUlGnjoWIoJhLxAdSjGU+a6QLaEIIvrfe8ktYpIMbHD78Yo7R
+IB999BFdeeVVgkR7mSTITkGQnTt3skVDHHf06FEaOHAw3XLLRD4HQMZRo66ia6+9jseRBHvq
+qdU0duzVbOGgAxd7/fXj6dNPP+UEZPfuPVzvA9ntE1RRSy2KRRCSTVMi2kTTgvIH19CUpijF
+08pTEaJ5KUEPIgv32RIO0RQZm9TUUii8Q+9+s8IyOWLHoDpXr7hO46LaooVfXgfOBulqKZpS
+TJyYs8biu2CRLuf+5nPX48eP8/HBB6cL11dGN954Exd/obNhwwa+Bvnggw+YrGvWrOFzkAny
+2GOP0bnnnkvt7R0xyuzZ9dwfNbxrrhnHf8MlQ6Qlve2227ndPkE3qppVlyWehjZgzSFAoR1p
+mwXLxXbVLr1F6idLmUSkgCvWPXQRtbU2OPTUOE0QImQfx0svTS1BVU8Pv0kX0DwvQbhYocSq
+AxbpysvL2XVKOXHiJJMN8RbcJxIBYPDgc+iJJ1YI17qe4zqQBJnq6dOn6YcffuDjyy//g9sn
+TpwkLNpmQcK/cryIeA0uFEQFmWfMmJG/G7HLhmXlMottgk4ENXFPmmIF4occAhRJZiidiFJI
+S84wKTG/IPIiRc8FnXsRlqzJrqOxYGpcFxAEzl+U0t5KMx06heAv6XRxr1fIooMjpgNRkBQg
+9kLWikQAZJE1tVyi0Yf1ABAIR8R2dnn88YXcDrJKXZkocMyWJyDIh6Rj9eo1dNNN1azHmbNt
+gg5oYqRsokmvWwp+gWsLKl+B+4VrCC3iOucLUuM5JX4qCP9Ip8tUs+L3FErO3LBIh1jq0UcX
+0JNPrqJAIGARACSBhUO8BZKBLCgUA7iOtvPOO5+effZZEZft5v7QRR9cB/r3HyjOc+UWnOOa
+JB/ug5hw3br1dP/90wTRy5VJWlB+cLElhcIICvfrlBJcW1Bk0fleUtIxJ2Ejbka547pf/Lt8
+Il0yrol726mlU0/jhEU6rCBI+fzzz+mii4YzoUAMuLxYLEbPPfccWz+71cLfcMEgDwgjj3Yd
+kAyk3r69hVauXMk6qNlh+QzrtseP534JEpRg0KukIKD4IOFalaKvxuXpxOY+lfikGNdqQbVk
+bitVpczbSQo1niu2VCLhD+m8JJuMFO1aAYt0yCYhiMkgN9xwI5MHhKuqClhZqKzVwWKBWLBq
+IOjQoUN5h8mFFw7lLBjtuA496M+b9wj3P3DgAFtGXEP79OnTuV0mIUuXLlUmaUF5ee4HBfhN
+Or0bcujorKEV12niOcX9doazS7qcZS4207aRbuLEiWzhUFfbsmULx1uSMMHgnTw0ShvPP7+R
+kw5YKlg4ZLUop3z33Xe8ywSZ71tv7RYutT8TFm4Ysd2uXbu4pIIxRo8ey31hAXH9jTfe4Gup
+VIrLKvYJOvB/aun6VdaRYswsYqnxnHcB2Qt+ky6LFUanlPDMLNJhBWLkyJFcEG5oeJgz0549
+ezNhAoHRnJlCkGSAiHCXV1wxiq/ffPMEJivk0KFDNGzY70SWO5guueRSK5loaWnh6wcOHGSL
+CEsH1z1hwi3s2u+5Zyq3g4z2CToQTriyJl3sUzrpdDGdSmYPFBHTAQqxpQtVXn7hpTI9/CRd
+rhanK6S7y0VesEgHqzRq1JW8dgoC3Xff/Vy3q6ioYNKgRIKYa+PGjVRbW8vt06fPoJ07d3G/
+5uYX+fqCBQsEkSbQ+++/z2Q855whNG3aNHrppZfYmj3yyHweD5Zy4cKFNGPGQzzh9957j9uY
+jLYJOqB5wcVmrwqx7F+m8gJ+zew1D+UeOT0lnivJykr4R7p2ZLB8XVekFwlYEUmFRbpcOaQ3
+vfbaa2zVXnllGy9tgSCNjY2UTO6z4i4IyIN1VSlYnYDrRL1NCmI7bBaA4BrWcffu3ctF58rK
+AezOEUuCrM888wzX7uDS7RN0QuOmYJWKqNNtVmsStpf7G9bpLKj3gGVwRwzZRFjTtzO4Sde5
+1alX/X2npFMShoZWYZddko51Wj5xkA6Jw2WXjWQCQUCGu+76I7tMWCnIwYMHeTF/8eIlIsGo
+4jZYuXnz5nGyUV9fT62tb/FWJ7jLVatW8RIY4j0piUSC6ur+wn+LW9Ann/yHi87IlrmUYpug
+G6plEQKCFHCHXttu7KRS3Z9Q+RVWJOyIKMFbUonnkhFd31qKxOWqSpbSre5CrOZjLLTorlu7
+VorRKunUWDWg2UkD91s4JrVIB7eGoB6WDcnC119/TcuXL+NC7+zZs4XVGk779+9nCyjd4/jx
+42n16tV8/tBDM/mWSAQw1gsvbGICy2Tk3Xffpe3bt/PC/9y583iVYuXKJ7lcIovJsH4F3SsQ
+0FgliG7tNRSmFq+tT25L9pusvTqhlk7ckqTNmv6In5yibi5QLZeQ/DOxz70pmtDuzlE/lmJI
+JxAQiZDCuwStLfAcLNKxhWFr152qq2u478KFi5gMyFZxjMX+Rd98c4hGjBjB5xJDhgzhGA6W
+cdu2Vx3XACzsw3ouXryYz2VdD/HhkSP/5Y0EyJZlXc8+QR2qlITiDETjPn/1XSZuaGJSh3iU
+SrRcFa7Ooef1MRYjWpIUSTqBKRrvA13dbwEcpIOVwREEeOedd7jz8uXLOQt94IE/0+HDh7kN
+tbZly5axK12yZCl9+OGH3C5dMNwrYj4s8q9bt85yrdjoCXcNt7xly1Zu27x5MxMQVlbe3z5B
+L5S87y2TcQbOHjHbme2nK253hT4m7RCvUklRpBPAElWB4T2kXSQduo+leNL1q2zQ/C7vZMZB
+OkC62MbGxWy5IKjBSZFFYrecOnWaSSeLy3bBOLIfEgq5qwRy771/4vvBDcs52CdYCNVNrcVt
+5MwIt4U4Jn/K4kE6HrfkncM12nF00MWOOfEulRTjXiWq6popWfTcxXOp87LOpZAuR3jltiJO
+rNfoKqSDi4X7w4rEbykg4rFjR/O1vArr/qWQLocaCjW3UiKdcRUss5RpT1E8KrcxFU+6HGqo
+/hf9j4QHvEKDgvPpLJFwI0DBxmh+7s67yblHG4OdjFEa6XDPiBLcwXqrHkAhHYDSyaBBgymZ
+THL5BBkr9s4hEdi6dSu7TGxvWrFiBYVCj9KcOXM4OZDAOdpxfcWKv3Fism3bNt4AitgP48Ha
+vfnmm1wftN8bsE/QoOtBIZ2Mq+SKAzJQrKPCAtq3KpWOMitZwHhYz8WqhySdvC9gn6BB14PW
+0kkCgBAACIg2EA+xF+I+lEwA/O0Fuw76yrExHggM2O8nYZ+gQdeDJ+kkySRZ3HATxQteenJs
+3XX7BA26HrSkO9uwT9Cg68GQzsB3WKQzMPALhnQGvsOQzsB3GNIZ+A5DOgPfYUhn4DsM6Qx8
+hyGdge8wpDPwGZX0PxsiWsfyvfnhAAAAAElFTkSuQmCC
+--B_3570686658_1068241615--
+
