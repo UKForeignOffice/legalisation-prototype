@@ -61,7 +61,7 @@ Received: from fernandoalonso.local (localhost [127.0.0.1])
 	for <s.moore@kainos.com>; Wed, 22 Feb 2017 10:54:16 +0000 (GMT)
 	boundary="----sinikael-?=_1-14877608566320.5081590169575065"
 To: s.moore@kainos.com
-Subject: Receipt for pay-legalisation-post from the Foreign Office
+Subject: Receipt for your additional payment for legalisation
 X-Mailer: nodemailer (1.3.1; +http://www.nodemailer.com;
  SMTP/1.0.2[client:1.3.8])
 Date: Wed, 22 Feb 2017 10:54:16 +0000
@@ -171,7 +171,7 @@ w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <td>
 <h1 style=3D"font-family:nta, Arial, sans-serif;font-size: 3.2em;line-height:=
  1.04167;font-weight: 700;text-transform: none;">
-Pay to legalise documents by post</h1>
+Additional payments for legalisation</h1>
 <h2 style=3D"font-family:nta, Arial, sans-serif;font-size: 1.5em;line-height:=
  1.04167;font-weight: bold;text-transform: none;">
 Receipt</h2>
@@ -182,15 +182,15 @@ e now taken payment for the following:</p>
 <p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
 em; line-height:1.31579; font-weight:50 text-transform:none;">
 Date: 22 February 2017</p>
+<!--<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
+em; line-height:1.31579; font-weight:50 text-transform:none;">
+Payment Reference: PAYLEGALISATIONPOST-UK-ECOMM-20170222-15</p>-->
 <p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
 em; line-height:1.31579; font-weight:50 text-transform:none;">
-Payment Reference: PAYLEGALISATIONPOST-UK-ECOMM-20170222-15</p>
+FCO Payment Reference: 8814877603458516</p>
 <p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
 em; line-height:1.31579; font-weight:50 text-transform:none;">
-FCO Reference: 8814877603458516</p>
-<p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
-em; line-height:1.31579; font-weight:50 text-transform:none;">
-Service: pay-legalisation-post</p>
+Service: Additional payments for legalisation</p>
 <p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
 em; line-height:1.31579; font-weight:50 text-transform:none;">
 Amount: =C2=A3101.50</p>
@@ -200,6 +200,7 @@ Card type: visa</p>
 <p style=3D"text-indent: 25px;font-family:nta, Arial, sans-serif; font-size:1=
 em; line-height:1.31579; font-weight:50 text-transform:none;">
 Card number: XXXX XXXX XXXX 7777</p>
+<p>[ADD STANDARD LEGALISATION FOOTER HERE]</p>
 </td>
 </tr>
 </tbody>
