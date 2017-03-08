@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Returning us your documents
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+<div class="column-two-thirds">
+<h1 class="heading-xlarge">Returning your documents</h1>
+
+
+<form action="/submit-postage-return-options" id="return_address" method="post">
+
+    <div class="form-group" id="legend_postage_available" >
+
+        
+        <fieldset>
+            <legend class="form-label-bold">
+                Select a delivery method for the return of your documents
+            </legend>
+
+            <label class="block-label" for="return_1" data-target="help-courier">
+                <input id="return_1"
+                       type="radio" 
+                       name="return_postage" value="8">
+                The Legalisation Office will arrange for the return of your documents by courier (including to British Forces Post Office) - £5.50
+            </label>            
+
+     
+<!-- start the  courier reveal -->
+<div class="panel panel-border-narrow js-hidden" id="help-courier">
+Your documents will be couriered in a waterproof envelope. If you want additional protection, when you send us your application include an envelope which will hold your documents unfolded (typically A4 size or larger)
+            </div>
+<!-- end the courier reveal -->
+
+            <label class="block-label" for="return_0" data-target="help-sae">
+                <input id="return_0"
+                       type="radio" 
+                       name="return_postage" value="7">
+                You&#39;ll arrange for the return of your documents by adding stamps on to a self-addressed envelope which you'll include with your documents - typically £1 to £2
+            </label>
+
+
+
+
+
+        </fieldset>
+    </div>
+
+</div>
+
+
+<!-- start the sae reveal -->
+
+<div class="panel panel-border-narrow js-hidden" id="help-sae">
+                         <h3 class="heading-xsmall">
+                Stamped self-addressed envelope instructions
+              </h2>
+              <img src="/public/images/SAE-10.png" style="float: right; margin-left: 25px;">
+              <ol class ="list list-number">
+              <li>Add stamps on to a large envelope - enough to cover posting your documents back:
+                  <ul class="list list-bullet">
+                      <li>we recommend you go to your local post office who will help you buy the right postage</li>
+                      <li>the correct amount depends on <a href="http://www.royalmail.com/price-finder" rel="external" target="_blank">the size, weight and delivery preferences</a> - returning 1 document will cost approximately £1 to £2</li>
+                      <li>use an envelope which will hold your documents unfolded - A4 or larger, classified as a 'Large Letter' by Royal Mail</li>
+                   </ul>
+              </li>
+              <li>Write your return address on the envelope - we'll use this envelope to send your documents back to you when they've been legalised.</li>
+              <li>Put this stamped self-addressed envelope together with your documents in a separate envelope addressed to the Legalisation Office.</li>
+              </ol>
+
+
+            </div>
+
+<!-- end the sae reveal -->
+
+
+          
+
+
+    <div class="form-group">
+ <a class="button" href="postage-return-options-application-confirmation">Continue</a><br><br>
+  (for illustration only, this Continue button goes directly to an example confirmation page showing placement of similar help)
+    </div>
+
+
+
+</form>
+
+
+
+
+</main>
+
+{% endblock %}
