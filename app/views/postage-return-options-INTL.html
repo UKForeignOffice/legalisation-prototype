@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Returning us your documents
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+<div class="column-two-thirds">
+<h1 class="heading-xlarge">Returning your documents</h1>
+
+
+<form action="/" id="return_address" method="post">
+
+    <div class="form-group " id="legend_postage_available" >
+
+        
+        <input id="return"  name="return_postage" type="hidden"  value="9">
+        <p class="text">We'll return your legalised documents and any supporting documentation by international courier.
+            The courier cost is <span style="font-weight:bold;">£25.00</span>.</a>
+        </p>
+        <p>Your documents will be couriered in a waterproof envelope. If you want additional protection, when you send us your application include an envelope which will hold your documents unfolded (typically A4 size or larger).</p>        
+
+        </fieldset>
+    </div>
+
+    <div class="form-group">
+        <input type="submit"  id='NextBtn' class="button" value="Continue" />
+    </div>
+
+</form>
+
+
+</main>
+
+{% endblock %}
