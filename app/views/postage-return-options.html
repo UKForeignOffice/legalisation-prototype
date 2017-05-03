@@ -23,51 +23,52 @@
                 Select a delivery method for the return of your documents
             </legend>
 
-            <label class="block-label" for="return_1">
+            <label class="block-label" for="return_1" data-target="help-courier">
                 <input id="return_1"
                        type="radio" 
-                       name="return_postage" value="Courier delivery (including to British Forces Post Office)">
-                Courier delivery (including to British Forces Post Office) - £5.50
+                       name="return_postage" value="The Legalisation Office will arrange for the return of your documents by courier (including to British Forces Post Office) - £5.50">
+                The Legalisation Office will arrange for the return of your documents by courier (including to British Forces Post Office) - £5.50
             </label>            
 
+<!-- start the  courier reveal -->
+<div class="panel panel-border-narrow js-hidden" id="help-courier">
+Your documents will be couriered in a waterproof envelope. If you want additional protection, when you send us your application include an envelope which will hold your documents unfolded (typically A4 size or larger)
+            </div>
+<!-- end the courier reveal -->
             
-            <label class="block-label" for="return_0" data-target="example-sae">
+            <label class="block-label" for="return_0" data-target="help-sae">
                 <input id="return_0"
                        type="radio" 
-                       name="return_postage" value="I will include a stamped addressed A4-sized envelope with my documents">
-                I&#39;ll include a stamped addressed A4-sized envelope with my documents
+                       name="return_postage" value="You&#39;ll arrange for the return of your documents by adding stamps on to a self-addressed envelope which you'll include with your documents - typically £1 to £8, the cost varies">
+                You&#39;ll arrange for the return of your documents by adding stamps on to a self-addressed envelope which you'll include with your documents - typically £1 to £8, the cost varies
             </label>
-
-
-<!-- start the big reveal
-
-GDS guiddance on visuals:
-- Only use visuals when there is a need
-- Images and icons, when used well, help draw the eye and give users a quick overview of understanding
-- When not used well they can confuse and distract users. They are ambiguous
-
-Good examples: renew your passport (how to take a photo), renew your car license (find the reference number)
- -->
-<div class="panel panel-border-narrow js-hidden" id="example-sae">
-
-              <h2 class="heading-medium">
-                Stamped addressed envelope instructions
-              </h2>
-              <ol class ="list list-number">
-              <li>Add stamps on to an A4-sized envelope - enough to cover posting your documents back (<a href="https://business.help.royalmail.com/app/answers/detail/a_id/89/~/size-and-weight-formats-for-uk-mail" rel="external" target="_blank">the amount depends on the size and weight</a>) 
-              <li>Write your return address on the envelope
-              <li>When you post your documents to us, include this envelope with them - it's OK to fold it
-              </ol>
-
-            </div>
-<!-- end the big reveal -->
-
-            
-
-            
+                    
 
         </fieldset>
     </div>
+</div>
+
+<!-- start the sae reveal -->
+<div class="panel panel-border-narrow js-hidden" id="help-sae">
+                         <h3 class="heading-xsmall">
+                Stamped self-addressed envelope instructions
+              </h2>
+              <img src="/public/images/SAE-10.png" style="float: right; margin-left: 25px;">
+              <ol class ="list list-number">
+              <li>Add stamps on to a large envelope - enough to cover posting your documents back:
+                  <ul class="list list-bullet">
+                      <li>we recommend you go to your local post office who will help you buy the right postage</li>
+                      <li>the cost varies depending on the size, weight and your delivery preferences - <a href="http://www.royalmail.com/price-finder" rel="external" target="_blank">check the latest Royal Mail pricing</a></li>
+                      <li>use an envelope which will hold your documents unfolded - A4 or larger, classified as a 'Large Letter' by Royal Mail</li>
+                   </ul>
+              </li>
+              <li>Write your return address on the envelope - we'll use this envelope to send your documents back to you when they've been legalised.</li>
+              <li>Put this stamped self-addressed envelope together with your documents in a separate envelope addressed to the Legalisation Office.</li>
+              </ol>
+
+
+            </div>
+<!-- end the sae reveal -->
 
     <div class="form-group">
         <input type="submit"  id='NextBtn' class="button" value="Continue" />
