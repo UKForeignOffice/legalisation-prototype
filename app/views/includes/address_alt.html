@@ -9,4 +9,9 @@
 {{ house_name_alt }} {{ street_alt }}, <br>
 {{ town_alt }}, <br>
 {{ county_alt }} {{ postcode_alt }}, <br>
-{{ country_alt }}
+{{ country_alt }}<br>
+Contact telephone: {{ delivery_telephone_alt }}
+{%  if delivery_email_alt == ""  %} 
+{% else %}
+<br>Contact email: {{ delivery_email_alt }}
+{% endif %}

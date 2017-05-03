@@ -1,0 +1,14 @@
+{{ full_name }}, <br>         
+{%  if organisation == ""  %} 
+{% else %}
+{{ organisation }}, <br>
+{% endif %}
+{{ house_name }} {{ street }}, <br>
+{{ town }}, <br>
+{{ county }} {{ postcode }}, <br>
+{{ country }}<br>
+Contact telephone: {{ delivery_telephone }}
+{%  if delivery_email == ""  %} 
+{% else %}
+<br>Contact email: {{ delivery_email }}
+{% endif %}

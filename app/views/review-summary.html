@@ -58,19 +58,9 @@
             <td class="summary-table-cell-label summary-label">Return address for successfully legalised documents</td>
             <td id="summary-address1" class="summary-table-cell-content">
                 <span class="mobile-format">
-                    {{ full_name }}, <br>
-                    
-                    {%  if organisation == ""  %} 
- 
-                    {% else %}
+            
+            {% include "includes/address.html" %}
 
-                    {{ organisation }}, <br>
-
-                    {% endif %}
-                    {{ house_name }} {{ street }}, <br>
-					{{ town }}, <br>
-					{{ county }} {{ postcode }}, <br>
-					{{ country }}
                 </span>
             </td>
             <td class="summary-table-cell-link"><a class="summary_change_links" href="/change-your-address-details?address_type=main">Change<span class="visually-hidden"> your successful legalisation return address</span></a></td>

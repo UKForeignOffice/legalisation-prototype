@@ -277,7 +277,9 @@ router.get('/your-main-address-uk-selected', function(req, res, next){
  res.render('your-main-address-uk-selected', {
     'number'     : req.session.number,
     'first_name' : req.session.first_name,
-    'last_name'  : req.session.last_name
+    'last_name'  : req.session.last_name,
+    'telephone'   : req.session.telephone,
+    'email'   : req.session.email 
   });
 
 });
@@ -288,7 +290,9 @@ router.get('/your-main-address-manual', function(req, res, next){
 
   res.render('your-main-address-manual', {
     'first_name'  : req.session.first_name,
-    'last_name'   : req.session.last_name
+    'last_name'   : req.session.last_name,
+    'telephone'   : req.session.telephone,
+    'email'   : req.session.email 
   });
 });
 
@@ -299,7 +303,9 @@ router.get('/international-main-address', function(req, res, next){
 
   res.render('international-main-address', {
     'first_name'  : req.session.first_name,
-    'last_name'   : req.session.last_name
+    'last_name'   : req.session.last_name,
+    'telephone'   : req.session.telephone,
+    'email'   : req.session.email 
   });
 });
 
@@ -345,7 +351,9 @@ router.get('/your-alternative-address-uk-selected', function(req, res, next){
  res.render('your-alternative-address-uk-selected', {
     'number'     : req.session.number,
     'first_name' : req.session.first_name,
-    'last_name'  : req.session.last_name
+    'last_name'  : req.session.last_name,
+    'telephone'   : req.session.telephone,
+    'email'   : req.session.email 
   });
 
 });
@@ -356,7 +364,9 @@ router.get('/your-alternative-address-manual', function(req, res, next){
 
   res.render('your-alternative-address-manual', {
     'first_name'  : req.session.first_name,
-    'last_name'   : req.session.last_name
+    'last_name'   : req.session.last_name,
+    'telephone'   : req.session.telephone,
+    'email'   : req.session.email 
   });
 });
 
@@ -367,7 +377,9 @@ router.get('/international-alternative-address', function(req, res, next){
 
   res.render('international-alternative-address', {
     'first_name'  : req.session.first_name,
-    'last_name'   : req.session.last_name
+    'last_name'   : req.session.last_name,
+    'telephone'   : req.session.telephone,
+    'email'   : req.session.email 
   });
 });
 
@@ -506,7 +518,9 @@ req.session.documentscost = documentscost;
     'town'          : req.session.town,
     'county'        : req.session.county,
     'postcode'      : req.session.postcode,
-    'country'       : req.session.country,
+    'delivery_email'     : req.session.delivery_email,
+    'delivery_telephone' : req.session.delivery_telephone,
+    'country'       : req.session.country,    
     'documentCount'     : req.session.documentCount,
     'documentscost'     : req.session.documentscost,
     'send_postage'      : req.session.send_postage,
@@ -522,6 +536,8 @@ req.session.documentscost = documentscost;
     'county_alt'        : req.session.county_alt,
     'postcode_alt'      : req.session.postcode_alt,
     'country_alt'       : req.session.country_alt,
+    'delivery_email_alt'     : req.session.delivery_email_alt,
+    'delivery_telephone_alt' : req.session.delivery_telephone_alt,
 
   });
 
