@@ -330,7 +330,9 @@ router.get('/alternative-address', function(req, res, next){
     'town'          : req.session.town,
     'county'        : req.session.county,
     'postcode'      : req.session.postcode,
-    'country'       : req.session.country
+    'country'       : req.session.country,
+    'delivery_email'     : req.session.delivery_email,
+    'delivery_telephone' : req.session.delivery_telephone
   });
 
 });

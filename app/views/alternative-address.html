@@ -31,7 +31,12 @@
 					{{ town }}, 
 					{{ county }} 
 					{{ postcode }}, 
-					{{ country }}
+					{{ country }}<br>
+                    Delivery contact: {{ delivery_telephone }}
+                    {%  if delivery_email == ""  %} 
+                    {% else %}
+                    , {{ delivery_email }}
+                    {% endif %}
                    
                 </label>
                 <label class="block-label " for="radio-no">
