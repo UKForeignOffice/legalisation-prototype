@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Legalisation prototype
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+{% include "includes/account-nav.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+
+<h1 class="heading-xlarge">Saved addresses</h1>
+    <p>Speed up your postal applications by saving return addresses you use regularly.</p>
+    
+    <div class="form-group">
+        <table class="review-personal-details summary-table">
+            <tbody>
+            
+            <tr><td>
+                    
+                    Mark Barlow, 78, Oakfield Road, London, 
+                    N14 6LS, 
+                    United Kingdom
+                    <br>
+                    Delivery contact: 07905 847933, mark.barlow@yahoo.co.uk
+                    <br/><br/>
+                    <a class="button-secondary button address-button" href="/api/user/edit-address?id=62">Edit</a>
+                    <a class="delete-address button-delete button address-button" href="/api/user/delete-address?id=62">Delete</a>
+                </td>
+            </tr>
+            
+            <tr><td>
+                    
+                    Mark Barlow, Foreign &amp; Commonwealth Office, King Charles Street, London, 
+                    SW1A 2AH, 
+                    United Kingdom
+                    <br>
+                    Delivery contact: 0207 808 0457
+                    <br/><br/>
+                    <a class="button-secondary button address-button" href="/api/user/edit-address?id=75">Edit</a>
+                    <a class="delete-address button-delete button address-button" href="/api/user/delete-address?id=75">Delete</a>
+                </td>
+            </tr>
+            
+            
+            <tr><td>
+                    
+                    Mark Barlow, Flat 29, Brittany Point, Lollard Street, London, 
+                    SE11 6UJ, 
+                    United Kingdom
+                    <br/><br/>
+                    <a class="button-secondary button address-button" href="/api/user/edit-address?id=133">Edit</a>
+                    <a class="delete-address button-delete button address-button" href="/api/user/delete-address?id=133">Delete</a>
+                </td>
+            </tr>
+  
+    
+            
+            </tbody></table>
+    </div>
+    <a class="button-secondary button" href="/api/user/add-address">Add an address</a>
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

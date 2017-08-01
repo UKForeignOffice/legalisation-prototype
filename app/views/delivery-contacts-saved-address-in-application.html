@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Legalisation prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+
+
+
+<h1 class="heading-xlarge">Update your saved address</h1>
+
+John Doe, 22 Acacia Avenue, Townsville, T00 5BN, United Kingdom
+<br><br>
+
+To help ensure safe delivery to this address we need to confirm delivery contact information. Check the details below, make any changes, then continue with your application. We'll save the information in your account for next time.
+
+
+<!-- <h2 class="heading-medium">Address</h2>
+
+John Doe, 22 Acacia Avenue, Townsville, T00 5BN, United Kingdom -->
+
+<form id="address_form" method="get" action="alternative-address">
+ 
+
+{% include "includes/delivery-contacts.html" %}
+
+            <div class="form-group">
+                <button class="button" type="submit">Continue</button>
+            </div>
+  
+</form>
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
