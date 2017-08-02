@@ -1,0 +1,180 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Legalisation prototype
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+
+
+  
+
+
+<div id="print-header">
+    <img id="fco-logo" title="Foreign &amp; Commonwealth Office" src="/public/images/fco-logo.png" alt="Foreign &amp; Commonwealth Office">
+    <h1 class="heading-large">Application cover sheet</h1>
+</div>
+
+<div class="printable-summary">
+    <table id="print-table-main" style="table-layout: fixed;">
+        <thead>
+        <tr>
+            <td>Name</td><td>Application date</td>
+        </tr>
+        </thead>
+
+        <tr id="bold-details">
+            <td>Mark Barlow</td>
+            <td>Wednesday August 2 2017</td>
+        </tr>
+        
+        <tr class="cover-sheet-telephone">
+            <td>Barlow Inc</td>
+            <td></td>
+        </tr>
+        
+        <tr class="cover-sheet-email">
+            <td>mark.barlow@digital.fco.gov.uk</td>
+            <td></td>
+        </tr>
+        <tr class="cover-sheet-telephone">
+            <td>1234567889</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+
+    <table class="print-table-secondary" style="table-layout: fixed; border-bottom:3px solid black">
+        <tr>
+            <td>
+                <p style="margin-bottom: 0">Application reference:</p>
+                <p style="font-weight: bold; font-size: 1.5em; margin-bottom: 0">A-C-17-0802-8690-FD22</p>
+            </td>
+            <td>
+                <div id="qr-code-div" style="margin-left: -10px;">
+                    <img height="70" width="70" id="qr-code" src="/public/images/A-C-17-0802-8690-FD22.png"  alt="QR code representing your application id:A-C-17-0802-8690-FD22">
+                </div>
+            </td>
+        </tr>
+    </table>
+    <!--  <p class="table-caption">  </p>-->
+
+    <h2 class="heading-medium" style="margin-bottom: 0px">Payment details</h2>
+    <table class="print-table-secondary" style="table-layout: fixed;">
+        <thead class="detail-label">
+        <tr>
+            <td>Amount</td>
+        </tr>
+        </thead>
+        <tr>
+            
+            <td>£35.50</td>
+            
+        </tr>
+        <tr class="detail-label">
+            <td>Service</td><td>Payment reference</td>
+        </tr>
+        <tr >
+            <td>Standard</td>
+            <td>8515016656225800</td>
+        </tr>
+    </table>
+    <p class="table-caption">Your payment will appear on your bank statement as FCO Legalisation Service.</p>
+
+    
+    <h2 class="heading-medium" style="margin-bottom: 0px">Application details</h2>
+    
+    <table class="print-table-secondary" style="table-layout: fixed;">
+        
+        <thead class="detail-label">
+        <tr>
+            <td>Return address</td>
+            <td>
+                <span class="hide-sm hide-md">Return address if application unsuccessful</span>
+                <span class="hide-lg">Unsuccessful return address</span>
+            </td>
+        </tr>
+        </thead>
+        <tr>
+
+            <td class="">Mark Barlow,
+                
+
+                78,
+
+                 Oakfield Road,
+                London,
+                
+                N14 6LS,
+                United Kingdom
+                <br>Contact: 07905 847933, mark.barlow@yahoo.co.uk
+            </td>
+            
+            <td class="details-address">                99,
+
+                 Acacia Ave,
+                Liverpool,
+                L19 1LL
+                United Kingdom
+                <br>Contact: 0151 427 2115</td>
+            
+        </tr>
+        <tr class="detail-label">
+            <td>Send delivery method</td><td>Return delivery method</td>
+        </tr>
+        <tr >
+            <td>You&#39;ll post your documents from the UK</td>
+            <td>The Legalisation Office will arrange for the return of your documents by courier (including to British Forces Post Office) from 9am to 5pm Monday to Friday, excluding bank holidays</td>
+        </tr>
+        
+
+        <tr class="detail-label">
+            <td>Your reference</td>
+            <td>Number of documents</td>
+        </tr>
+        <tr >
+            <td>
+                1234
+                </td><td>1</td>
+        </tr>
+    </table>
+
+    <p class="table-caption"> </p>
+    <h2 class="heading-medium" style="margin-bottom: 0px">Legalisation Office address</h2>
+
+    <table class="print-table-secondary" style="table-layout: fixed;">
+        <tr><td>
+                
+                
+                <p>Please send your documents and cover sheet via <span style="font-weight: bold;">Royal Mail tracked delivery</span> to:</p>
+
+                <p style="margin-bottom: -10px;"><span>Legalisation Office, Foreign and Commonwealth Office, PO Box 6255, Milton Keynes, MK10 1XX</span></p>
+                
+                    </td></tr>
+    </table>
+
+    <p class="table-caption" style="margin-bottom: 0px;"> </p>
+
+
+</div>
+
+<div class="form-group noPrint" style="margin-top: 40px">
+    <a href="javascript:window.print()"   role="button" class="button">Print</a>
+</div>
+
+
+
+
+
+</main>
+
+{% endblock %}
+
+
